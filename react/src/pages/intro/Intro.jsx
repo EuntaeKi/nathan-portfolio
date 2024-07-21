@@ -3,6 +3,8 @@ import React from "react";
 import "./Intro.css";
 
 const Intro = () => {
+  // Need to bring in the logic from ../../../../pages/intro/script.js
+
   return (
     <>
       <div id="layout">
