@@ -30,9 +30,10 @@
 
   & li {
     font-size: var(--header-nav-item-font-size);
+    font-family: var(--header-nav-item-font-family);
 
     & a {
-      font-family: var(--header-nav-item-font-family);
-    }
+        text-decoration: none;
+      }
   }
 }

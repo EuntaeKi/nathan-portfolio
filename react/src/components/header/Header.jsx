@@ -1,23 +1,29 @@
-import './Header.css';
+import { NavLink, Link } from "react-router-dom";
+
+import "./Header.css";
+import logo from "../../assets/img/Logo.png";
 
 function Header() {
   return (
-    <>
-    {/* Header Component for Routing */}
-    <nav id="header-navigation">
-      <a href="../../pages/main/index.html">
-        <img src="../../img/Logo.png" alt="Logo_Nathan-Seung" />
-      </a>
-      <ul id="header-navigation-list">
-        <li>
-          <a href="../../pages/projects/index.html">Projects</a>
-        </li>
-        <li>
-          <a href="../../pages/about/index.html">About</a>
-        </li>
-      </ul>
-    </nav>
-  </>
+    <div id="header">
+      {/* Header Component for Routing */}
+      <nav id="header-navigation">
+        <Link to="/intro">
+          <img src={logo} alt="Logo_Nathan-Seung" />
+        </Link>
+        <ul id="header-navigation-list">
+          <li>
+            <NavLink to="/intro">Intro</NavLink>
+          </li>
+          <li>
+            <NavLink to="/">Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/about">About</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </div>
   );
 }
 
