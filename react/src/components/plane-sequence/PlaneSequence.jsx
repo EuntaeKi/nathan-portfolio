@@ -12,7 +12,7 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
   const [rotate, setRotate] = useState(false);
   // Trigger clear on user click from phase 2 to 3 requires to be factored out
   const [intervalId, setIntervalId] = useState(null);
-  // Function to get the image source based on the frame index
+  // Function to get the image source based on the fr   ame index
   const getCurrentFrame = (index) =>
     `${process.env.PUBLIC_URL}/img/intro_${index
       .toString()
