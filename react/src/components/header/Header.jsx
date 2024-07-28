@@ -1,9 +1,10 @@
 import { NavLink, Link } from "react-router-dom";
 
 import "./Header.css";
-import logo from "../../assets/img/Logo.png";
 
 function Header() {
+  const logo = `${process.env.PUBLIC_URL}/img/logo.png`;
+
   return (
     <div id="header">
       {/* Header Component for Routing */}

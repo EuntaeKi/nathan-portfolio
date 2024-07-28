@@ -1,49 +1,36 @@
 import React from "react";
-
-import "./Intro.css";
+import PlaneSequence from "../../components/plane-sequence/PlaneSequence";
 
 const Intro = () => {
-  // Need to bring in the logic from ../../../../pages/intro/script.js
+  const phaseFrames = [8, 1, 10];
+  const frameCoordinates = [
+    [64, 34],
+    [-52, 16],
+    [15, 33],
+    [-15, 37.5],
+    [111.5, 52],
+    [117, 44.5],
+    [53, 4],
+    [-1, -4],
+    [-3, 55.5],
+    [0, 31],
+    [-2.5, 35],
+    [-0.5, 23],
+    [0.5, 16],
+    [-4, 10.5],
+    [-6.5, -31],
+    [0, 5],
+    [-6, 6],
+    [0, -16],
+    [0, 5],
+  ];
 
   return (
-    <>
-      <div id="layout">
-        <div className="heading-container">
-          <div className="heading"></div>
-        </div>
-        <div id="name-container">
-          <span id="name">Nathan Seung</span>
-        </div>
-        <div className="plane-container">
-          <div className="fly-in">
-            <div className="plane plane-one"></div>
-            <div className="plane plane-two"></div>
-            <div className="plane plane-three"></div>
-            <div className="plane plane-four"></div>
-            <div className="plane plane-five"></div>
-            <div className="plane plane-six"></div>
-            <div className="plane plane-seven"></div>
-            <div className="plane plane-eight" id="pre-loading-plane"></div>
-            <div className="plane plane-nine"></div>
-            <div className="plane plane-nine" id="loading-plane"></div>
-          </div>
-          <div className="drop-in">
-            <div className="plane plane-one"></div>
-            <div className="plane plane-two"></div>
-            <div className="plane plane-three"></div>
-            <div className="plane plane-four"></div>
-            <div className="plane plane-five"></div>
-            <div className="plane plane-six"></div>
-            <div className="plane plane-seven"></div>
-            <div className="plane plane-eight"></div>
-            <div className="plane plane-nine"></div>
-            <div className="plane plane-ten" id="pre-last-plane"></div>
-            <div className="plane plane-eleven"></div>
-            <div className="plane plane-eleven" id="last-plane"></div>
-          </div>
-        </div>
-      </div>
-    </>
+    <PlaneSequence
+      phaseFrames={phaseFrames}
+      frameCoordinates={frameCoordinates}
+      interval={250}
+    />
   );
 };
 

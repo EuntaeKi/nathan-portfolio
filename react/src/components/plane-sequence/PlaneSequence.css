@@ -1,0 +1,22 @@
+.rotate {
+    animation: plane-hover 2.5s ease-out infinite normal;
+}
+
+.rotate:hover {
+    animation: none;
+    cursor: pointer;
+}
+
+@keyframes plane-hover {
+    0% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(8deg);
+    }
+}

@@ -1,9 +1,10 @@
 import React from "react";
 
 import "./Main.css";
-import tree from "../../assets/img/main_tree.png";
 
 const Main = () => {
+  const tree = `${process.env.PUBLIC_URL}/img/main_tree.png`;
+
   return (
     <>
       <div id="main-container">
