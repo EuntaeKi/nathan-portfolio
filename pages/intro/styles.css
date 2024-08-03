@@ -164,9 +164,9 @@
         content: 'SHIP APPROACHING.....';
     }
 
-    100% {
+    /* 100% {
         content: 'SHIP APPROACHING.....';
-    }
+    } */
 }
 
 .plane-container {

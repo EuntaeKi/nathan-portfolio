@@ -9,7 +9,7 @@ function Header() {
     <div id="header">
       {/* Header Component for Routing */}
       <nav id="header-navigation">
-        <Link to="/intro">
+        <Link to="/">
           <img src={logo} alt="Logo_Nathan-Seung" />
         </Link>
         <ul id="header-navigation-list">

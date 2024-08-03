@@ -17,12 +17,6 @@ const showHeader = !noHeaderPages.includes(window.location.pathname);
 
 const router = createBrowserRouter([
   {
-    // path: "/",
-    // element: (
-    //   <Layout showHeader={showHeader}>
-    //     <Main />
-    //   </Layout>
-    // ),
     path: "*",
     element: <Root />,
   },

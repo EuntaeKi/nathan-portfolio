@@ -1,5 +1,6 @@
 .rotate {
-    animation: plane-hover 2.5s ease-out infinite normal;
+    animation: plane-rotate 1.2s ease-in-out infinite normal;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .rotate:hover {
@@ -7,7 +8,7 @@
     cursor: pointer;
 }
 
-@keyframes plane-hover {
+@keyframes plane-rotate {
     0% {
         transform: rotate(8deg);
     }

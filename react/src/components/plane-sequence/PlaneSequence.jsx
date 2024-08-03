@@ -1,18 +1,41 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "./PlaneSequence.css";
 
-const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
+const PlaneSequence = ({ phaseFrames, interval, phase, setPhase }) => {
+  const navigate = useNavigate();
   const canvasRef = useRef(null);
   const [images, setImages] = useState([]);
   const [frameIndex, setFrameIndex] = useState(0);
-  const [x, setX] = useState(frameCoordinates[0][0]);
-  const [y, setY] = useState(frameCoordinates[0][1]);
-  const [phase, setPhase] = useState(1);
   const [rotate, setRotate] = useState(false);
   // Trigger clear on user click from phase 2 to 3 requires to be factored out
   const [intervalId, setIntervalId] = useState(null);
-  // Function to get the image source based on the fr   ame index
+  const [frameCoordinates] = useState([
+    [64, 34],
+    [-52, 16],
+    [15, 33],
+    [-15, 37.5],
+    [111.5, 52],
+    [117, 44.5],
+    [53, 4],
+    [-1, -4],
+    [-3, 55.5],
+    [0, 31],
+    [-2.5, 35],
+    [-0.5, 23],
+    [0.5, 16],
+    [-4, 10.5],
+    [-6.5, -31],
+    [0, 5],
+    [-6, 6],
+    [0, -16],
+    [0, 5],
+  ]);
+  const [x, setX] = useState(frameCoordinates[0][0]);
+  const [y, setY] = useState(frameCoordinates[0][1]);
+
+  // Function to get the image source based on the frame index
   const getCurrentFrame = (index) =>
     `${process.env.PUBLIC_URL}/img/intro_${index
       .toString()
@@ -20,17 +43,6 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
 
   // Preload images
   useEffect(() => {
-    // Adjust coordinates to the center
-    const element = canvasRef.current;
-    if (element) {
-      const rect = element.getBoundingClientRect();
-      frameCoordinates[0][0] = rect.left + rect.width / 2 + 64;
-      frameCoordinates[0][1] = rect.top + rect.height / 2 + 34;
-      console.log(rect);
-      setX(frameCoordinates[0][0]);
-      setY(frameCoordinates[0][1]);
-    }
-
     // Load image files
     const preloadImages = () => {
       const loadedImages = [];
@@ -58,12 +70,17 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
     preloadImages();
   }, [phaseFrames, frameCoordinates]);
 
-  // Set up the canvas and render the images
+  // Initialize the canvas
   useEffect(() => {
     const context = canvasRef.current.getContext("2d");
-    context.canvas.width = 300;
-    context.canvas.height = 200;
+    // Clickable image size
+    context.canvas.width = 218;
+    context.canvas.height = 85;
+  }, []);
 
+  // Image rendering process
+  useEffect(() => {
+    const context = canvasRef.current.getContext("2d");
     const render = () => {
       if (images.length > 0) {
         context.clearRect(0, 0, context.canvas.width, context.canvas.height);
@@ -75,16 +92,22 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
     render();
   }, [frameIndex, images]);
 
-  // Handle click event to start the second phase
+  // Click handler to start the second phase
   const handleClick = () => {
     if (phase === 2) {
       clearInterval(intervalId);
       setRotate(false);
       setPhase(3);
-      setFrameIndex(phaseFrames[0] + phaseFrames[1]); // Start from the first frame of the second phase
+      // Start from the first frame of the second phase
+      setFrameIndex(phaseFrames[0] + phaseFrames[1]);
+      // Update canvas dimensions
+      const context = canvasRef.current.getContext("2d");
+      context.canvas.width = 300;
+      context.canvas.height = 200;
     }
   };
 
+  // Phase logics
   useEffect(() => {
     let id, rotationId;
     if (phase === 1) {
@@ -121,10 +144,15 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
             return prevIndex + 1;
           } else {
             clearInterval(id);
+            setPhase(4);
             return prevIndex;
           }
         });
       }, interval);
+    } else {
+      id = setInterval(() => {
+        navigate("/");
+      }, 1500);
     }
 
     setIntervalId(id);
@@ -133,7 +161,7 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
       clearInterval(id);
       clearInterval(rotationId);
     };
-  }, [phase, interval, phaseFrames, x, y, frameCoordinates]);
+  }, [phase, interval, phaseFrames, x, y, frameCoordinates, setPhase]);
 
   return (
     <canvas
@@ -141,6 +169,7 @@ const PlaneSequence = ({ phaseFrames, frameCoordinates, interval }) => {
       ref={canvasRef}
       onClick={handleClick}
       style={{
+        // The container is relative, allowing translation of image over time
         position: "absolute",
         left: `${x}px`,
         top: `${y}px`,
