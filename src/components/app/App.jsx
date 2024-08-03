@@ -1,4 +1,3 @@
-// Library Imports
 import {
   Routes,
   Route,
@@ -6,21 +5,20 @@ import {
   RouterProvider,
 } from "react-router-dom";
 
-// Project Imports
 import "./App.css";
 import Layout from "../../components/layout/Layout";
 import Main from "../../pages/main/Main";
 import Intro from "../../pages/intro/Intro";
 
-const noHeaderPages = ["/intro"];
-const showHeader = !noHeaderPages.includes(window.location.pathname);
-
-const router = createBrowserRouter([
-  {
-    path: "*",
-    element: <Root />,
-  },
-]);
+const router = createBrowserRouter(
+  [
+    {
+      path: "*",
+      element: <Root />,
+    },
+  ],
+  { basename: "/nathan-portfolio" } // Set the basename here
+);
 
 const App = () => {
   return (
@@ -34,7 +32,7 @@ function Root() {
   return (
     <Routes>
       <Route
-        path="/"
+        path="/home"
         element={
           <Layout showHeader={true}>
             <Main />
@@ -42,7 +40,7 @@ function Root() {
         }
       />
       <Route
-        path="/intro"
+        path="/"
         element={
           <Layout showHeader={false}>
             <Intro />

@@ -9,15 +9,15 @@ function Header() {
     <div id="header">
       {/* Header Component for Routing */}
       <nav id="header-navigation">
-        <Link to="/">
+        <Link to="/home">
           <img src={logo} alt="Logo_Nathan-Seung" />
         </Link>
         <ul id="header-navigation-list">
           <li>
-            <NavLink to="/intro">Intro</NavLink>
+            <NavLink to="/">Intro</NavLink>
           </li>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/home">Home</NavLink>
           </li>
           <li>
             <NavLink to="/about">About</NavLink>

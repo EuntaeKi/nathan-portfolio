@@ -151,7 +151,7 @@ const PlaneSequence = ({ phaseFrames, interval, phase, setPhase }) => {
       }, interval);
     } else {
       id = setInterval(() => {
-        navigate("/");
+        navigate("/home");
       }, 1500);
     }
 
@@ -161,7 +161,16 @@ const PlaneSequence = ({ phaseFrames, interval, phase, setPhase }) => {
       clearInterval(id);
       clearInterval(rotationId);
     };
-  }, [phase, interval, phaseFrames, x, y, frameCoordinates, setPhase]);
+  }, [
+    phase,
+    interval,
+    phaseFrames,
+    x,
+    y,
+    frameCoordinates,
+    setPhase,
+    navigate,
+  ]);
 
   return (
     <canvas
