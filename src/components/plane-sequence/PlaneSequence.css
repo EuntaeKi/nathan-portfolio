@@ -1,0 +1,23 @@
+.rotate {
+    animation: plane-rotate 1.2s ease-in-out infinite normal;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotate:hover {
+    animation: none;
+    cursor: pointer;
+}
+
+@keyframes plane-rotate {
+    0% {
+        transform: rotate(8deg);
+    }
+
+    50% {
+        transform: rotate(-8deg);
+    }
+
+    100% {
+        transform: rotate(8deg);
+    }
+}
