@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {
   Routes,
   Route,
@@ -9,26 +10,11 @@ import "./App.css";
 import Layout from "../../components/layout/Layout";
 import Main from "../../pages/main/Main";
 import Intro from "../../pages/intro/Intro";
+import About from "../../pages/about/About";
 
-const router = createBrowserRouter(
-  [
-    {
-      path: "*",
-      element: <Root />,
-    },
-  ],
-  { basename: "/nathan-portfolio" } // Set the basename here
-);
+const Root = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
 
-const App = () => {
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
-};
-
-function Root() {
   return (
     <Routes>
       <Route
@@ -47,8 +33,34 @@ function Root() {
           </Layout>
         }
       />
+      <Route
+        path="/about"
+        element={
+          <Layout showHeader={true} showOverlay={showOverlay} color="rgba(0, 0, 0, 0.08)">
+            <About setShowOverlay={setShowOverlay} />
+          </Layout>
+        }
+      />
     </Routes>
   );
 }
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "*",
+      element: <Root />,
+    },
+  ],
+  { basename: "/nathan-portfolio" } // Set the basename here
+);
+
+const App = () => {
+  return (
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+};
 
 export default App;

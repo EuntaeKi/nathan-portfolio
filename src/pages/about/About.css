@@ -1,0 +1,21 @@
+@import url(../../components/app/App.css);
+
+.about-container {
+    display: contents;
+}
+
+.slide {
+    animation-duration: 0.5s;
+    animation-name: slidedown;
+}
+
+@keyframes slidedown {
+    from {
+        transform: translateY(-20%);
+    }
+  
+    to {
+        transform: translateY(0);
+    }
+  }
+

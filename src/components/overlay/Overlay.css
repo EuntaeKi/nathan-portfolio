@@ -1,0 +1,21 @@
+/* Note: Path is from components folder */
+@import url(../app/App.css);
+
+#overlay {
+  background-color: #66666650;
+}
+
+.blink {
+  animation: blink 1s;
+  animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
