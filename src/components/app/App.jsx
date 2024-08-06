@@ -14,6 +14,7 @@ import About from "../../pages/about/About";
 
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
+  const [overlayColor, setOverlayColor] = useState("#00000050");
 
   return (
     <Routes>
@@ -36,14 +37,21 @@ const Root = () => {
       <Route
         path="/about"
         element={
-          <Layout showHeader={true} showOverlay={showOverlay} color="rgba(0, 0, 0, 0.08)">
-            <About setShowOverlay={setShowOverlay} />
+          <Layout
+            showHeader={true}
+            showOverlay={showOverlay}
+            overlayColor={overlayColor}
+          >
+            <About
+              setShowOverlay={setShowOverlay}
+              setOverlayColor={setOverlayColor}
+            />
           </Layout>
         }
       />
     </Routes>
   );
-}
+};
 
 const router = createBrowserRouter(
   [

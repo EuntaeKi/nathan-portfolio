@@ -4,10 +4,10 @@ import Header from "../header/Header";
 import Overlay from "../overlay/Overlay";
 import "./Layout.css";
 
-const Layout = ({ children, showHeader, showOverlay }) => {
+const Layout = ({ children, showHeader, showOverlay, overlayColor }) => {
   return (
     <>
-      <Overlay trigger={showOverlay} />
+      <Overlay trigger={showOverlay} color={overlayColor} />
       <div className="layout-container">
         {showHeader && <Header />}
         {children}
