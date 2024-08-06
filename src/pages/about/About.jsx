@@ -24,6 +24,11 @@ const About = ({ setShowOverlay, setOverlayColor }) => {
     } else if (phase === 3) {
       setShowOverlay(true);
       setOverlayColor("#000000");
+      id = setTimeout(() => {
+        setPhase(4);
+      }, 2500);
+    } else if (phase === 4) {
+      setOverlayColor("#EC7979");
     }
 
     return () => {
@@ -40,6 +45,12 @@ const About = ({ setShowOverlay, setOverlayColor }) => {
         style={{ display: phase === 0 ? "none" : "block" }}
       />
       {phase < 3 && <Main className={phase === 0 ? "" : "slide"} />}
+      {
+        phase > 3 &&
+        <>
+          <p>Nathan is a designer who loves simplicity and practicality. </p>
+        </>
+      }
     </>
   );
 };
