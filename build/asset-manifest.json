@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.def44133.css",
-    "main.js": "/nathan-portfolio/static/js/main.0891be8f.js",
+    "main.css": "/nathan-portfolio/static/css/main.748b1f38.css",
+    "main.js": "/nathan-portfolio/static/js/main.757d00d3.js",
     "static/media/ClashDisplay-Variable.ttf": "/nathan-portfolio/static/media/ClashDisplay-Variable.e7f67b72cbf79f80c9c7.ttf",
     "static/media/ClashDisplay-Light.ttf": "/nathan-portfolio/static/media/ClashDisplay-Light.65f6b9963b2bc29f88d0.ttf",
     "static/media/ClashDisplay-Extralight.ttf": "/nathan-portfolio/static/media/ClashDisplay-Extralight.4b744d1b1e49894d8db2.ttf",
@@ -24,11 +24,11 @@
     "static/media/ClashDisplay-Bold.woff2": "/nathan-portfolio/static/media/ClashDisplay-Bold.e2f8628a6f360f644a76.woff2",
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
-    "main.def44133.css.map": "/nathan-portfolio/static/css/main.def44133.css.map",
-    "main.0891be8f.js.map": "/nathan-portfolio/static/js/main.0891be8f.js.map"
+    "main.748b1f38.css.map": "/nathan-portfolio/static/css/main.748b1f38.css.map",
+    "main.757d00d3.js.map": "/nathan-portfolio/static/js/main.757d00d3.js.map"
   },
   "entrypoints": [
-    "static/css/main.def44133.css",
-    "static/js/main.0891be8f.js"
+    "static/css/main.748b1f38.css",
+    "static/js/main.757d00d3.js"
   ]
 }
