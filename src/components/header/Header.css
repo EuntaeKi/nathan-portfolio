@@ -24,16 +24,20 @@
   height: 100%;
 }
 
+#header-navigation a.active {
+  text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px, 0px 0px 80px;
+}
+
 #header-navigation-list {
   display: flex;
   column-gap: var(--header-nav-item-gap);
 
   & li {
     font-size: var(--header-nav-item-font-size);
-    font-family: var(--header-nav-item-font-family);
 
     & a {
-        text-decoration: none;
-      }
+      text-decoration: none;
+      font-family: var(--header-nav-item-font-family);
+    }
   }
 }

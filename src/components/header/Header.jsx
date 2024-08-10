@@ -2,7 +2,7 @@ import { NavLink, Link } from "react-router-dom";
 
 import "./Header.css";
 
-function Header() {
+function Header({ pageColor }) {
   const logo = `${process.env.PUBLIC_URL}/img/logo.png`;
 
   return (
@@ -14,13 +14,13 @@ function Header() {
         </Link>
         <ul id="header-navigation-list">
           <li>
-            <NavLink to="/">Intro</NavLink>
+            <NavLink to="/" style={{ color: pageColor }}>Intro</NavLink>
           </li>
           <li>
-            <NavLink to="/home">Home</NavLink>
+            <NavLink to="/home" style={{ color: pageColor }}>Home</NavLink>
           </li>
           <li>
-            <NavLink to="/about">About</NavLink>
+            <NavLink to="/about" style={{ color: pageColor }}>About</NavLink>
           </li>
         </ul>
       </nav>

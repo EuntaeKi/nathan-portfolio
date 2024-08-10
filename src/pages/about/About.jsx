@@ -2,53 +2,78 @@ import React, { useEffect, useState } from "react";
 
 import "./About.css";
 import Main from "../main/Main";
+import Light from "../../components/light/Light";
 
-const About = ({ setShowOverlay, setOverlayColor }) => {
-  const light = `${process.env.PUBLIC_URL}/img/light.png`;
+const About = ({ setShowOverlay, setOverlayColor, setPageColor, pageColor }) => {
   const [phase, setPhase] = useState(0);
 
-  // Inject light image
   useEffect(() => {
     let id;
     // Factor out the overlay blink logic to Overlay
     if (phase === 0) {
       setPhase(1);
     } else if (phase === 1) {
-      setPhase(2);
-      setShowOverlay(true);
+      id = setTimeout(() => {
+        setPhase(2);
+        setShowOverlay(true);
+      }, 500);
     } else if (phase === 2) {
       id = setTimeout(() => {
         setShowOverlay(false);
         setPhase(3);
-      }, 2500);
+      }, 3000);
     } else if (phase === 3) {
       setShowOverlay(true);
       setOverlayColor("#000000");
-      id = setTimeout(() => {
-        setPhase(4);
-      }, 2500);
+      setPhase(4);
     } else if (phase === 4) {
-      setOverlayColor("#EC7979");
+      setShowOverlay(false);
+      setPageColor("#EC7979");
     }
 
     return () => {
       clearTimeout(id);
+      setPageColor("#FFFFFF")
     };
-  }, [phase, setShowOverlay, setOverlayColor]);
+  }, [phase, setShowOverlay, setOverlayColor, setPageColor]);
 
   return (
     <>
-      <img
-        src={light}
-        alt="Light"
-        className="slide"
-        style={{ display: phase === 0 ? "none" : "block" }}
-      />
+      <Light display={phase !== 0} />
       {phase < 3 && <Main className={phase === 0 ? "" : "slide"} />}
       {
         phase > 3 &&
         <>
-          <p>Nathan is a designer who loves simplicity and practicality. </p>
+          <div className="about-container">
+            <div className="about-description-container">
+              <p className="about-description">
+                is a UX/UI designer and a formal psychology researcher who dedicated his work on various multi-disciplinary research studies for 3 years. Now he is applying this background to expand his passion in influencing the world through research-based projects by his UX/UI designs. He understands the dynamics of research and how to connect the collected data to life through this designs.
+              </p>
+            </div>
+            <div className="about-resume-container">
+              <div className="about-resume-category">
+                <span>Contact</span>
+                <ul>
+                  <li>
+                    <a href="mailto:jeungha89@gmail.com" style={{ color: pageColor }}>jeungha89@gmail.com</a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/nathan-seung-174b63203/" style={{ color: pageColor }}>LinkedIn</a>
+                  </li>
+                  <li>
+                    <a href="mailto:jeungha89@gmail.com" style={{ color: pageColor }}>Resume</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="about-resume-category">
+                <span>Experience</span>
+              </div>
+              <div className="about-resume-category">
+                <span>Capabilities</span>
+              </div>
+            </div>
+          </div>
+
         </>
       }
     </>

@@ -5,6 +5,10 @@
   position: absolute;
   width: 100vw;
   height: 100vh;
+  /* filter: brightness(0) saturate(100%) sepia(13%) saturate(4117%) hue-rotate(313deg) contrast(86%);
+  mask-image: url(../../../public/img/light_mask.svg);
+  mask-size: 100%;
+  mask-repeat: no-repeat; */
 }
 
 .blink {
@@ -16,16 +20,20 @@
   20% {
     opacity: 0;
   }
+
   30% {
     opacity: 1;
   }
+
   40% {
     opacity: 0;
   }
+
   60% {
     opacity: 1;
   }
-  100% {
+
+  90% {
     opacity: 0;
   }
 }

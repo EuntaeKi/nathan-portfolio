@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
   Routes,
   Route,
@@ -14,15 +14,34 @@ import About from "../../pages/about/About";
 
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [overlayColor, setOverlayColor] = useState("#00000050");
+  const [overlayColor, setOverlayColor] = useState("#00000040");
+  const [pageColor, setPageColor] = useState("#FFFFFF");
+
+  useEffect(() => {
+    if (pageColor === "#FFFFFF") {
+      document.documentElement.classList.remove('html-red');
+      document.documentElement.classList.remove('html-blue');
+      document.documentElement.classList.add('html-white');
+    } else if (pageColor === "#85ECE0") {
+      document.documentElement.classList.remove('html-red');
+      document.documentElement.classList.remove('html-white');
+      document.documentElement.classList.add('html-blue');
+    } else if (pageColor === "#EC7979") {
+      document.documentElement.classList.remove('html-white');
+      document.documentElement.classList.remove('html-blue');
+      document.documentElement.classList.add('html-red');
+    }
+  })
 
   return (
     <Routes>
       <Route
         path="/home"
         element={
-          <Layout showHeader={true}>
-            <Main />
+          <Layout showHeader={true}
+            pageColor={pageColor}>
+            <Main
+              setPageColor={setPageColor} />
           </Layout>
         }
       />
@@ -41,10 +60,13 @@ const Root = () => {
             showHeader={true}
             showOverlay={showOverlay}
             overlayColor={overlayColor}
+            pageColor={pageColor}
           >
             <About
               setShowOverlay={setShowOverlay}
               setOverlayColor={setOverlayColor}
+              setPageColor={setPageColor}
+              pageColor={pageColor}
             />
           </Layout>
         }
