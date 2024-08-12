@@ -12,6 +12,9 @@ import Main from "../../pages/main/Main";
 import Intro from "../../pages/intro/Intro";
 import About from "../../pages/about/About";
 
+/* To Fix
+ * - Intro animation bug
+ */
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayColor, setOverlayColor] = useState("#00000040");

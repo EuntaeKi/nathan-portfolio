@@ -27,8 +27,10 @@ const About = ({ setShowOverlay, setOverlayColor, setPageColor, pageColor }) => 
       setOverlayColor("#000000");
       setPhase(4);
     } else if (phase === 4) {
-      setShowOverlay(false);
-      setPageColor("#EC7979");
+      id = setTimeout(() => {
+        setShowOverlay(false);
+        setPageColor("#EC7979");
+      }, 1000);
     }
 
     return () => {
