@@ -2,9 +2,10 @@
 
 .about-container {
     display: contents;
+    font-family: 'Inter', system-ui;
 }
 
-.slide {
+.slide-down {
     animation-duration: 0.5s;
     animation-name: slidedown;
 }
@@ -16,27 +17,63 @@
     justify-content: space-between;
     font-size: 1.125rem;
     line-height: 2.125rem;
-    letter-spacing: -10%;
+    letter-spacing: -1.5px;
 }
 
-.about-resume-category {
+.about-resume-header {
     display: flex;
     flex-direction: column;
 }
 
-.about-resume-category span {
-    font-family: 'Inter', system-ui;
+.about-resume-header span {
     font-weight: 700;
     font-size: 1.75rem;
 }
 
-.about-resume-category li {
-    margin-bottom: 0.5rem;
+.about-resume-subitems li {
+    list-style-type: disc;
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.about-logo {
+    margin-left: -5rem;
+    margin-bottom: -3.5rem;
+    animation: logo-blink 3s infinite;
+    animation-timing-function: ease;
+    opacity: 1;
+}
+
+@keyframes logo-blink {
+    0% {
+        filter: drop-shadow(0 0 5px #EC7979) drop-shadow(0 0 40px #EC7979);
+    }
+
+    37% {
+        opacity: 1;
+    }
+
+    40% {
+        filter: drop-shadow(0 0 5px #EC7979) drop-shadow(0 0 40px #EC7979);
+        opacity: 0.7;
+    }
+
+    43% {
+        opacity: 1;
+    }
+
+    70% {
+        filter: drop-shadow(0 0 5px #EC7979) drop-shadow(0 0 40px #EC7979);
+    }
+
+    100% {
+        filter: none;
+    }
 }
 
 .about-description {
     width: 50vw;
-    font-family: 'Inter', system-ui;
     font-weight: 400;
     font-size: 1.5rem;
     line-height: 2.5rem;

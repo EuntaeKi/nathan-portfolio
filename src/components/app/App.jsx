@@ -14,12 +14,17 @@ import About from "../../pages/about/About";
 
 /* To Fix
  * - Intro animation bug
+ * - Light Masking
+ * - Light Fixture Disappearing Animation
+ * - Project Page
  */
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayColor, setOverlayColor] = useState("#00000040");
   const [pageColor, setPageColor] = useState("#FFFFFF");
+  const [isPreviousPageIntro, setIsPreviousPageIntro] = useState("false");
 
+  // Change the text color of the HTML based on page color
   useEffect(() => {
     if (pageColor === "#FFFFFF") {
       document.documentElement.classList.remove('html-red');
@@ -44,7 +49,11 @@ const Root = () => {
           <Layout showHeader={true}
             pageColor={pageColor}>
             <Main
-              setPageColor={setPageColor} />
+              showLight={!isPreviousPageIntro}
+              setPageColor={setPageColor}
+              pageColor={pageColor}
+              setOverlayColor={setOverlayColor}
+              actualPageRender={true} />
           </Layout>
         }
       />
@@ -52,7 +61,9 @@ const Root = () => {
         path="/"
         element={
           <Layout showHeader={false}>
-            <Intro />
+            <Intro
+              setIsPreviousPageIntro={setIsPreviousPageIntro}
+            />
           </Layout>
         }
       />

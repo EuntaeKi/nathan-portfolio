@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PlaneSequence from "../../components/plane-sequence/PlaneSequence";
 import "./Intro.css";
 
-const Intro = () => {
+const Intro = ({ setIsPreviousPageIntro }) => {
   // Broken up by different phases
   const phaseFrames = [8, 1, 10];
 
   // 1 is the start, 4 is the end
   const [phase, setPhase] = useState(1);
+
+  useEffect(() => {
+    if (phase === 3) {
+      setIsPreviousPageIntro(true);
+    }
+  }, [phase, setIsPreviousPageIntro])
 
   return (
     <>
