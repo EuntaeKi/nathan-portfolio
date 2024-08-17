@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/nathan-portfolio/static/css/main.1e41716e.css",
-    "main.js": "/nathan-portfolio/static/js/main.d922ff66.js",
+    "main.js": "/nathan-portfolio/static/js/main.3e1197bf.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/nathan-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/ClashDisplay-Variable.ttf": "/nathan-portfolio/static/media/ClashDisplay-Variable.e7f67b72cbf79f80c9c7.ttf",
     "static/media/ClashDisplay-Light.ttf": "/nathan-portfolio/static/media/ClashDisplay-Light.65f6b9963b2bc29f88d0.ttf",
@@ -26,10 +26,10 @@
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
     "main.1e41716e.css.map": "/nathan-portfolio/static/css/main.1e41716e.css.map",
-    "main.d922ff66.js.map": "/nathan-portfolio/static/js/main.d922ff66.js.map"
+    "main.3e1197bf.js.map": "/nathan-portfolio/static/js/main.3e1197bf.js.map"
   },
   "entrypoints": [
     "static/css/main.1e41716e.css",
-    "static/js/main.d922ff66.js"
+    "static/js/main.3e1197bf.js"
   ]
 }
