@@ -3,22 +3,41 @@ import React, { useEffect } from "react";
 import "./Main.css";
 import Light from "../../components/light/Light";
 
-const Main = ({ pageColor, showLight, setOverlayColor, actualPageRender }) => {
+const Main = ({
+  pageColor,
+  isPreviousPageIntro,
+  setOverlayColor,
+  actualPageRender,
+  setIsPreviousPageIntro,
+}) => {
   const tree = `${process.env.PUBLIC_URL}/img/main_tree.png`;
 
   useEffect(() => {
+    let intervalId;
+
     if (actualPageRender) {
       setOverlayColor("#00000040");
     }
 
-    // if () {
+    if (isPreviousPageIntro) {
+      intervalId = setTimeout(() => {
+        setIsPreviousPageIntro(true);
+      }, 1000);
+    }
 
-    // }
-  }, [setOverlayColor, actualPageRender])
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [
+    setOverlayColor,
+    actualPageRender,
+    isPreviousPageIntro,
+    setIsPreviousPageIntro,
+  ]);
 
   return (
     <>
-      <Light display={showLight} color={pageColor} />
+      <Light display={isPreviousPageIntro} color={pageColor} />
       <div id="main-container">
         <span id="main-description">
           <span id="main-name">Nathan Seung</span>

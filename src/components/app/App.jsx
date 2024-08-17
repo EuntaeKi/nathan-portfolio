@@ -27,33 +27,34 @@ const Root = () => {
   // Change the text color of the HTML based on page color
   useEffect(() => {
     if (pageColor === "#FFFFFF") {
-      document.documentElement.classList.remove('html-red');
-      document.documentElement.classList.remove('html-blue');
-      document.documentElement.classList.add('html-white');
+      document.documentElement.classList.remove("html-red");
+      document.documentElement.classList.remove("html-blue");
+      document.documentElement.classList.add("html-white");
     } else if (pageColor === "#85ECE0") {
-      document.documentElement.classList.remove('html-red');
-      document.documentElement.classList.remove('html-white');
-      document.documentElement.classList.add('html-blue');
+      document.documentElement.classList.remove("html-red");
+      document.documentElement.classList.remove("html-white");
+      document.documentElement.classList.add("html-blue");
     } else if (pageColor === "#EC7979") {
-      document.documentElement.classList.remove('html-white');
-      document.documentElement.classList.remove('html-blue');
-      document.documentElement.classList.add('html-red');
+      document.documentElement.classList.remove("html-white");
+      document.documentElement.classList.remove("html-blue");
+      document.documentElement.classList.add("html-red");
     }
-  })
+  });
 
   return (
     <Routes>
       <Route
         path="/home"
         element={
-          <Layout showHeader={true}
-            pageColor={pageColor}>
+          <Layout showHeader={true} pageColor={pageColor}>
             <Main
-              showLight={!isPreviousPageIntro}
+              isPreviousPageIntro={!isPreviousPageIntro}
+              setIsPreviousPageIntro={setIsPreviousPageIntro}
               setPageColor={setPageColor}
               pageColor={pageColor}
               setOverlayColor={setOverlayColor}
-              actualPageRender={true} />
+              actualPageRender={true}
+            />
           </Layout>
         }
       />
@@ -61,9 +62,7 @@ const Root = () => {
         path="/"
         element={
           <Layout showHeader={false}>
-            <Intro
-              setIsPreviousPageIntro={setIsPreviousPageIntro}
-            />
+            <Intro setIsPreviousPageIntro={setIsPreviousPageIntro} />
           </Layout>
         }
       />
@@ -81,6 +80,7 @@ const Root = () => {
               setOverlayColor={setOverlayColor}
               setPageColor={setPageColor}
               pageColor={pageColor}
+              setIsPreviousPageIntro={setIsPreviousPageIntro}
             />
           </Layout>
         }
