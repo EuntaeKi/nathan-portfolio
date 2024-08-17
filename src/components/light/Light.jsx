@@ -2,21 +2,69 @@ import React, { useEffect, useState } from "react";
 
 import "./Light.css";
 
-const Light = ({ color, display, slideType }) => {
+const Light = ({
+  display,
+  pageColor,
+  triggerBlink,
+  setTriggerBlink,
+  slideType,
+  setShowOverlay,
+  setOverlayColor,
+}) => {
   const [light, setLight] = useState(`${process.env.PUBLIC_URL}/img/light.png`);
+  const [phase, setPhase] = useState(0);
 
   // Change the color of light based on the parameter
   useEffect(() => {
-    if (color === "#FFFFFF") {
-      setLight(`${process.env.PUBLIC_URL}/img/light.png`)
-    } else if (color === "#85ECE0") {
-      setLight(`${process.env.PUBLIC_URL}/img/light_blue.png`)
-      // setLight(`${process.env.PUBLIC_URL}/img/light.png`)
-    } else if (color === "#EC7979") {
-      setLight(`${process.env.PUBLIC_URL}/img/light_red.png`)
-      // setLight(`${process.env.PUBLIC_URL}/img/light.png`)
+    if (pageColor === "#FFFFFF") {
+      setLight(`${process.env.PUBLIC_URL}/img/light.png`);
+    } else if (pageColor === "#85ECE0") {
+      setLight(`${process.env.PUBLIC_URL}/img/light_blue.png`);
+    } else if (pageColor === "#EC7979") {
+      setLight(`${process.env.PUBLIC_URL}/img/light_red.png`);
     }
-  }, [color, setLight]);
+  }, [pageColor, setLight]);
+
+  // Blink Logic
+  useEffect(() => {
+    let id;
+    if (triggerBlink) {
+      if (phase === 0) {
+        setPhase(1);
+      } else if (phase === 1) {
+        id = setTimeout(() => {
+          setPhase(2);
+          setShowOverlay(true);
+        }, 500);
+      } else if (phase === 2) {
+        id = setTimeout(() => {
+          setShowOverlay(false);
+          setPhase(3);
+        }, 3000);
+      } else if (phase === 3) {
+        setShowOverlay(true);
+        setOverlayColor("#000000");
+        setPhase(4);
+      } else if (phase === 4) {
+        id = setTimeout(() => {
+          setShowOverlay(false);
+          setTriggerBlink(false);
+        }, 1000);
+      }
+    }
+
+    return () => {
+      if (id) clearTimeout(id);
+    };
+  }, [triggerBlink, phase, pageColor, setTriggerBlink, setShowOverlay, setOverlayColor]);
+
+  // Component Dismount Logic
+  useEffect(() => {
+    if (!triggerBlink) {
+      setOverlayColor("#00000040");
+      setPhase(0);
+    }
+  }, [triggerBlink]);
 
   return (
     <img

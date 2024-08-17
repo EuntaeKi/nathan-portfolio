@@ -2,42 +2,36 @@ import React, { useEffect } from "react";
 
 import "./Main.css";
 import Light from "../../components/light/Light";
+import usePreviousLocation from '../../contexts/usePreviousLocation';
 
 const Main = ({
   pageColor,
-  isPreviousPageIntro,
+  setPageColor,
+  triggerBlink,
+  setTriggerBlink,
   setOverlayColor,
-  actualPageRender,
-  setIsPreviousPageIntro,
+  setShowOverlay,
 }) => {
   const tree = `${process.env.PUBLIC_URL}/img/main_tree.png`;
+  const previousLocation = usePreviousLocation();
 
   useEffect(() => {
-    let intervalId;
-
-    if (actualPageRender) {
-      setOverlayColor("#00000040");
-    }
-
-    if (isPreviousPageIntro) {
-      intervalId = setTimeout(() => {
-        setIsPreviousPageIntro(true);
-      }, 1000);
-    }
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, [
-    setOverlayColor,
-    actualPageRender,
-    isPreviousPageIntro,
-    setIsPreviousPageIntro,
-  ]);
+    setPageColor("#FFFFFF");
+    console.log(triggerBlink, previousLocation)
+  }, [triggerBlink, setPageColor, previousLocation])
 
   return (
     <>
-      <Light display={isPreviousPageIntro} color={pageColor} />
+      <Light
+        display={triggerBlink && previousLocation && previousLocation.pathname !== "/"}
+        pageColor={pageColor}
+        triggerBlink={triggerBlink}
+        setTriggerBlink={setTriggerBlink}
+        setPageColor={setPageColor}
+        setShowOverlay={setShowOverlay}
+        setOverlayColor={setOverlayColor}
+        slideType="up"
+      />
       <div id="main-container">
         <span id="main-description">
           <span id="main-name">Nathan Seung</span>

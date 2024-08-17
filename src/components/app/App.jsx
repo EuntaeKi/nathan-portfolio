@@ -3,7 +3,7 @@ import {
   Routes,
   Route,
   createBrowserRouter,
-  RouterProvider,
+  RouterProvider
 } from "react-router-dom";
 
 import "./App.css";
@@ -22,7 +22,7 @@ const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayColor, setOverlayColor] = useState("#00000040");
   const [pageColor, setPageColor] = useState("#FFFFFF");
-  const [isPreviousPageIntro, setIsPreviousPageIntro] = useState("false");
+  const [triggerBlink, setTriggerBlink] = useState(false);
 
   // Change the text color of the HTML based on page color
   useEffect(() => {
@@ -46,14 +46,21 @@ const Root = () => {
       <Route
         path="/home"
         element={
-          <Layout showHeader={true} pageColor={pageColor}>
+          <Layout
+            showHeader={true}
+            pageColor={pageColor}
+            showOverlay={showOverlay}
+            overlayColor={overlayColor}
+            triggerBlink={triggerBlink}
+            setTriggerBlink={setTriggerBlink}
+          >
             <Main
-              isPreviousPageIntro={!isPreviousPageIntro}
-              setIsPreviousPageIntro={setIsPreviousPageIntro}
-              setPageColor={setPageColor}
               pageColor={pageColor}
+              setPageColor={setPageColor}
+              triggerBlink={triggerBlink}
+              setTriggerBlink={setTriggerBlink}
+              setShowOverlay={setShowOverlay}
               setOverlayColor={setOverlayColor}
-              actualPageRender={true}
             />
           </Layout>
         }
@@ -62,7 +69,7 @@ const Root = () => {
         path="/"
         element={
           <Layout showHeader={false}>
-            <Intro setIsPreviousPageIntro={setIsPreviousPageIntro} />
+            <Intro />
           </Layout>
         }
       />
@@ -74,13 +81,16 @@ const Root = () => {
             showOverlay={showOverlay}
             overlayColor={overlayColor}
             pageColor={pageColor}
+            triggerBlink={triggerBlink}
+            setTriggerBlink={setTriggerBlink}
           >
             <About
+              pageColor={pageColor}
+              setPageColor={setPageColor}
+              triggerBlink={triggerBlink}
+              setTriggerBlink={setTriggerBlink}
               setShowOverlay={setShowOverlay}
               setOverlayColor={setOverlayColor}
-              setPageColor={setPageColor}
-              pageColor={pageColor}
-              setIsPreviousPageIntro={setIsPreviousPageIntro}
             />
           </Layout>
         }
