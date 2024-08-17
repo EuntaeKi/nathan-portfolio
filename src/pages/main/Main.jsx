@@ -15,9 +15,13 @@ const Main = ({
   const tree = `${process.env.PUBLIC_URL}/img/main_tree.png`;
   const previousLocation = usePreviousLocation();
 
+  // Figure out why the Main is calling PreviousLocation 3 times
   useEffect(() => {
     setPageColor("#FFFFFF");
-    console.log(triggerBlink, previousLocation)
+    // console.log(triggerBlink, previousLocation)
+    console.log('Main component render');
+    console.log('Trigger Blink:', triggerBlink);
+    console.log('Previous Location:', previousLocation);
   }, [triggerBlink, setPageColor, previousLocation])
 
   return (
