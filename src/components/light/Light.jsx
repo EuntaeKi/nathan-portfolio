@@ -40,7 +40,7 @@ const Light = ({
         id = setTimeout(() => {
           setShowOverlay(false);
           setPhase(3);
-        }, 3000);
+        }, 2000);
       } else if (phase === 3) {
         setShowOverlay(true);
         setOverlayColor("#000000");

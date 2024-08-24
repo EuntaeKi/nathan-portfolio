@@ -11,16 +11,16 @@ import Layout from "../../components/layout/Layout";
 import Main from "../../pages/main/Main";
 import Intro from "../../pages/intro/Intro";
 import About from "../../pages/about/About";
+import Projects from "../../pages/projects/Projects";
 
 /* To Fix
  * - Intro animation bug
  * - Light Masking
- * - Light Fixture Disappearing Animation
  * - Project Page
  */
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [overlayColor, setOverlayColor] = useState("#00000040");
+  const [overlayColor, setOverlayColor] = useState("#00000020");
   const [pageColor, setPageColor] = useState("#FFFFFF");
   const [triggerBlink, setTriggerBlink] = useState(false);
 
@@ -85,6 +85,28 @@ const Root = () => {
             setTriggerBlink={setTriggerBlink}
           >
             <About
+              pageColor={pageColor}
+              setPageColor={setPageColor}
+              triggerBlink={triggerBlink}
+              setTriggerBlink={setTriggerBlink}
+              setShowOverlay={setShowOverlay}
+              setOverlayColor={setOverlayColor}
+            />
+          </Layout>
+        }
+      />
+      <Route
+        path="/projects"
+        element={
+          <Layout
+            showHeader={true}
+            pageColor={pageColor}
+            showOverlay={showOverlay}
+            overlayColor={overlayColor}
+            triggerBlink={triggerBlink}
+            setTriggerBlink={setTriggerBlink}
+          >
+            <Projects
               pageColor={pageColor}
               setPageColor={setPageColor}
               triggerBlink={triggerBlink}

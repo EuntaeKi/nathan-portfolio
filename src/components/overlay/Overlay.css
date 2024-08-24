@@ -6,14 +6,12 @@
   width: 100vw;
   height: 100vh;
   z-index: 9999;
-  /* filter: brightness(0) saturate(100%) sepia(13%) saturate(4117%) hue-rotate(313deg) contrast(86%);
-  mask-image: url(../../../public/img/light_mask.svg);
-  mask-size: 100%;
-  mask-repeat: no-repeat; */
+  /* mask: url("../../../public/img/light_mask.svg") center/contain no-repeat;
+  mask-composite: exclude; */
 }
 
 .blink {
-  animation: blink 2s;
+  animation: blink 1.5s;
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 

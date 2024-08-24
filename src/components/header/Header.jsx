@@ -32,6 +32,8 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
 
     if (previousLocation) {
       const exceptionPaths = (previousLocation.pathname !== "/" && path !== location.pathname);
+      console.log('Exception Condition: ', (previousLocation.pathname !== "/" && path !== location.pathname));
+      console.log('ShouldTriggerBlink', shouldTriggerBlink);
       if (shouldTriggerBlink && exceptionPaths) {
         setTriggerBlink(true);
         setDestPath(path);
@@ -42,12 +44,16 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
         setTriggerBlink(true);
         setDestPath(path);
         setClicked(true);
+      } else {
+        setDestPath(path);
+        setClicked(true);
       }
     }
   };
 
   // Blink Finished & Clean up
   useEffect(() => {
+    console.log(clicked, !triggerBlink);
     if (!triggerBlink && clicked) {
       setClicked(false);
       navigate(destPath);
@@ -86,6 +92,15 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
               onClick={(event) => handleNavLinkClick(event, "/about")}
             >
               About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/projects"
+              style={{ color: pageColor }}
+              onClick={(event) => handleNavLinkClick(event, "/projects")}
+            >
+              Projects
             </NavLink>
           </li>
         </ul>

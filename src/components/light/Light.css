@@ -1,4 +1,6 @@
 .light {
+    /* width: 339px;
+    height: 183px; */
     margin-bottom: -5rem;
 }
 
@@ -24,10 +26,10 @@
 
 @keyframes slideup {
     from {
-        transform: translateY(0);
+        transform: translateY(20%);
     }
 
     to {
-        transform: translateY(-20%);
+        transform: translateY(0);
     }
 }

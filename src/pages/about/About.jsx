@@ -60,7 +60,7 @@ const About = ({
               </li>
               <li>
                 <a
-                  href="https://www.linkedin.com/in/nathan-seung-174b63203/"
+                  href="https://www.linkedin.com/in/jeonghaseung/"
                   style={{ color: pageColor }}
                 >
                   LinkedIn

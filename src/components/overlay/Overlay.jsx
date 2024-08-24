@@ -11,7 +11,8 @@ const Overlay = ({ trigger, overlayColor }) => {
         display: trigger === true ? "block" : "none",
         backgroundColor: overlayColor
       }}
-    ></div>
+    >
+    </div>
   );
 };
 

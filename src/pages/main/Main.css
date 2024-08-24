@@ -1,4 +1,5 @@
 @import url(../../components/app/App.css);
+@import url(../../components/light/Light.css);
 
 #main-container {
     display: flex;

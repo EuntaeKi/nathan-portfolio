@@ -22,12 +22,8 @@ const usePreviousLocation = () => {
     const currentLocationRef = useRef(location);
 
     useEffect(() => {
-        console.log('Previous Location:', prevLocationRef.current);
-        console.log('Current Location:', currentLocationRef.current);
         prevLocationRef.current = currentLocationRef.current;
         currentLocationRef.current = location;
-        console.log('Updated Previous Location:', prevLocationRef.current);
-        console.log('Updated Current Location:', currentLocationRef.current);
     }, [location]);
 
     return prevLocationRef.current;
