@@ -17,6 +17,7 @@ import Projects from "../../pages/projects/Projects";
  * - Intro animation bug
  * - Light Masking
  * - Project Page
+ * - Icon & Title change
  */
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);

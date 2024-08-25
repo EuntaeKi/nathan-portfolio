@@ -1,0 +1,32 @@
+@import '../../components/app/App.css';
+
+.project-list {
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+    margin-top: 5rem;
+}
+
+.project-list-item {
+    font-size: 1.25rem;
+    font-family: var(--text-font-family);
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &:hover {
+        text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px, 0px 0px 80px;
+    }
+
+    &.active {
+        text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px, 0px 0px 80px
+    }
+}
+
+.project-preview-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem;
+    /* background-image: url('../../../public/img/project_arcaders_app_preview.png');
+    background-repeat: no-repeat; */
+}
