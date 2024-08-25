@@ -17,7 +17,7 @@ const Projects = ({ pageColor, setPageColor, triggerBlink, setTriggerBlink, setS
         "Yihwa"
     ];
 
-    const handleClick = (index) => {
+    const handleHover = (index) => {
         setProject(index);
     };
 
@@ -36,7 +36,7 @@ const Projects = ({ pageColor, setPageColor, triggerBlink, setTriggerBlink, setS
                     <div
                         key={index}
                         className={`project-list-item ${project === index ? 'active' : ''}`}
-                        onClick={() => handleClick(index)}
+                        onMouseOver={() => handleHover(index)}
                     >
                         {item}
                     </div>
@@ -53,25 +53,28 @@ const PreviewArcadersApp = () => {
     return (
         <>
             <div className="preview-arcaders-app-container">
-                <div className="flex z-0">
-                    <div>
+                <div className="flex text-gray-400 w-full justify-around">
+                    <div className="w-1/3">
                         PROJECT:
                     </div>
-                    <div>
+                    <div className="w-1/3">
                         PROJECT TYPE:
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div className="flex w-full justify-around">
+                    <div className="w-1/3 text-6xl">
                         ARCADERS'
                     </div>
-                    <div>
+                    <div className="w-1/3 text-xl text-nowrap">
                         10 WEEKS SOLO PROJECT <br /> SELF-SELECT PROMPT
                     </div>
                 </div>
-                <div>
-                    <div>
+                <div className="flex w-full justify-around">
+                    <div className="w-1/3 text-2xl">
                         ALL-AROUND GAME REVIEW APP
+                    </div>
+                    <div className="w-1/3">
+
                     </div>
                 </div>
             </div>

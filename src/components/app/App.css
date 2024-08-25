@@ -2,6 +2,7 @@
 
 :root {
   /* HTML Element Default Style Configuration */
+  --arcade-font-family: 'Press Start 2P', system-ui;
   --header-text-font-family: 'ClashDisplay-Light', system-ui;
   --header-highlight-text-font-family: 'ClashDisplay-Regular', system-ui;
   --text-font-family: 'Inter', 'system-ui';

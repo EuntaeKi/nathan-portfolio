@@ -5,6 +5,7 @@
     justify-content: space-around;
     width: 100vw;
     margin-top: 5rem;
+    margin-bottom: 2rem;
 }
 
 .project-list-item {
@@ -26,7 +27,22 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    padding: 3rem;
-    /* background-image: url('../../../public/img/project_arcaders_app_preview.png');
-    background-repeat: no-repeat; */
+}
+
+.preview-arcaders-app-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 1183px;
+    height: 449px;
+    padding: 2rem;
+    font-family: var(--arcade-font-family);
+    background-image: url('../../../public/img/project_arcaders_app_preview.png');
+    /* background-repeat: no-repeat; */
+    background-repeat: repeat-y;
+    background-position: center;
+    row-gap: 2rem;
+
 }
