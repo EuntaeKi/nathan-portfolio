@@ -1,0 +1,16 @@
+.arcaders-app-container {
+    font-family: var(--arcade-font-family);
+}
+
+.arcaders-app-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    width: 100vw;
+    background-image: url('../../../../public/img/arcaders_preview.png');
+    /* background-repeat: repeat-y; */
+    background-position: center;
+    row-gap: 2rem;
+}

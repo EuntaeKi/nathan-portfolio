@@ -31,9 +31,11 @@ a {
   font-family: var(--text-font-family);
 }
 
-ul,
-li {
+ul {
   list-style-type: none;
+}
+
+li {
   margin: 0;
   padding: 0;
 }

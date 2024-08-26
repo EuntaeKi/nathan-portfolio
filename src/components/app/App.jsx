@@ -12,6 +12,7 @@ import Main from "../../pages/main/Main";
 import Intro from "../../pages/intro/Intro";
 import About from "../../pages/about/About";
 import Projects from "../../pages/projects/Projects";
+import ArcadersApp from "../../pages/projects/arcadersApp/ArcadersApp";
 
 /* To Fix
  * - Intro animation bug
@@ -116,6 +117,14 @@ const Root = () => {
               setOverlayColor={setOverlayColor}
             />
           </Layout>
+        }
+      />
+      <Route
+        path="/projects/arcaders-app"
+        element={
+          <ArcadersApp
+            setPageColor={setPageColor}
+          />
         }
       />
     </Routes>

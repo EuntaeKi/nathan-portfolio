@@ -35,11 +35,11 @@
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    width: 1183px;
-    height: 449px;
+    width: 492px;
+    height: 277px;
     padding: 2rem;
     font-family: var(--arcade-font-family);
-    background-image: url('../../../public/img/project_arcaders_app_preview.png');
+    background-image: url('../../../public/img/arcaders_preview.png');
     /* background-repeat: no-repeat; */
     background-repeat: repeat-y;
     background-position: center;
