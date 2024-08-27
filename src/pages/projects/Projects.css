@@ -43,6 +43,6 @@
     /* background-repeat: no-repeat; */
     background-repeat: repeat-y;
     background-position: center;
-    row-gap: 2rem;
-
+    row-gap: 0.5rem;
+    box-shadow: 3px 3px 6px #00000080
 }

@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.61a5c7b6.css",
-    "main.js": "/nathan-portfolio/static/js/main.e1f036e2.js",
+    "main.css": "/nathan-portfolio/static/css/main.666a0288.css",
+    "main.js": "/nathan-portfolio/static/js/main.62a5042b.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/nathan-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
+    "static/media/arcaders_preview.png": "/nathan-portfolio/static/media/arcaders_preview.d704ab251b1944e0a0ae.png",
     "static/media/ClashDisplay-Variable.ttf": "/nathan-portfolio/static/media/ClashDisplay-Variable.e7f67b72cbf79f80c9c7.ttf",
     "static/media/ClashDisplay-Light.ttf": "/nathan-portfolio/static/media/ClashDisplay-Light.65f6b9963b2bc29f88d0.ttf",
     "static/media/ClashDisplay-Extralight.ttf": "/nathan-portfolio/static/media/ClashDisplay-Extralight.4b744d1b1e49894d8db2.ttf",
@@ -25,11 +26,11 @@
     "static/media/ClashDisplay-Bold.woff2": "/nathan-portfolio/static/media/ClashDisplay-Bold.e2f8628a6f360f644a76.woff2",
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
-    "main.61a5c7b6.css.map": "/nathan-portfolio/static/css/main.61a5c7b6.css.map",
-    "main.e1f036e2.js.map": "/nathan-portfolio/static/js/main.e1f036e2.js.map"
+    "main.666a0288.css.map": "/nathan-portfolio/static/css/main.666a0288.css.map",
+    "main.62a5042b.js.map": "/nathan-portfolio/static/js/main.62a5042b.js.map"
   },
   "entrypoints": [
-    "static/css/main.61a5c7b6.css",
-    "static/js/main.e1f036e2.js"
+    "static/css/main.666a0288.css",
+    "static/js/main.62a5042b.js"
   ]
 }

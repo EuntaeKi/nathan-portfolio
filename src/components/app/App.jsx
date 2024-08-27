@@ -19,6 +19,8 @@ import ArcadersApp from "../../pages/projects/arcadersApp/ArcadersApp";
  * - Light Masking
  * - Project Page
  * - Icon & Title change
+ * - Light Disappearing on Main bug
+ * - Routing pages via URL returns 404
  */
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
