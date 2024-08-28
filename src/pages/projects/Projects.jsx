@@ -33,8 +33,8 @@ const Projects = ({ pageColor, setPageColor, triggerBlink, setTriggerBlink, setS
                 triggerBlink={triggerBlink}
                 setTriggerBlink={setTriggerBlink} />
             <div className="flex flex-col">
-                <div className="flex gap-10 mb-16">
-                    <div className="flex flex-col">
+                <div className="flex mb-16 justify-between">
+                    <div className="flex flex-col mr-10">
                         <div className="flex items-center justify-center bg-zinc-900 px-8 py-12 mb-4">
                             <div className="preview-container" id="arcaders-app">
                                 <div className="flex text-gray-400 w-full justify-around">

@@ -163,8 +163,46 @@ const ArcadersApp = ({ setPageColor }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="flex bg-white w-1/3 text-black border-4 border-black text-[6.5px] p-4 h-fit gap-6 rotate-[12deg]">
+                    <div className="flex bg-white w-1/3 self-center text-black border-4 border-black text-[6.5px] p-4 h-fit gap-6 py-8 px-16 mb-4">
                         <div className="flex flex-col gap-8 w-1/3 items-center">
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">1</div>
+                                <div className="flex border border-black w-full"></div>
+                                <div className="text-gray-500 text-[11px] mb-4">ORGANIZATION</div>
+                                <div className="text-center text-[9px]">PREVIEWS AVAILABLE IN THE MARKET ARE OFTEN HARD TO NAVIGATE</div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-8 w-1/3 items-center">
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">2</div>
+                                <div className="flex border border-black w-full"></div>
+                                <div className="text-gray-500 text-[11px] mb-4">INFORMATIVE</div>
+                                <div className="text-center text-[9px]">MAJOR GAME PROVIDES/PREVIEWERS ARE LACKING INFORMATION OR PROVIDE MISLEADING DESCRIPTIONS</div>
+                            </div>
+                        </div>
+                        <div className="flex flex-col gap-8 w-1/3 items-center">
+                            <div className="flex flex-col items-center gap-4">
+                                <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">3</div>
+                                <div className="flex border border-black w-full"></div>
+                                <div className="text-gray-500 text-[10px] mb-4">VISUAL APPEAL</div>
+                                <div className="text-center text-[9px]">USERS ARE WANTING MORE INTERACTIVE, AND ENTERTAINING INTERFACES THAT ARE VISUALLY APPEALING</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex bg-white w-1/3 self-center text-black border-4 border-black text-[6.5px] p-4 h-fit gap-6 py-8 px-16">
+                        <div className="flex flex-col items-center gap-4">
+                            <div className="text-gray-500 text-[10px]">USER RESEARCH</div>
+                            <div className="flex border border-black w-full"></div>
+                            <div className="text-center text-[9px]">PREVIEWS AVAILABLE IN THE MARKET ARE OFTEN HARD TO NAVIGATE</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="flex bg-black h-svh mt-[-10rem] justify-center">
+                    <div className="flex flex-col mt-80">
+                        <div className="flex items-center gap-8">
+                            <div className="text-gray-500">COMPETITIVE AUDIT I: </div>
+                            <img src={`${imagePath}arcaders_app_steam.png`} alt="Steam Icon" />
+                            STEAM
                         </div>
                     </div>
                 </div>
