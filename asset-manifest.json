@@ -1,10 +1,15 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.d8c58230.css",
-    "main.js": "/nathan-portfolio/static/js/main.f836d3e5.js",
+    "main.css": "/nathan-portfolio/static/css/main.f2f218df.css",
+    "main.js": "/nathan-portfolio/static/js/main.315a20da.js",
+    "static/media/material-symbols-rounded.woff2": "/nathan-portfolio/static/media/material-symbols-rounded.63fc9628a3e3226f2a62.woff2",
+    "static/media/material-symbols-outlined.woff2": "/nathan-portfolio/static/media/material-symbols-outlined.c5e8d508a591c896fcca.woff2",
+    "static/media/material-symbols-sharp.woff2": "/nathan-portfolio/static/media/material-symbols-sharp.12c5c42a2268feebc869.woff2",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/nathan-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/arcaders_preview.png": "/nathan-portfolio/static/media/arcaders_preview.d704ab251b1944e0a0ae.png",
+    "static/media/arcaders_web_preview.png": "/nathan-portfolio/static/media/arcaders_web_preview.57cf7225e665c92f11f8.png",
     "static/media/ClashDisplay-Variable.ttf": "/nathan-portfolio/static/media/ClashDisplay-Variable.e7f67b72cbf79f80c9c7.ttf",
+    "static/media/BebasNeue-Regular.ttf": "/nathan-portfolio/static/media/BebasNeue-Regular.12e3683f9192436a7be8.ttf",
     "static/media/ClashDisplay-Light.ttf": "/nathan-portfolio/static/media/ClashDisplay-Light.65f6b9963b2bc29f88d0.ttf",
     "static/media/ClashDisplay-Extralight.ttf": "/nathan-portfolio/static/media/ClashDisplay-Extralight.4b744d1b1e49894d8db2.ttf",
     "static/media/ClashDisplay-Medium.ttf": "/nathan-portfolio/static/media/ClashDisplay-Medium.a55835c0e75979b02fcb.ttf",
@@ -26,11 +31,11 @@
     "static/media/ClashDisplay-Bold.woff2": "/nathan-portfolio/static/media/ClashDisplay-Bold.e2f8628a6f360f644a76.woff2",
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
-    "main.d8c58230.css.map": "/nathan-portfolio/static/css/main.d8c58230.css.map",
-    "main.f836d3e5.js.map": "/nathan-portfolio/static/js/main.f836d3e5.js.map"
+    "main.f2f218df.css.map": "/nathan-portfolio/static/css/main.f2f218df.css.map",
+    "main.315a20da.js.map": "/nathan-portfolio/static/js/main.315a20da.js.map"
   },
   "entrypoints": [
-    "static/css/main.d8c58230.css",
-    "static/js/main.f836d3e5.js"
+    "static/css/main.f2f218df.css",
+    "static/js/main.315a20da.js"
   ]
 }
