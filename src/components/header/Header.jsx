@@ -32,8 +32,6 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
 
     if (previousLocation) {
       const exceptionPaths = (previousLocation.pathname !== "/" && path !== location.pathname);
-      console.log('Exception Condition: ', (previousLocation.pathname !== "/" && path !== location.pathname));
-      console.log('ShouldTriggerBlink', shouldTriggerBlink);
       if (shouldTriggerBlink && exceptionPaths) {
         setTriggerBlink(true);
         setDestPath(path);

@@ -6,7 +6,6 @@
   --header-text-font-family: 'ClashDisplay-Light', system-ui;
   --header-highlight-text-font-family: 'ClashDisplay-Regular', system-ui;
   --text-font-family: 'Inter', 'system-ui';
-
 }
 
 /* HTML Element Default Style Configuration */
@@ -134,6 +133,13 @@ li {
   font-family: 'Inter';
   src: url('../../../public/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf-variations');
   src: url('../../../public/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf') tech('variations');
+  font-weight: 100 900;
+  font-stretch: 25% 150%;
+}
+
+@font-face {
+  font-family: 'Bebas-Neue';
+  src: url('../../../public/fonts/BebasNeue-Regular.ttf') format('truetype');
   font-weight: 100 900;
   font-stretch: 25% 150%;
 }

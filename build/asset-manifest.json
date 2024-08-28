@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.666a0288.css",
-    "main.js": "/nathan-portfolio/static/js/main.62a5042b.js",
+    "main.css": "/nathan-portfolio/static/css/main.d8c58230.css",
+    "main.js": "/nathan-portfolio/static/js/main.f836d3e5.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/nathan-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/arcaders_preview.png": "/nathan-portfolio/static/media/arcaders_preview.d704ab251b1944e0a0ae.png",
     "static/media/ClashDisplay-Variable.ttf": "/nathan-portfolio/static/media/ClashDisplay-Variable.e7f67b72cbf79f80c9c7.ttf",
@@ -26,11 +26,11 @@
     "static/media/ClashDisplay-Bold.woff2": "/nathan-portfolio/static/media/ClashDisplay-Bold.e2f8628a6f360f644a76.woff2",
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
-    "main.666a0288.css.map": "/nathan-portfolio/static/css/main.666a0288.css.map",
-    "main.62a5042b.js.map": "/nathan-portfolio/static/js/main.62a5042b.js.map"
+    "main.d8c58230.css.map": "/nathan-portfolio/static/css/main.d8c58230.css.map",
+    "main.f836d3e5.js.map": "/nathan-portfolio/static/js/main.f836d3e5.js.map"
   },
   "entrypoints": [
-    "static/css/main.666a0288.css",
-    "static/js/main.62a5042b.js"
+    "static/css/main.d8c58230.css",
+    "static/js/main.f836d3e5.js"
   ]
 }

@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
+import 'material-symbols';
 
 import "./App.css";
 import Layout from "../../components/layout/Layout";
