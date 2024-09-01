@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.450768ee.css",
-    "main.js": "/nathan-portfolio/static/js/main.5e757526.js",
+    "main.css": "/nathan-portfolio/static/css/main.ab76a6ce.css",
+    "main.js": "/nathan-portfolio/static/js/main.85381b2c.js",
     "static/media/material-symbols-rounded.woff2": "/nathan-portfolio/static/media/material-symbols-rounded.63fc9628a3e3226f2a62.woff2",
     "static/media/material-symbols-outlined.woff2": "/nathan-portfolio/static/media/material-symbols-outlined.c5e8d508a591c896fcca.woff2",
     "static/media/material-symbols-sharp.woff2": "/nathan-portfolio/static/media/material-symbols-sharp.12c5c42a2268feebc869.woff2",
@@ -31,11 +31,11 @@
     "static/media/ClashDisplay-Bold.woff2": "/nathan-portfolio/static/media/ClashDisplay-Bold.e2f8628a6f360f644a76.woff2",
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
-    "main.450768ee.css.map": "/nathan-portfolio/static/css/main.450768ee.css.map",
-    "main.5e757526.js.map": "/nathan-portfolio/static/js/main.5e757526.js.map"
+    "main.ab76a6ce.css.map": "/nathan-portfolio/static/css/main.ab76a6ce.css.map",
+    "main.85381b2c.js.map": "/nathan-portfolio/static/js/main.85381b2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.450768ee.css",
-    "static/js/main.5e757526.js"
+    "static/css/main.ab76a6ce.css",
+    "static/js/main.85381b2c.js"
   ]
 }
