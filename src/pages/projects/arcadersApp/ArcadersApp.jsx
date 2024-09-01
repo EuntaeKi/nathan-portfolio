@@ -4,6 +4,7 @@ import "./ArcadersApp.css";
 
 const ArcadersApp = ({ setPageColor }) => {
     const imagePath = `${process.env.PUBLIC_URL}/img/`;
+    const [hover, setHover] = useState(false);
 
     useEffect(() => {
         setPageColor("#FFFFFF");
@@ -165,27 +166,27 @@ const ArcadersApp = ({ setPageColor }) => {
                     </div>
                     <div className="flex bg-white w-1/3 self-center text-black border-4 border-black text-[6.5px] p-4 h-fit gap-6 py-8 px-16 mb-4">
                         <div className="flex flex-col gap-8 w-1/3 items-center">
-                            <div className="flex flex-col items-center gap-4">
+                            <div className="flex flex-col items-center gap-4 w-full">
                                 <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">1</div>
                                 <div className="flex border border-black w-full"></div>
-                                <div className="text-gray-500 text-[11px] mb-4">ORGANIZATION</div>
-                                <div className="text-center text-[9px]">PREVIEWS AVAILABLE IN THE MARKET ARE OFTEN HARD TO NAVIGATE</div>
+                                <div className="text-gray-500 text-[11px] mb-4 w-full text-center">ORGANIZATION</div>
+                                <div className="text-center text-[9px] w-full">PREVIEWS AVAILABLE IN THE MARKET ARE OFTEN HARD TO NAVIGATE</div>
                             </div>
                         </div>
                         <div className="flex flex-col gap-8 w-1/3 items-center">
-                            <div className="flex flex-col items-center gap-4">
+                            <div className="flex flex-col items-center gap-4 w-full">
                                 <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">2</div>
                                 <div className="flex border border-black w-full"></div>
-                                <div className="text-gray-500 text-[11px] mb-4">INFORMATIVE</div>
-                                <div className="text-center text-[9px]">MAJOR GAME PROVIDES/PREVIEWERS ARE LACKING INFORMATION OR PROVIDE MISLEADING DESCRIPTIONS</div>
+                                <div className="text-gray-500 text-[11px] mb-4 w-full text-center">INFORMATIVE</div>
+                                <div className="text-center text-[9px] w-full">MAJOR GAME PROVIDES / PREVIEWERS ARE LACKING INFORMATION OR PROVIDE MISLEADING DESCRIPTIONS</div>
                             </div>
                         </div>
                         <div className="flex flex-col gap-8 w-1/3 items-center">
-                            <div className="flex flex-col items-center gap-4">
+                            <div className="flex flex-col items-center gap-4 w-full">
                                 <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">3</div>
                                 <div className="flex border border-black w-full"></div>
-                                <div className="text-gray-500 text-[10px] mb-4">VISUAL APPEAL</div>
-                                <div className="text-center text-[9px]">USERS ARE WANTING MORE INTERACTIVE, AND ENTERTAINING INTERFACES THAT ARE VISUALLY APPEALING</div>
+                                <div className="text-gray-500 text-[10px] mb-4 w-full text-center">VISUAL APPEAL</div>
+                                <div className="text-center text-[9px] w-full">USERS ARE WANTING MORE INTERACTIVE, AND ENTERTAINING INTERFACES THAT ARE VISUALLY APPEALING</div>
                             </div>
                         </div>
                     </div>
@@ -197,14 +198,145 @@ const ArcadersApp = ({ setPageColor }) => {
                         </div>
                     </div>
                 </div>
-                <div className="flex bg-black h-svh mt-[-10rem] justify-center">
-                    <div className="flex flex-col mt-80">
-                        <div className="flex items-center gap-8">
-                            <div className="text-gray-500">COMPETITIVE AUDIT I: </div>
-                            <img src={`${imagePath}arcaders_app_steam.png`} alt="Steam Icon" />
-                            STEAM
+                <div className="flex bg-black mt-[-10rem] justify-center mb-24">
+                    <div className="flex flex-col mt-80 gap-16">
+                        <div className="flex flex-col items-center gap-8">
+                            <div className="flex items-center gap-8">
+                                <div className="text-gray-500">COMPETITIVE AUDIT I: </div>
+                                <img src={`${imagePath}arcaders_app_steam.png`} alt="Steam Icon" />
+                                STEAM
+                            </div>
+                            <div>
+                                <div className={`relative opacity-0 hover-show`}>
+                                    <div className="z-10 absolute w-full h-[1145px] bg-gray-900">
+                                        <div className="h-[312px] flex items-center opacity-0 hover-show">
+                                            <div className="ml-8">
+                                                <div className="text-2xl w-fit">ALL IN ONE</div>
+                                                <div className="text-[7px] w-64">MAIN PAGE HAS IMAGE, ADDITIONAL TOOL TAB ON TOP OF THE APP’S TOOL TAB (DEFAULT SETTING), SIMPLE DESCRIPTION WITH OVERALL RATING FROM THE USERS</div>
+                                            </div>
+                                            <img
+                                                src={`${imagePath}arcaders_competitive_audit_steam_1_masked.png`}
+                                                alt="Masking of Steam's Baldur's Gate 3 page on overview"
+                                                className="z-20 h-[228px] translate-x-[14px] translate-y-[-1px]"
+                                            />
+                                        </div>
+                                        <div className="ml-24 h-[302px] flex items-center opacity-0 hover-show">
+                                            <img
+                                                src={`${imagePath}arcaders_competitive_audit_steam_2_masked.png`}
+                                                alt="Masking of Steam's Baldur's Gate 3 page on description"
+                                                className="z-20 h-[205px] translate-x-[15px] translate-y-[73px]"
+                                            />
+                                            <div className="ml-12 mt-16">
+                                                <div className="text-2xl w-fit">ABOUT</div>
+                                                <div className="text-[7px] w-64">THE GENERAL DESCRIPTION IS PROVIDED, BUT BY THE PRODUCERS. SOME USERS FIND IT DIFFICULT TO NOTICE WHAT KIND OF GAME IT ACTUALLY IS.</div>
+                                            </div>
+                                        </div>
+                                        <div className="h-[531px] flex items-center opacity-0 hover-show">
+                                            <img
+                                                src={`${imagePath}arcaders_competitive_audit_steam_3_masked.png`}
+                                                alt="Masking of Steam's Baldur's Gate 3 page on review"
+                                                className="z-20 h-[340px] translate-x-[-24px] translate-y-[-89px]"
+                                            />
+                                            <div className="ml-8 mb-32">
+                                                <div className="text-2xl w-fit">REVIEWS</div>
+                                                <div className="text-[7px] w-64">USERS CAN LEAVE THEIR OWN REVIEWS AND BRIEFLY COMMUNICATE THROUGH LIKE OR DISLIKE OTHER USER’S REVIEWS.</div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <img
+                                    src={`${imagePath}arcaders_competitive_audit_steam_1.png`}
+                                    alt="Baldur's Gate 3 page on Steam"
+                                    className="z-0"
+                                />
+                                <img
+                                    src={`${imagePath}arcaders_competitive_audit_steam_2.png`}
+                                    alt="Baldur's Gate 3 game description on Steam"
+                                    className="z-0" />
+                                <img
+                                    src={`${imagePath}arcaders_competitive_audit_steam_3.png`}
+                                    alt="Baldur's Gate 3 reviews on Steam"
+                                    className="z-0" />
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center gap-8">
+                            <div className="flex items-center gap-8">
+                                <div className="text-gray-500">COMPETITIVE AUDIT II: </div>
+                                <img src={`${imagePath}arcaders_app_metacritic.png`} alt="Metacritic Icon" />
+                                METACRITIC
+                            </div>
+                            <div>
+                                <div className={`relative opacity-0 hover-show`}>
+                                    <div className="z-10 absolute w-full h-[598px] bg-gray-900">
+                                        <div className="h-[598px] flex items-start opacity-0 hover-show">
+                                            <div className="flex ml-24 mt-32 flex-col justify-center">
+                                                <div className="text-2xl w-fit">METASCORE</div>
+                                                <div className="text-[7px] w-64">CENTERED ON REVIEW “SCORES” BY BOTH USERS AND THEIR OWN EVALUATIONS. DESCRIPTION OF THE GAMES ARE HIDDEN OR NOT PROVIDED.</div>
+                                            </div>
+                                            <img
+                                                src={`${imagePath}arcaders_competitive_audit_metacritic_mask.png`}
+                                                alt="Masking of Metacritic's Baldur's Gate 3 page on overview"
+                                                className="z-20 h-[276px] translate-x-[57px] translate-y-[25px]"
+                                            />
+                                        </div>
+                                    </div>
+                                </div>
+                                <img
+                                    src={`${imagePath}arcaders_competitive_audit_metacritic.png`}
+                                    alt="Baldur's Gate 3 review on Metacritic"
+                                    className="z-0"
+                                />
+                            </div>
+                        </div>
+                        <div className="flex flex-col items-center gap-8">
+                            <div className="flex items-center gap-8">
+                                <div className="text-gray-500">COMPETITIVE AUDIT III: </div>
+                                <img src={`${imagePath}arcaders_app_gamespot.png`} alt="Gamespot Icon" />
+                                GAMESPOT
+                            </div>
+                            <div>
+                                <div className={`relative opacity-0 hover-show`}>
+                                    <div className="z-10 absolute w-full h-[685px] bg-gray-900">
+                                        <div className="h-[685px] flex items-start opacity-0 hover-show">
+                                            <img
+                                                src={`${imagePath}arcaders_competitive_audit_gamespot_mask.png`}
+                                                alt="Masking of Gamespot's Baldur's Gate 3 page on overview article"
+                                                className="z-20 h-[261px] translate-x-[35px] translate-y-[23px]"
+                                            />
+                                            <div className="ml-16 mt-24">
+                                                <div className="text-2xl w-fit">ARTICLES</div>
+                                                <div className="text-[7px] w-64">CENTERED ON REVIEW “SCORES” BY BOTH USERS AND THEIR OWN EVALUATIONS. DESCRIPTION OF THE GAMES ARE HIDDEN OR NOT PROVIDED. </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <img
+                                    src={`${imagePath}arcaders_competitive_audit_gamespot.png`}
+                                    alt="Gamespot's Baldur's Gate 3 page on overview article"
+                                    className="z-0"
+                                />
+                            </div>
                         </div>
                     </div>
+                </div>
+                <div className="flex flex-col gap-12">
+                    <div className="flex flex-col items-center gap-12">
+                        <div className="text-2xl text-gray-500">TESTING DESIGNS:</div>
+                        <div className="flex gap-12">
+                            <img
+                                src={`${imagePath}arcaders_testing_design_1.png`}
+                                alt="Wireframe and flow design on Arcader's app"
+                                className="z-0 block"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_testing_design_2.png`}
+                                alt="Prototype design on Arcader's app"
+                                className="z-0 block"
+                            />
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </>
