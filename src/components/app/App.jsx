@@ -18,9 +18,10 @@ import ArcadersApp from "../../pages/projects/arcadersApp/ArcadersApp";
 /* To Fix
  * - Intro animation bug
  * - Light Masking
+ * - Routing pages via URL returns 404 in Production
+ 
  * - Project Page
  * - Icon & Title change
- * - Routing pages via URL returns 404 in Production
  * - Overall Spacing as Tailwind messed things up 
  */
 const Root = () => {
