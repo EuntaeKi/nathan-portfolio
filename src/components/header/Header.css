@@ -41,3 +41,20 @@
     }
   }
 }
+
+.navitem-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  color: transparent;
+  background: #fff;
+  height: 1px;
+  transition: all 0.35s;
+}
+
+#header-navigation ul li a:not(.active):hover .navitem-underline {
+  width: 100%;
+}

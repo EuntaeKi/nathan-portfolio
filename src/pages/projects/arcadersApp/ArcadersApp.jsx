@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 import "./ArcadersApp.css";
 
 const ArcadersApp = ({ setPageColor }) => {
     const imagePath = `${process.env.PUBLIC_URL}/img/`;
-    const [hover, setHover] = useState(false);
 
     useEffect(() => {
         setPageColor("#FFFFFF");
@@ -320,25 +319,182 @@ const ArcadersApp = ({ setPageColor }) => {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-12">
+                <div className="flex flex-col gap-48">
                     <div className="flex flex-col items-center gap-12">
                         <div className="text-2xl text-gray-500">TESTING DESIGNS:</div>
-                        <div className="flex gap-12">
+                        <div className="flex gap-12 flex-wrap justify-center">
                             <img
                                 src={`${imagePath}arcaders_testing_design_1.png`}
-                                alt="Wireframe and flow design on Arcader's app"
+                                alt="Wireframe and flow design on Arcaders' app"
                                 className="z-0 block"
                             />
                             <img
                                 src={`${imagePath}arcaders_testing_design_2.png`}
-                                alt="Prototype design on Arcader's app"
+                                alt="Prototype design on Arcaders' app"
                                 className="z-0 block"
                             />
                         </div>
                     </div>
-
+                    <div className="flex items-center justify-center gap-16">
+                        <div className="flex items-center">
+                            <img
+                                src={`${imagePath}arcaders_confirming_interaction_1.png`}
+                                alt="Arcaders' app screen on the game League of Legends, showing an option to add the game to the list"
+                                className="z-0"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_confirming_interaction_arrow.png`}
+                                alt="Arrow showing the connection between the first and second screen"
+                                className="z-10 mt-[116px] mx-[-36px]"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_confirming_interaction_2.png`}
+                                alt="Arcaders' app screen on the game League of Legends confirming an option to add the game to the list"
+                                className="z-0"
+                            />
+                        </div>
+                        <div className="flex flex-col w-1/3 text-xs">
+                            <div className="text-gray-500 text-2xl mb-6">CONFIRMING INTERACTION:</div>
+                            <div>ADDING CONFIRMATION INTERACTION WHEN USERS MAKING MAJOR DECISIONS SUCH AS
+                                <ul className="list-decimal ml-9">
+                                    <li>ADDING GAMES/STREAMERS TO MYLIST</li>
+                                    <li>LOG-IN & REGISTERING ACCOUNT PROCESS</li>
+                                    <li>ADJUSTING FILTERS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex justify-center gap-12 items-center">
+                        <div className="flex flex-col w-1/3">
+                            <div className="text-gray-500 text-2xl mb-6">
+                                CUSTOMIZATION:
+                            </div>
+                            <div className="text-xs">ARCADERS’ PROVIDE CUSTOMIZED EXPERIENCE FOR THE USERS BY COLLECTING SURVEY DATA WHILE SETTING UP THE ACCOUNT FOR THE FIRST TIME. THESE SURVEY INCLUDES STRAIGHTFORWARD IMAGES AND TEXTUAL QUESTIONS AND ANSWER FORMATS. </div>
+                        </div>
+                        <img
+                            src={`${imagePath}arcaders_customization.png`}
+                            alt="Arcaders' survey screen where the user can select games and streamers and another Arcaders' survey screen with a question asking 'How many people do you play games with in general?'"
+                            className="z-0"
+                        />
+                        <div className="w-1/4 text-xs">
+                            THE COLLECTED DATA ARE APPLIED TO RECOMMENDED GAMES AND STREAMER LIST.
+                        </div>
+                    </div>
+                    <div className="flex flex-wrap justify-center gap-12 items-center">
+                        <div className="flex flex-col w-1/4">
+                            <div className="text-gray-500 text-2xl mb-6">
+                                GAMERS AND STREAMERS:
+                            </div>
+                            <div className="text-xs">
+                                ACCORDING TO THE INTERVIEW/USABILITY STUDY, LARGE PORTION OF ONLINE GAMING COMMUNITY AND STREAM VIEWERS’ COMMUNITY OVERLAPPED.
+                                <br /><br />
+                                TO STRENGTHEN THE CUSTOMIZING PROCESS, PREFERENCE OF STREAMERS IS ADDED TO THE SURVEY PAGE ALONG WITH A SEPARATE STREAMER & GAME REVIEW PAGES.
+                            </div>
+                        </div>
+                        <div className="flex justify-end">
+                            <img
+                                src={`${imagePath}arcaders_gamers_streamers_1.png`}
+                                alt="Arcaders' app screen on a streamer's overview page showing League of Legends and StarCraft videos"
+                                className="z-20 rotate-[-30deg] translate-x-11 translate-y-5"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_gamers_streamers_2.png`}
+                                alt="Arcaders' app screen asking what streamers the user watches, listing out random streamers"
+                                className="z-10"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_gamers_streamers_3.png`}
+                                alt="Arcaders' app screen listing out streamers the user follows"
+                                className="z-0 rotate-[15deg] translate-x-[-1.25rem] translate-y-5"
+                            />
+                        </div>
+                    </div>
+                    <div className="flex flex-col flex-wrap justify-center gap-12 items-center">
+                        <div className="flex gap-8">
+                            <img
+                                src={`${imagePath}arcaders_screen_1.png`}
+                                alt="Main login screen on the Arcaders' app"
+                                className="z-0"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_screen_2.png`}
+                                alt="Contact information on the Arcaders' app"
+                                className="z-0"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_screen_3.png`}
+                                alt="Main search page on the Arcaders' app, showing different games like Overcooked or Tetris"
+                                className="z-0"
+                            />
+                        </div>
+                        <div className="flex flex-col h-[1500px]">
+                            <img
+                                src={`${imagePath}arcaders_screen_4.png`}
+                                alt="Different search page showing recommended games or genre on the Arcaders' app"
+                                className="z-0 translate-x-[-75%]"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_screen_5.png`}
+                                alt="Different search page showing user's favorite games or daily and weekly popular games on the Arcaders' app"
+                                className="z-0 translate-x-[-25%] translate-y-[-75%]"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_screen_6.png`}
+                                alt="Different search page showing recently added games on the Arcaders' app"
+                                className="z-0 translate-x-[25%] translate-y-[-150%]"
+                            />
+                            <img
+                                src={`${imagePath}arcaders_screen_7.png`}
+                                alt="Overlay for confirming the addition of the game to the list on the Arcaders' app"
+                                className="z-0 translate-x-[75%] translate-y-[-225%]"
+                            />
+                        </div>
+                        <img
+                            src={`${imagePath}arcaders_whiteboard.png`}
+                            alt="Main login screen on the Arcaders' app"
+                            className="z-0" />
+                    </div>
+                    <div className="flex flex-col gap-24 items-center">
+                        <div className="flex flex-col w-1/2 items-center">
+                            <div className="text-gray-500 text-2xl mb-16">IF I HAD MORE RESOURCES:</div>
+                            <ul className="text-xs list-decimal ml-10">
+                                <li className="mb-6">
+                                    EXPLORING COLLABORATING METHODS WITH MAJOR COMPANIES LIKE YOUTUBE, INSTAGRAM, TWITTER, ETC. I THINK PROVIDING BRIDGES FOR PRE-EXISING USER/GROUP POOL FROM THESE MAINSTREAM SERVICES MAY BE AN ATTRACTIVE OPTION FOR A LOT OF SERVICES, BUT I ALSO RECOGNIZED THAT THESE CAN BE CHALLENGING DUE TO VARIOUS REASONS SUCH AS COPYRIGHTS. I WISH I HAD MORE TIME TO UNDERSTAND THE DYNAMICS OF COLLABORATIONS.
+                                </li>
+                                <li>
+                                    I BELIEVE THAT THE CUSTOMIZING COMPONENT WOULD HAVE BEEN MORE THOROUGH IF I WORKED WITH A TECH TEAM, WHICH WOULD HAVE CREATED A LOGIC BEHIND THE COLLECTED RAW DATA. AS A UX RESEARCHER, I WOULD HAVE CONTACTED DATA ANALYST TO MODIFY THE CUSTOMIZATION WITH THEM.
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex flex-col w-1/2 items-center">
+                            <div className="text-gray-500 text-2xl mb-16">WHAT DID I LEARN AND WHAT’S NEXT:</div>
+                            <ul className="text-xs list-decimal ml-10">
+                                <li className="mb-6">
+                                    NEED OF WORKING AS A TEAM
+                                    <br /><br />
+                                    LAUNCHING A PRODUCT WITH GOOD LOGIC SHOULD BE BASED ON GOOD RESEARCH ON THE MARKET/FIELD. ONCE THE RESEARCH IS FIRM, THE PRODUCT SHOULD BE DESIGNED WITH INTENTIONS AND CLEAR AIMS. MODERN TREND OFTEN REQUIRES THE PRODUCT/SERVICE TO COLLECT, ANALYZE, AND UTILIZE DATA TO PROVIDE MORE PERSONALIZED USER EXPERIENCE FOR THE CUSTOMERS. ONCE I LEARNED THESE LIMITATIONS OF WORKING ALONE, I ASSEMBLED A SMALL TEAM INCLUDING A BUSINESS RESEARCHER, MYSELF, AND A TECHNICIAN TO LAUNCH OUR OWN SERVICE.
+                                </li>
+                                <li>
+                                    WEBSITE DESIGN
+                                    <br /><br />
+                                    I LEARNED THAT I WAS ENJOYING THE PROCESS OF PLANNING AND ACTUALLY DESIGNING PRODUCTS. I WANTED TO EXPAND THIS PROJECT TO WEBSITE DESIGN. CHECK OUT MY ARCADERS WEBSITE PROJECT BELOW.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div className="flex justify-center">
+                        <ArcadersFooter />
+                    </div>
                 </div>
             </div>
+        </>
+    );
+};
+
+const ArcadersFooter = () => {
+    return (
+        <>
+            <div className="border-white border-4 w-4/5"></div>
         </>
     );
 };

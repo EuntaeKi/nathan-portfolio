@@ -18,31 +18,16 @@ const Main = ({
   const location = useLocation();
   const previousLocation = usePreviousLocation();
 
-  // Figure out why the Main is calling PreviousLocation 3 times
   useEffect(() => {
-    let id;
     setPageColor("#FFFFFF");
-    console.log(
-      (triggerBlink || isHome) &&
-      previousLocation &&
-      previousLocation.pathname !== "/"
-    );
-    setIsHome(location.pathname === "/home");
-    id = setTimeout(() => {
-      setIsHome(false);
-    }, 500);
-
-    return (() => {
-      clearTimeout(id);
-    })
-  }, [location, previousLocation, triggerBlink, setPageColor]);
+  }, [setPageColor]);
 
   return (
     <>
       <Light
         display={
           // Make it disappear once it's done
-          (triggerBlink || isHome) &&
+          triggerBlink &&
           previousLocation &&
           previousLocation.pathname !== "/"
         }
@@ -54,7 +39,9 @@ const Main = ({
         setOverlayColor={setOverlayColor}
         slideType={triggerBlink ? "down" : "up"}
       />
-      <div className="slide-up" id="main-container">
+      <div className={`${triggerBlink ? 'slide-down' :
+        previousLocation &&
+          previousLocation.pathname !== "/" ? 'slide-up' : ''}`} id="main-container">
         <span id="main-description">
           <span id="main-name">Nathan Seung</span>
           <div id="main-body">

@@ -31,9 +31,14 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
     const shouldTriggerBlink = (path !== "/" && !triggerBlink);
 
     if (previousLocation) {
-      const exceptionPaths = (previousLocation.pathname !== "/" && path !== location.pathname);
+      // previousLocation.pathname !== "/" && 
+      const exceptionPaths = (path !== location.pathname);
+      console.log(path, location);
       if (shouldTriggerBlink && exceptionPaths) {
         setTriggerBlink(true);
+        setDestPath(path);
+        setClicked(true);
+      } else {
         setDestPath(path);
         setClicked(true);
       }
@@ -51,7 +56,6 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
 
   // Blink Finished & Clean up
   useEffect(() => {
-    console.log(clicked, !triggerBlink);
     if (!triggerBlink && clicked) {
       setClicked(false);
       navigate(destPath);
@@ -70,8 +74,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
               to="/"
               style={{ color: pageColor }}
               onClick={(event) => handleNavLinkClick(event, "/")}
+              className="relative"
             >
               Intro
+              <div className="navitem-underline" style={{ background: pageColor }} />
             </NavLink>
           </li>
           <li>
@@ -79,8 +85,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
               to="/home"
               style={{ color: pageColor }}
               onClick={(event) => handleNavLinkClick(event, "/home")}
+              className="relative"
             >
               Home
+              <div className="navitem-underline" style={{ background: pageColor }} />
             </NavLink>
           </li>
           <li>
@@ -88,8 +96,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
               to="/about"
               style={{ color: pageColor }}
               onClick={(event) => handleNavLinkClick(event, "/about")}
+              className="relative"
             >
               About
+              <div className="navitem-underline" style={{ background: pageColor }} />
             </NavLink>
           </li>
           <li>
@@ -97,8 +107,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
               to="/projects"
               style={{ color: pageColor }}
               onClick={(event) => handleNavLinkClick(event, "/projects")}
+              className="relative"
             >
               Projects
+              <div className="navitem-underline" style={{ background: pageColor }} />
             </NavLink>
           </li>
         </ul>
