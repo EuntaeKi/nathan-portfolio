@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 import "./Main.css";
 import Light from "../../components/light/Light";
@@ -24,6 +25,9 @@ const Main = ({
 
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Light
         display={
           // Make it disappear once it's done

@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Helmet } from 'react-helmet';
+
 import PlaneSequence from "../../components/plane-sequence/PlaneSequence";
 import "./Intro.css";
 
@@ -11,6 +13,9 @@ const Intro = ({ setIsPreviousPageIntro }) => {
 
   return (
     <>
+      <Helmet>
+        <title>Intro</title>
+      </Helmet>
       <div className="intro-container">
         {
           // Before user interaction

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import Light from "../../components/light/Light";
 import "./Projects.css";
@@ -24,6 +25,9 @@ const Projects = ({ pageColor, setPageColor, triggerBlink, setTriggerBlink, setS
 
     return (
         <>
+            <Helmet>
+                <title>Projects</title>
+            </Helmet>
             <Light
                 display={false}
                 pageColor={pageColor}

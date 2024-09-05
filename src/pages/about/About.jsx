@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 
 import "./About.css";
 import Light from "../../components/light/Light";
@@ -19,6 +20,9 @@ const About = ({
 
   return (
     <>
+      <Helmet>
+        <title>About</title>
+      </Helmet>
       <Light
         display={true}
         pageColor={pageColor}

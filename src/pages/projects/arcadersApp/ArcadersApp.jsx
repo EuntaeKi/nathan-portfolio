@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from 'react-helmet';
 
 import "./ArcadersApp.css";
 
@@ -11,6 +12,9 @@ const ArcadersApp = ({ setPageColor }) => {
 
     return (
         <>
+            <Helmet>
+                <title>Project Arcaders' App</title>
+            </Helmet>
             <div className="arcaders-app-container block">
                 <div className="arcaders-app-intro h-svh">
                     <div className="flex text-gray-400 w-full justify-around">

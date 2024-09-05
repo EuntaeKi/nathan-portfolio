@@ -20,8 +20,7 @@ import ArcadersApp from "../../pages/projects/arcadersApp/ArcadersApp";
  * - Light Masking
  * - Routing pages via URL returns 404 in Production
  
- * - Project Page
- * - Icon & Title change
+ * - Second Project Page
  * - Overall Spacing as Tailwind messed things up 
  */
 const Root = () => {

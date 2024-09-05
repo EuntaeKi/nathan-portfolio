@@ -24,6 +24,7 @@ const usePreviousLocation = () => {
     useEffect(() => {
         prevLocationRef.current = currentLocationRef.current;
         currentLocationRef.current = location;
+        console.log("Location Hook Updated");
     }, [location]);
 
     return prevLocationRef.current;
