@@ -26,7 +26,7 @@ const Main = ({
   return (
     <>
       <Helmet>
-        <title>Home</title>
+        <title>NS | Portfolio</title>
       </Helmet>
       <Light
         display={
@@ -44,8 +44,10 @@ const Main = ({
         slideType={triggerBlink ? "down" : "up"}
       />
       <div className={`${triggerBlink ? 'slide-down' :
-        previousLocation &&
-          previousLocation.pathname !== "/" ? 'slide-up' : ''}`} id="main-container">
+        (location.pathname === "home" &&
+          previousLocation &&
+          previousLocation.pathname !== "/" &&
+          previousLocation.pathname !== location.pathname) ? 'slide-up' : ''}`} id="main-container">
         <span id="main-description">
           <span id="main-name">Nathan Seung</span>
           <div id="main-body">

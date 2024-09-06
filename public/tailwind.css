@@ -852,6 +852,9 @@ video {
 .self-center {
   align-self: center;
 }
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
 .text-nowrap {
   text-wrap: nowrap;
 }

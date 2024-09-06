@@ -15,14 +15,6 @@ import About from "../../pages/about/About";
 import Projects from "../../pages/projects/Projects";
 import ArcadersApp from "../../pages/projects/arcadersApp/ArcadersApp";
 
-/* To Fix
- * - Intro animation bug
- * - Light Masking
- * - Routing pages via URL returns 404 in Production
- 
- * - Second Project Page
- * - Overall Spacing as Tailwind messed things up 
- */
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayColor, setOverlayColor] = useState("#00000020");
@@ -83,9 +75,9 @@ const Root = () => {
         element={
           <Layout
             showHeader={true}
+            pageColor={pageColor}
             showOverlay={showOverlay}
             overlayColor={overlayColor}
-            pageColor={pageColor}
             triggerBlink={triggerBlink}
             setTriggerBlink={setTriggerBlink}
           >

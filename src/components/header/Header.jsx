@@ -28,12 +28,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
     // Prevent navigation
     event.preventDefault();
 
-    const shouldTriggerBlink = (path !== "/" && !triggerBlink);
+    const shouldTriggerBlink = ((location.pathname === "/about" || location.pathname === "/home" || location.pathname === "/projects") && !triggerBlink);
 
     if (previousLocation) {
-      // previousLocation.pathname !== "/" && 
       const exceptionPaths = (path !== location.pathname);
-      console.log(path, location);
       if (shouldTriggerBlink && exceptionPaths) {
         setTriggerBlink(true);
         setDestPath(path);
@@ -52,6 +50,9 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
         setClicked(true);
       }
     }
+
+    document.body.classList.add('overflow-y-hidden');
+    document.documentElement.classList.add('overflow-y-hidden');
   };
 
   // Blink Finished & Clean up
@@ -60,6 +61,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
       setClicked(false);
       navigate(destPath);
     }
+    return () => {
+      document.body.classList.remove('overflow-y-hidden');
+      document.documentElement.classList.remove('overflow-y-hidden');
+    };
   }, [triggerBlink, destPath, clicked, setClicked, navigate])
 
   return (

@@ -14,7 +14,7 @@ const Intro = ({ setIsPreviousPageIntro }) => {
   return (
     <>
       <Helmet>
-        <title>Intro</title>
+        <title>NS | Portfolio</title>
       </Helmet>
       <div className="intro-container">
         {

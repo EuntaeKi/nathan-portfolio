@@ -13,7 +13,7 @@ const ArcadersApp = ({ setPageColor }) => {
     return (
         <>
             <Helmet>
-                <title>Project Arcaders' App</title>
+                <title>NS | Arcaders App</title>
             </Helmet>
             <div className="arcaders-app-container block">
                 <div className="arcaders-app-intro h-svh">

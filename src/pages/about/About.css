@@ -5,6 +5,10 @@
     font-family: 'Inter', system-ui;
 }
 
+.about-description-container {
+    margin-bottom: 2rem;
+}
+
 .slide-down {
     animation-duration: 0.5s;
     animation-name: slidedown;
@@ -38,8 +42,8 @@
 }
 
 .about-logo {
-    margin-left: -5rem;
-    margin-bottom: -3.5rem;
+    margin-left: -7rem;
+    margin-bottom: -2.5rem;
     animation: logo-blink 3s infinite;
     animation-timing-function: ease;
     opacity: 1;

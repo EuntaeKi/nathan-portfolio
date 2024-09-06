@@ -21,7 +21,7 @@ const About = ({
   return (
     <>
       <Helmet>
-        <title>About</title>
+        <title>NS | Portfolio</title>
       </Helmet>
       <Light
         display={true}

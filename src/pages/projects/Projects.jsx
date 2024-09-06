@@ -2,42 +2,31 @@ import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
-import Light from "../../components/light/Light";
 import "./Projects.css";
+import Light from "../../components/light/Light";
 
 const Projects = ({ pageColor, setPageColor, triggerBlink, setTriggerBlink, setShowOverlay, setOverlayColor }) => {
-    const [project, setProject] = useState(0);
-
     useEffect(() => {
         setPageColor("#85ECE0");
     }, [setPageColor]);
 
-    const projectList = [
-        "Arcaders' (Application)",
-        "Arcaders' (Website)",
-        "Reverse Analysis",
-        "Yihwa"
-    ];
-
-    const handleHover = (index) => {
-        setProject(index);
-    };
-
     return (
         <>
             <Helmet>
-                <title>Projects</title>
+                <title>NS | Portfolio</title>
             </Helmet>
             <Light
-                display={false}
+                display={triggerBlink}
                 pageColor={pageColor}
+                setPageColor={setPageColor}
                 setShowOverlay={setShowOverlay}
                 setOverlayColor={setOverlayColor}
-                setPageColor={setPageColor}
                 triggerBlink={triggerBlink}
-                setTriggerBlink={setTriggerBlink} />
-            <div className="flex flex-col">
-                <div className="flex mb-16 justify-between">
+                setTriggerBlink={setTriggerBlink}
+                slideType={triggerBlink ? "down" : "up"} />
+            <div className=
+                {`${triggerBlink ? 'slide-down flex flex-col' : 'slide-up flex flex-col'}`} >
+                <div className="flex mb-16 justify-between flex-wrap">
                     <div className="flex flex-col mr-10">
                         <div className="flex items-center justify-center bg-zinc-900 px-8 py-12 mb-4">
                             <div className="preview-container" id="arcaders-app">
@@ -79,10 +68,10 @@ const Projects = ({ pageColor, setPageColor, triggerBlink, setTriggerBlink, setS
                         <Link to="/projects/arcaders-web" className="text-lg flex w-fit items-center" style={{ fontFamily: 'ClashDisplay-Regular, system-ui' }}>Learn More <i className="material-symbols-outlined">arrow_right_alt</i></Link>
                     </div>
                 </div>
-                <div className="flex bg-zinc-900 w-full py-8 px-16 items-center">
-                    <div className="flex flex-col">
-                        <div className="text-white text-3xl font-clash-bold">Let's work together!</div>
-                        <div className="text-gray-400 w-2/3 font-clash-bold">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</div>
+                <div className="flex bg-zinc-900 w-full py-8 items-center justify-around">
+                    <div className="flex flex-col w-2/3">
+                        <div className="text-white text-3xl font-clash-bold w-fit">Let's work together!</div>
+                        <div className="text-gray-400 w-2/3 font-clash-bold">With a passion for designing simple, intuitive, and visually appealing user experiences, I’m ready to bring my skills to your next project.</div>
                     </div>
                     <a href="mailto:jeungha89@gmail.com" className="bg-app-blue text-black py-3 px-16 font-clash-medium text-xl">contact</a>
                 </div>
