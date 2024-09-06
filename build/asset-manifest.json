@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.8ff0d4dd.css",
-    "main.js": "/nathan-portfolio/static/js/main.33cab6b4.js",
+    "main.css": "/nathan-portfolio/static/css/main.cd3e5d18.css",
+    "main.js": "/nathan-portfolio/static/js/main.c868f97b.js",
     "static/media/material-symbols-rounded.woff2": "/nathan-portfolio/static/media/material-symbols-rounded.63fc9628a3e3226f2a62.woff2",
     "static/media/material-symbols-outlined.woff2": "/nathan-portfolio/static/media/material-symbols-outlined.c5e8d508a591c896fcca.woff2",
     "static/media/material-symbols-sharp.woff2": "/nathan-portfolio/static/media/material-symbols-sharp.12c5c42a2268feebc869.woff2",
@@ -32,11 +32,11 @@
     "static/media/ClashDisplay-Bold.woff2": "/nathan-portfolio/static/media/ClashDisplay-Bold.e2f8628a6f360f644a76.woff2",
     "static/media/ClashDisplay-Extralight.woff2": "/nathan-portfolio/static/media/ClashDisplay-Extralight.8f792be62d02ca420577.woff2",
     "index.html": "/nathan-portfolio/index.html",
-    "main.8ff0d4dd.css.map": "/nathan-portfolio/static/css/main.8ff0d4dd.css.map",
-    "main.33cab6b4.js.map": "/nathan-portfolio/static/js/main.33cab6b4.js.map"
+    "main.cd3e5d18.css.map": "/nathan-portfolio/static/css/main.cd3e5d18.css.map",
+    "main.c868f97b.js.map": "/nathan-portfolio/static/js/main.c868f97b.js.map"
   },
   "entrypoints": [
-    "static/css/main.8ff0d4dd.css",
-    "static/js/main.33cab6b4.js"
+    "static/css/main.cd3e5d18.css",
+    "static/js/main.c868f97b.js"
   ]
 }
