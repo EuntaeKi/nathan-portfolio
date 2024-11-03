@@ -3,9 +3,9 @@ import {
   Routes,
   Route,
   createBrowserRouter,
-  RouterProvider
+  RouterProvider,
 } from "react-router-dom";
-import 'material-symbols';
+import "material-symbols";
 
 import "./App.css";
 import Layout from "../../components/layout/Layout";
@@ -14,6 +14,7 @@ import Intro from "../../pages/intro/Intro";
 import About from "../../pages/about/About";
 import Projects from "../../pages/projects/Projects";
 import ArcadersApp from "../../pages/projects/arcadersApp/ArcadersApp";
+import ArcadersWeb from "../../pages/projects/arcadersWeb/ArcadersWeb";
 
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -116,11 +117,11 @@ const Root = () => {
       />
       <Route
         path="/projects/arcaders-app"
-        element={
-          <ArcadersApp
-            setPageColor={setPageColor}
-          />
-        }
+        element={<ArcadersApp setPageColor={setPageColor} />}
+      />
+      <Route
+        path="/projects/arcaders-website"
+        element={<ArcadersWeb setPageColor={setPageColor} />}
       />
     </Routes>
   );

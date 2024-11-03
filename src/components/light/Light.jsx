@@ -35,12 +35,12 @@ const Light = ({
         id = setTimeout(() => {
           setPhase(2);
           setShowOverlay(true);
-        }, 500);
+        }, 350);
       } else if (phase === 2) {
         id = setTimeout(() => {
           setShowOverlay(false);
           setPhase(3);
-        }, 2000);
+        }, 1000);
       } else if (phase === 3) {
         setShowOverlay(true);
         setOverlayColor("#000000");
@@ -56,7 +56,14 @@ const Light = ({
     return () => {
       if (id) clearTimeout(id);
     };
-  }, [triggerBlink, phase, pageColor, setTriggerBlink, setShowOverlay, setOverlayColor]);
+  }, [
+    triggerBlink,
+    phase,
+    pageColor,
+    setTriggerBlink,
+    setShowOverlay,
+    setOverlayColor,
+  ]);
 
   // Component Dismount Logic
   useEffect(() => {

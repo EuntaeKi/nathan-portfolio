@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 import PlaneSequence from "../../components/plane-sequence/PlaneSequence";
 import "./Intro.css";
@@ -46,7 +46,7 @@ const Intro = ({ setIsPreviousPageIntro }) => {
         <div className="plane-container">
           <PlaneSequence
             phaseFrames={phaseFrames}
-            interval={250}
+            interval={175}
             phase={phase}
             setPhase={setPhase}
           />
