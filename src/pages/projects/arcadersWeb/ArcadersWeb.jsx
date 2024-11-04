@@ -2,6 +2,8 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import "./ArcadersWeb.css";
+import CommentBox from "../../../components/web/CommentBox";
+import StreamerProfile from "../../../components/web/StreamerProfile";
 
 const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
@@ -16,6 +18,7 @@ const ArcadersWeb = ({ setPageColor }) => {
         <title>NS | Arcaders Website</title>
       </Helmet>
       {/* Outer Container */}
+      {/* Outer margin should be m-8 */}
       <div className="flex flex-col bg-web-bg w-full">
         {/* Landing Section */}
         <div className="flex min-h-svh">
@@ -147,7 +150,7 @@ const ArcadersWeb = ({ setPageColor }) => {
               Background
             </h2>
           </div>
-          {/* Section Body Part 1 */}
+          {/* Section Body Gamepad */}
           <div className="flex flex-col min-h-svh items-center justify-end text-center border-b-4 border-white/50">
             <div className="font-clash-semibold text-5xl mb-8">
               How do I find the games that I <br />
@@ -163,29 +166,29 @@ const ArcadersWeb = ({ setPageColor }) => {
               className="z-10"
             />
           </div>
-          {/* Section Body Part 2 */}
+          {/* Section Body Brainstorming */}
           <div className="flex flex-col bg-web-bg font-clash-medium justify-center items-center py-16">
-            <div>
+            <div className="container">
               <div className="text-5xl mb-6">Brainstorming</div>
               <div className="text-xl">
                 To outline the research plan, I selected 3 main themes:
                 Community, Concision, and Stream. Through industry-relevant user
-                research design, I envisioned to transform <br /> gamers’ need
+                research design, I envisioned to transform gamers’ need
                 to real life design.
               </div>
             </div>
           </div>
-          {/* Section Body Part 3 */}
-          <div className="flex flex-col xl:flex-row w-full">
+          {/* Section Body Three Grids */}
+          <div className="flex flex-col xl:flex-row w-full text-center">
             {/* Section Community */}
             <div
-              className="w-full xl:w-1/3"
+              className="w-full xl:w-1/3 h-max-content xl:h-[150svh]"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_community.png)`,
               }}
             >
-              <div className="flex flex-col justify-around h-max-content bg-web-img-background-gradient">
-                <div className="flex flex-col h-max-content xl:h-[80svh] justify-between text-center pt-16">
+              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full">
+                <div className="flex flex-col h-max-content justify-between text-center pt-16">
                   <div className="font-clash-bold text-6xl">Community</div>
                 </div>
                 <div className="flex flex-col items-center py-12">
@@ -202,13 +205,13 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
             {/* Section Concision */}
             <div
-              className="w-full xl:w-1/3"
+              className="w-full xl:w-1/3 h-max-content xl:h-[150svh]"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_concision.png)`,
               }}
             >
-              <div className="flex flex-col justify-around h-max-content bg-web-img-background-gradient">
-                <div className="flex flex-col h-max-content xl:h-[80svh] justify-between text-center pt-16">
+              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full">
+                <div className="flex flex-col h-max-content justify-between pt-16">
                   <div className="font-clash-bold text-6xl">Concision</div>
                 </div>
                 <div className="flex flex-col items-center py-12">
@@ -226,13 +229,13 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
             {/* Section Stream */}
             <div
-              className="w-full xl:w-1/3"
+              className="w-full xl:w-1/3 h-max-content xl:h-[150svh]"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_stream.png)`,
               }}
             >
-              <div className="flex flex-col justify-around h-max-content bg-web-img-background-gradient text-center">
-                <div className="flex flex-col h-max-content xl:h-[80svh] justify-between text-center pt-16">
+              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full text-center">
+                <div className="flex flex-col h-max-content justify-between text-center pt-16">
                   <div className="font-clash-bold text-6xl">Stream</div>
                 </div>
                 <div className="flex flex-col items-center py-12">
@@ -248,6 +251,81 @@ const ArcadersWeb = ({ setPageColor }) => {
               </div>
             </div>
           </div>
+        </div>
+        {/* 03. Ideate */}
+        <div className="flex flex-col min-h-svh">
+          {/* Section Header */}
+          <div className="mb-16 ml-20 pt-16">
+            <div className="font-bebas-neue text-xl">03</div>
+            <h2 className="font-clash-medium text-5xl ml-4 -mt-2">
+              Ideate
+            </h2>
+          </div>
+          {/* Section Body Comments */}
+          <div className="flex flex-col items-center text-center">
+            <div className="mb-[5.5rem]">
+              <div className="font-clash-medium text-2xl text-white">User Reviews & Persona</div>
+              <div className="font-clash-medium text-xl text-web-gray">
+                User’s comment on existing game review services. <br />
+                I asked 32 gamers located in the US.
+              </div>
+            </div>
+            <div className="flex flex-wrap justify-center w-full gap-12">
+              <CommentBox
+                imagePath={imagePath}
+                commentImage="arcaders_web_ideate_gamepad_comment.png"
+                avatarImage="arcaders_web_ideate_avatar_1.png"
+                username="Gamergirl22"
+                comment="So many <br /> advertisements."
+                altText="Gamepad shaped comment box"
+              />
+              <CommentBox
+                imagePath={imagePath}
+                commentImage="arcaders_web_ideate_square_comment.png"
+                avatarImage="arcaders_web_ideate_avatar_2.png"
+                username="KitingSam"
+                comment="Not enough information<br /> about the actual game"
+                altText="Rectangle shaped comment box"
+                commentBoxStyle="bottom-[5.5rem]"
+              />
+              <CommentBox
+                imagePath={imagePath}
+                commentImage="arcaders_web_ideate_gamepad_comment.png"
+                avatarImage="arcaders_web_ideate_avatar_3.png"
+                username="CalmKate"
+                comment="Too many UI tabs <br /> that I don't use"
+                altText="Gamepad shaped comment box"
+              />
+              <CommentBox
+                imagePath={imagePath}
+                commentImage="arcaders_web_ideate_square_comment.png"
+                avatarImage="arcaders_web_ideate_avatar_4.png"
+                username="FragileVictor"
+                comment="Boring UI/UX Design."
+                altText="Rectangle shaped comment box"
+                commentBoxStyle="bottom-[5.5rem]"
+              />
+              <CommentBox
+                imagePath={imagePath}
+                commentImage="arcaders_web_ideate_gamepad_comment.png"
+                avatarImage="arcaders_web_ideate_avatar_5.png"
+                username="HappyJoe"
+                comment="Little to no real <br /> gameplay"
+                altText="Gamepad shaped comment box"
+              />
+              <CommentBox
+                imagePath={imagePath}
+                commentImage="arcaders_web_ideate_square_comment.png"
+                avatarImage="arcaders_web_ideate_avatar_6.png"
+                username="WatchingTim"
+                comment="Wish I could know what <br /> my streamer played."
+                altText="Rectangle shaped comment box"
+                commentBoxStyle="bottom-[5.5rem]"
+              />
+            </div>
+          </div>
+          {/* Section Body Profiles #1 */}
+          <StreamerProfile />
         </div>
       </div>
     </>

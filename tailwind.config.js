@@ -10,6 +10,7 @@ module.exports = {
         "web-gray": "#8F9094",
         "web-dark-blue": "#4B60C0",
         "web-bg": "#1B1B23",
+        "web-dirty-white": "#F2F5F6"
       },
       fontFamily: {
         "clash-variable": "ClashDisplay-Variable",
