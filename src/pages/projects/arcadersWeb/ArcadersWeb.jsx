@@ -173,8 +173,8 @@ const ArcadersWeb = ({ setPageColor }) => {
               <div className="text-xl">
                 To outline the research plan, I selected 3 main themes:
                 Community, Concision, and Stream. Through industry-relevant user
-                research design, I envisioned to transform gamers’ need
-                to real life design.
+                research design, I envisioned to transform gamers’ need to real
+                life design.
               </div>
             </div>
           </div>
@@ -257,17 +257,17 @@ const ArcadersWeb = ({ setPageColor }) => {
           {/* Section Header */}
           <div className="mb-16 ml-20 pt-16">
             <div className="font-bebas-neue text-xl">03</div>
-            <h2 className="font-clash-medium text-5xl ml-4 -mt-2">
-              Ideate
-            </h2>
+            <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Ideate</h2>
           </div>
           {/* Section Body Comments */}
           <div className="flex flex-col items-center text-center">
             <div className="mb-[5.5rem]">
-              <div className="font-clash-medium text-2xl text-white">User Reviews & Persona</div>
+              <div className="font-clash-medium text-2xl text-white">
+                User Reviews & Persona
+              </div>
               <div className="font-clash-medium text-xl text-web-gray">
-                User’s comment on existing game review services. <br />
-                I asked 32 gamers located in the US.
+                User’s comment on existing game review services. <br />I asked
+                32 gamers located in the US.
               </div>
             </div>
             <div className="flex flex-wrap justify-center w-full gap-12">
@@ -325,7 +325,37 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
           </div>
           {/* Section Body Profiles #1 */}
-          <StreamerProfile />
+          <StreamerProfile
+            streamer={{
+              Name: "Jackson",
+              Age: 26,
+              Sex: "male",
+              Location: "NY, USA",
+              Occupation: "Student",
+            }}
+            keywords={[
+              "#GAMEISLIFE",
+              "#FAN",
+              "#UI/UX",
+              "#VIEWING-GAME",
+              "#STREAM",
+            ]}
+            painPointsNeeds={[
+              {
+                painPoint: "Hard to find what my streamers played before",
+                need: "Product that connects game reviews with streamers",
+              },
+              {
+                painPoint:
+                  "Existing review services are overwhelming and subjective",
+                need: "Simple and useful  review format",
+              },
+              {
+                painPoint: "Complicated and boring UI",
+                need: "Intuitive and organized interface",
+              },
+            ]}
+          />
         </div>
       </div>
     </>
