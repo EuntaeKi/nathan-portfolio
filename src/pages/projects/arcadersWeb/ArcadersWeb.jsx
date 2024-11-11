@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import "./ArcadersWeb.css";
 import CommentBox from "../../../components/web/CommentBox";
 import StreamerProfile from "../../../components/web/StreamerProfile";
+import UserJourney from "../../../components/web/UserJourney";
 
 const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
@@ -17,7 +18,7 @@ const ArcadersWeb = ({ setPageColor }) => {
     "Watch a gaming stream",
     "Discuss with peers",
     "Play the game",
-    "Leave a review"
+    "Leave a review",
   ];
 
   const behaviors = [
@@ -25,9 +26,8 @@ const ArcadersWeb = ({ setPageColor }) => {
     "Tries to look up what games that their favorite streamer played",
     "Discuss what game to play with friends",
     "Tries playing the game",
-    "Leaves a review about the game based on the gameplay"
+    "Leaves a review about the game based on the gameplay",
   ];
-
 
   return (
     <>
@@ -351,7 +351,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                 Sex: "male",
                 Location: "NY, USA",
                 Occupation: "Student",
-                ProfileImage: `${imagePath}arcaders_web_ideate_streamer_1.png`
+                ProfileImage: `${imagePath}arcaders_web_ideate_streamer_1.png`,
               }}
               keywords={[
                 "#GAMEISLIFE",
@@ -378,20 +378,20 @@ const ArcadersWeb = ({ setPageColor }) => {
               profileSliders={[
                 {
                   label: "Game Activity",
-                  value: "9"
+                  value: "9",
                 },
                 {
                   label: "New Games",
-                  value: "5"
+                  value: "5",
                 },
                 {
                   label: "Stream Participation",
-                  value: "9"
+                  value: "9",
                 },
                 {
                   label: "Social Level",
-                  value: "5"
-                }
+                  value: "5",
+                },
               ]}
             />
             <StreamerProfile
@@ -402,7 +402,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                 Sex: "female",
                 Location: "NC, USA",
                 Occupation: "Consultant",
-                ProfileImage: `${imagePath}arcaders_web_ideate_streamer_2.png`
+                ProfileImage: `${imagePath}arcaders_web_ideate_streamer_2.png`,
               }}
               keywords={[
                 "#FRIENDS",
@@ -416,72 +416,84 @@ const ArcadersWeb = ({ setPageColor }) => {
                   need: "Platform that provide customized recommendation",
                 },
                 {
-                  painPoint:
-                    "Can't agree on what game to play with my friends",
+                  painPoint: "Can't agree on what game to play with my friends",
                   need: "Game review service that I can communicate with peers",
                 },
                 {
-                  painPoint: "All the information is scattered around different sections",
+                  painPoint:
+                    "All the information is scattered around different sections",
                   need: "Practical information grouped together",
                 },
               ]}
               profileSliders={[
                 {
                   label: "Game Activity",
-                  value: "9"
+                  value: "9",
                 },
                 {
                   label: "New Games",
-                  value: "9"
+                  value: "9",
                 },
                 {
                   label: "Stream Participation",
-                  value: "2"
+                  value: "2",
                 },
                 {
                   label: "Social Level",
-                  value: "9"
-                }
+                  value: "9",
+                },
               ]}
             />
           </div>
           {/* Insight #1 */}
           <div className="flex flex-col w-full justify-center">
-            <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 md:px-0 rounded-3xl text-center">
+            <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 md:px-0 rounded-3xl text-center mb-12">
               <div className="text-4xl">Insight #1</div>
-              <div className="text-2xl">Wide variety of game review platforms is overwhelming for users.</div>
+              <div className="text-2xl">
+                Wide variety of game review platforms is overwhelming for users.
+              </div>
             </div>
             {/* User Journey */}
-            <div className="flex flex-col justify-around items-center bg-white w-full h-[110svh]">
-              <div className="text-web-dark-blue text-4xl font-clash-semibold">User Journey</div>
-              {/* Step */}
+            {/* <div className="flex flex-col justify-around items-center bg-white w-full h-[110svh]">
+              <div className="text-web-dark-blue text-4xl font-clash-semibold">
+                User Journey
+              </div>
               <div className="flex text-lg font-clash-medium items-start justify-around w-full">
                 <div className="text-web-gray w-36 text-center">Step</div>
                 <div className="flex flex-wrap items-center justify-around w-full gap-4">
                   {steps.map((step, index) => (
                     <React.Fragment key={index}>
-                      <div className={`text-black relative flex items-center w-80 ${index < steps.length - 1 ? 'web-user-journey-step-after' : ''}`}>
-                        <div className="text-web-dark-blue text-lg absolute bottom-4 -left-4">{`0${index + 1}`}</div>
+                      <div
+                        className={`text-black relative flex items-center w-80 ${
+                          index < steps.length - 1
+                            ? "web-user-journey-step-after"
+                            : ""
+                        }`}
+                      >
+                        <div className="text-web-dark-blue text-lg absolute bottom-4 -left-4">{`0${
+                          index + 1
+                        }`}</div>
                         {step}
                       </div>
                     </React.Fragment>
                   ))}
                 </div>
               </div>
-              {/* Behavior */}
               <div className="flex text-lg font-clash-medium items-start justify-around w-full">
                 <div className="text-web-gray w-36 text-center">Behavior</div>
                 <div className="flex flex-wrap items-start justify-around w-full gap-4 text-center">
                   {behaviors.map((behavior, index) => (
-                    <div key={index} className="text-black relative flex flex-col items-center w-80">
+                    <div
+                      key={index}
+                      className="text-black relative flex flex-col items-center w-80"
+                    >
                       {behavior}
                     </div>
                   ))}
                 </div>
               </div>
-
-
-            </div>
+            </div> */}
+            <UserJourney />
           </div>
         </div>
       </div>
