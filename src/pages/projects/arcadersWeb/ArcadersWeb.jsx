@@ -12,6 +12,23 @@ const ArcadersWeb = ({ setPageColor }) => {
     setPageColor("#FFFFFF");
   }, [setPageColor]);
 
+  const steps = [
+    "Search for a game",
+    "Watch a gaming stream",
+    "Discuss with peers",
+    "Play the game",
+    "Leave a review"
+  ];
+
+  const behaviors = [
+    "Look for games to play with peers",
+    "Tries to look up what games that their favorite streamer played",
+    "Discuss what game to play with friends",
+    "Tries playing the game",
+    "Leaves a review about the game based on the gameplay"
+  ];
+
+
   return (
     <>
       <Helmet>
@@ -253,7 +270,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
         </div>
         {/* 03. Ideate */}
-        <div className="flex flex-col min-h-svh">
+        <div className="flex flex-col min-h-svh gap-12">
           {/* Section Header */}
           <div className="mb-16 ml-20 pt-16">
             <div className="font-bebas-neue text-xl">03</div>
@@ -324,38 +341,148 @@ const ArcadersWeb = ({ setPageColor }) => {
               />
             </div>
           </div>
-          {/* Section Body Profiles #1 */}
-          <StreamerProfile
-            streamer={{
-              Name: "Jackson",
-              Age: 26,
-              Sex: "male",
-              Location: "NY, USA",
-              Occupation: "Student",
-            }}
-            keywords={[
-              "#GAMEISLIFE",
-              "#FAN",
-              "#UI/UX",
-              "#VIEWING-GAME",
-              "#STREAM",
-            ]}
-            painPointsNeeds={[
-              {
-                painPoint: "Hard to find what my streamers played before",
-                need: "Product that connects game reviews with streamers",
-              },
-              {
-                painPoint:
-                  "Existing review services are overwhelming and subjective",
-                need: "Simple and useful  review format",
-              },
-              {
-                painPoint: "Complicated and boring UI",
-                need: "Intuitive and organized interface",
-              },
-            ]}
-          />
+          {/* Section Body Profiles */}
+          <div className="flex flex-col gap-12">
+            <StreamerProfile
+              comment="I want to know what my favorite streamer plays. It’s hard to find what games they played before."
+              streamer={{
+                Name: "Jackson",
+                Age: 26,
+                Sex: "male",
+                Location: "NY, USA",
+                Occupation: "Student",
+                ProfileImage: `${imagePath}arcaders_web_ideate_streamer_1.png`
+              }}
+              keywords={[
+                "#GAMEISLIFE",
+                "#FAN",
+                "#UI/UX",
+                "#VIEWING-GAME",
+                "#STREAM",
+              ]}
+              painPointsNeeds={[
+                {
+                  painPoint: "Hard to find what my streamers played before",
+                  need: "Product that connects game reviews with streamers",
+                },
+                {
+                  painPoint:
+                    "Existing review services are overwhelming and subjective",
+                  need: "Simple and useful  review format",
+                },
+                {
+                  painPoint: "Complicated and boring UI",
+                  need: "Intuitive and organized interface",
+                },
+              ]}
+              profileSliders={[
+                {
+                  label: "Game Activity",
+                  value: "9"
+                },
+                {
+                  label: "New Games",
+                  value: "5"
+                },
+                {
+                  label: "Stream Participation",
+                  value: "9"
+                },
+                {
+                  label: "Social Level",
+                  value: "5"
+                }
+              ]}
+            />
+            <StreamerProfile
+              comment="I am constantly looking for new games to play with my friends. I play game to expand my social circles."
+              streamer={{
+                Name: "Kate",
+                Age: 31,
+                Sex: "female",
+                Location: "NC, USA",
+                Occupation: "Consultant",
+                ProfileImage: `${imagePath}arcaders_web_ideate_streamer_2.png`
+              }}
+              keywords={[
+                "#FRIENDS",
+                "#SOCIAL-NETWORK",
+                "#NEWDOPAMINE",
+                "#GAMEISLIFE",
+              ]}
+              painPointsNeeds={[
+                {
+                  painPoint: "Hard to find new games I want to play",
+                  need: "Platform that provide customized recommendation",
+                },
+                {
+                  painPoint:
+                    "Can't agree on what game to play with my friends",
+                  need: "Game review service that I can communicate with peers",
+                },
+                {
+                  painPoint: "All the information is scattered around different sections",
+                  need: "Practical information grouped together",
+                },
+              ]}
+              profileSliders={[
+                {
+                  label: "Game Activity",
+                  value: "9"
+                },
+                {
+                  label: "New Games",
+                  value: "9"
+                },
+                {
+                  label: "Stream Participation",
+                  value: "2"
+                },
+                {
+                  label: "Social Level",
+                  value: "9"
+                }
+              ]}
+            />
+          </div>
+          {/* Insight #1 */}
+          <div className="flex flex-col w-full justify-center">
+            <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 md:px-0 rounded-3xl text-center">
+              <div className="text-4xl">Insight #1</div>
+              <div className="text-2xl">Wide variety of game review platforms is overwhelming for users.</div>
+            </div>
+            {/* User Journey */}
+            <div className="flex flex-col justify-around items-center bg-white w-full h-[110svh]">
+              <div className="text-web-dark-blue text-4xl font-clash-semibold">User Journey</div>
+              {/* Step */}
+              <div className="flex text-lg font-clash-medium items-start justify-around w-full">
+                <div className="text-web-gray w-36 text-center">Step</div>
+                <div className="flex flex-wrap items-center justify-around w-full gap-4">
+                  {steps.map((step, index) => (
+                    <React.Fragment key={index}>
+                      <div className={`text-black relative flex items-center w-80 ${index < steps.length - 1 ? 'web-user-journey-step-after' : ''}`}>
+                        <div className="text-web-dark-blue text-lg absolute bottom-4 -left-4">{`0${index + 1}`}</div>
+                        {step}
+                      </div>
+                    </React.Fragment>
+                  ))}
+                </div>
+              </div>
+              {/* Behavior */}
+              <div className="flex text-lg font-clash-medium items-start justify-around w-full">
+                <div className="text-web-gray w-36 text-center">Behavior</div>
+                <div className="flex flex-wrap items-start justify-around w-full gap-4 text-center">
+                  {behaviors.map((behavior, index) => (
+                    <div key={index} className="text-black relative flex flex-col items-center w-80">
+                      {behavior}
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+
+            </div>
+          </div>
         </div>
       </div>
     </>
