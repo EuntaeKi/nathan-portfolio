@@ -5,6 +5,8 @@ import "./ArcadersWeb.css";
 import CommentBox from "../../../components/web/CommentBox";
 import StreamerProfile from "../../../components/web/StreamerProfile";
 import UserJourney from "../../../components/web/UserJourney";
+import ProjectGoal from "../../../components/web/ProjectGoal";
+import UserFlow from "../../../components/web/UserFlow";
 
 const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
@@ -12,22 +14,6 @@ const ArcadersWeb = ({ setPageColor }) => {
   useEffect(() => {
     setPageColor("#FFFFFF");
   }, [setPageColor]);
-
-  const steps = [
-    "Search for a game",
-    "Watch a gaming stream",
-    "Discuss with peers",
-    "Play the game",
-    "Leave a review",
-  ];
-
-  const behaviors = [
-    "Look for games to play with peers",
-    "Tries to look up what games that their favorite streamer played",
-    "Discuss what game to play with friends",
-    "Tries playing the game",
-    "Leaves a review about the game based on the gameplay",
-  ];
 
   return (
     <>
@@ -447,53 +433,62 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
           {/* Insight #1 */}
           <div className="flex flex-col w-full justify-center">
-            <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 md:px-0 rounded-3xl text-center mb-12">
+            <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 rounded-3xl text-center mb-12">
               <div className="text-4xl">Insight #1</div>
               <div className="text-2xl">
                 Wide variety of game review platforms is overwhelming for users.
               </div>
             </div>
             {/* User Journey */}
-            {/* <div className="flex flex-col justify-around items-center bg-white w-full h-[110svh]">
-              <div className="text-web-dark-blue text-4xl font-clash-semibold">
-                User Journey
-              </div>
-              <div className="flex text-lg font-clash-medium items-start justify-around w-full">
-                <div className="text-web-gray w-36 text-center">Step</div>
-                <div className="flex flex-wrap items-center justify-around w-full gap-4">
-                  {steps.map((step, index) => (
-                    <React.Fragment key={index}>
-                      <div
-                        className={`text-black relative flex items-center w-80 ${
-                          index < steps.length - 1
-                            ? "web-user-journey-step-after"
-                            : ""
-                        }`}
-                      >
-                        <div className="text-web-dark-blue text-lg absolute bottom-4 -left-4">{`0${
-                          index + 1
-                        }`}</div>
-                        {step}
-                      </div>
-                    </React.Fragment>
-                  ))}
-                </div>
-              </div>
-              <div className="flex text-lg font-clash-medium items-start justify-around w-full">
-                <div className="text-web-gray w-36 text-center">Behavior</div>
-                <div className="flex flex-wrap items-start justify-around w-full gap-4 text-center">
-                  {behaviors.map((behavior, index) => (
-                    <div
-                      key={index}
-                      className="text-black relative flex flex-col items-center w-80"
-                    >
-                      {behavior}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div> */}
             <UserJourney />
+          </div>
+          {/* Insight #2 */}
+          <div className="flex flex-col w-full justify-center items-center gap-4">
+            <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 rounded-3xl text-center mb-12">
+              <div className="text-4xl">Insight #2</div>
+              <div className="text-2xl">
+                For users, game is an opportunity to socialize. They often form
+                online communities based on different games. These communities
+                often share similar preferences on which games they play.
+              </div>
+            </div>
+            <div className="border-l-2 border-dashed border-white h-32"></div>
+            {/* Project Goal */}
+            <div className="flex flex-col items-center font-clash-semibold text-center gap-4">
+              <div className="text-white text-4xl">Project Goal</div>
+              <div className="text-web-gray text-3xl">
+                Design a Simple & Customizable Game Reviewing Community
+              </div>
+              <div className="flex flex-wrap gap-8 w-full justify-center">
+                <ProjectGoal
+                  title="Customization"
+                  hashtag="JustforU"
+                  description="Based on user profile,  Arcaders provide customized experience for gamers"
+                />
+                <ProjectGoal
+                  title="Community-based"
+                  hashtag="Together"
+                  description="Interaction between streamers, peers, and strangers are encouraged"
+                />
+                <ProjectGoal
+                  title="Intuitive"
+                  hashtag="SimpleIsBest"
+                  description="Keep the UI simple, organized, and yet visually appealing"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* 04. Design */}
+        <div className="flex flex-col min-h-svh gap-12">
+          {/* Section Header */}
+          <div className="mb-16 ml-20 pt-16">
+            <div className="font-bebas-neue text-xl">04</div>
+            <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Design</h2>
+          </div>
+          {/* User Flow */}
+          <div className="w-full h-[500px]">
+            <UserFlow />
           </div>
         </div>
       </div>

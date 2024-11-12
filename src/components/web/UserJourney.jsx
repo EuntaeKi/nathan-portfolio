@@ -10,7 +10,6 @@ import {
   LinearScale,
   PointElement,
 } from "chart.js";
-import Emoji from "react-emoji-render";
 
 // Register required chart components
 ChartJS.register(
@@ -22,6 +21,23 @@ ChartJS.register(
   LinearScale,
   PointElement
 );
+
+const emojiToCanvas = (emoji, fontSize = 32) => {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  // Set canvas dimensions based on font size
+  canvas.width = fontSize * 1.5;
+  canvas.height = fontSize * 1.5;
+
+  // Draw emoji on the canvas
+  ctx.font = `${fontSize}px Arial`;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillText(emoji, canvas.width / 2, canvas.height / 2);
+
+  return canvas;
+};
 
 const UserJourney = () => {
   return (
@@ -51,39 +67,32 @@ const UserJourney = () => {
       </div>
 
       {/* Emotion Row */}
-      <div className="grid grid-cols-11 gap-4 items-center border-t-2 border-b-2 border-dashed border-web-gray py-8">
+      <div className="grid grid-cols-11 items-center border-t-2 border-b-2 border-dashed border-web-gray py-8">
         <Header title="Emotion" />
         <div className="col-span-10">
-          <div className="grid grid-cols-10">
-            <div className="col-span-1"></div>
+          <div className="grid grid-cols-10 h-56">
             <EmotionSection />
-            <div className="col-span-1"></div>
           </div>
-          <div className="grid grid-cols-10">
+          <div className="grid grid-cols-10 gap-4 relative">
             <Emotion
-              emoji="🙂"
               description="Excited to play a new game! Where do I find one though?"
-              yPos={-120}
+              yPos={-60}
             />
             <Emotion
-              emoji="😐"
               description="Is this the one my streamer played? I can't tell."
-              yPos={-50}
+              yPos={-30}
             />
             <Emotion
-              emoji="😊"
               description="Whatever the game is we will enjoy it together!"
-              yPos={-120}
+              yPos={-70}
             />
             <Emotion
-              emoji="😞"
               description="This is not what I expected. What a disappointment."
-              yPos={-40}
+              yPos={-10}
             />
             <Emotion
-              emoji="😞"
               description="The interface looks boring. What's the point of reviewing?"
-              yPos={-40}
+              yPos={-10}
             />
           </div>
         </div>
@@ -127,12 +136,12 @@ const Behavior = ({ description }) => (
   <div className="col-span-2">{description}</div>
 );
 
-const Emotion = ({ emoji, description, yPos }) => (
-  <div className="flex flex-col items-center justify-center col-span-2">
-    <span className="text-3xl">{emoji}</span>
-    <div className="mt-2 p-2 bg-gray-300 rounded-3xl text-center text-pretty">
-      {description}
-    </div>
+const Emotion = ({ description, yPos }) => (
+  <div
+    className="col-span-2 p-2 bg-gray-300 rounded-3xl text-center text-pretty relative"
+    style={{ top: yPos }}
+  >
+    {description}
   </div>
 );
 
@@ -146,41 +155,57 @@ const Opportunity = ({ description }) => (
   </div>
 );
 
-const EmojiImage = ({ emoji }) => <Emoji text={`:${emoji}:`} />;
-
 const EmotionSection = () => {
-  //   const data = {
-  //     // pointStyle: ["😊", "😐", "🙂", "😞", "😐"],
-  //     datasets: [
-  //       {
-  //         label: "Test",
-  //         pointRadius: 20,
-  //         pointHoverRadius: 20,
-  //         pointHitRadius: "😊",
-  //         data: 1,
-  //       },
-  //     ],
-  //   };
-  const img = <EmojiImage emoji="kissing_face_with_closed_eyes" />;
   const data = {
-    labels: ["", "", "", "", ""], // Empty labels for each point to avoid any axis labels
+    labels: ["", "", "", "", ""],
     datasets: [
       {
         label: "",
-        data: [80, 60, 75, 50, 65], // Example y-axis values representing emotion levels
+        data: [60, 30, 70, 10, 10],
         borderColor: "#4b60c0",
-        pointRadius: 10,
+        borderWidth: 6,
+        pointRadius: 32,
         fill: false,
-        tension: 0, // Curved line for a smoother appearance
-        pointStyle: [img, "star", "star", "star", "star"], // Set the pointStyle to 'circle', as the custom emoji will be drawn
+        tension: 0,
+        pointStyle: [
+          emojiToCanvas("🙂", 32),
+          emojiToCanvas("😐", 32),
+          emojiToCanvas("😊", 32),
+          emojiToCanvas("😞", 32),
+          emojiToCanvas("😞", 32),
+        ],
       },
     ],
   };
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
+    layout: {
+      padding: (ctx) => {
+        const chart = ctx.chart;
+        const width = chart.width;
+        const height = chart.height;
+
+        // Define padding as a percentage of chart width and height
+        const paddingPercentage = {
+          top: 0.05,
+          bottom: 0.05,
+          left: 0.1,
+          right: 0.1,
+        };
+
+        return {
+          top: height * paddingPercentage.top,
+          bottom: height * paddingPercentage.bottom,
+          left: width * paddingPercentage.left,
+          right: width * paddingPercentage.right,
+        };
+      },
+    },
     plugins: {
-      legend: { display: false }, // Hide legend
+      legend: { display: false },
+      tooltip: { enabled: false },
     },
     scales: {
       x: {
@@ -192,7 +217,7 @@ const EmotionSection = () => {
     },
   };
 
-  return <Line data={data} options={options} />;
+  return <Line className="col-span-auto" data={data} options={options} />;
 };
 
 export default UserJourney;
