@@ -1,25 +1,13 @@
-import React, { memo } from "react";
-import { Handle, Position } from "@xyflow/react";
+import React from "react";
 
-function FilledNode({ data }) {
+const FilledNode = ({ text }) => {
   return (
-    <div className="flex justify-center items-center px-4 py-2 rounded-xl bg-web-dark-blue w-[237px] h-[75px] cursor-pointer">
-      <div className="text-lg font-bold text-center">{data.text}</div>
-
-      <Handle
-        type="target"
-        position={Position.Top}
-        isConnectable={false}
-        className="invisible"
-      />
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        isConnectable={false}
-        className="invisible"
-      />
-    </div>
+    <>
+      <div className="py-6 min-h-20 text-white bg-web-dark-blue rounded-md font-clash-semibold text-center">
+        {text}
+      </div>
+    </>
   );
-}
+};
 
-export default memo(FilledNode);
+export default FilledNode;

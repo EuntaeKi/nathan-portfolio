@@ -1,25 +1,13 @@
-import React, { memo } from "react";
-import { Handle, Position } from "@xyflow/react";
+import React from "react";
 
-function OutlinedNode({ data }) {
+const OutlinedNode = ({ text }) => {
   return (
-    <div className="flex justify-center items-center px-4 py-2 rounded-xl border-web-dark-blue border-2 bg-none w-[237px] h-[75px]">
-      <div className="text-lg font-bold text-center">{data.text}</div>
-
-      <Handle
-        type="target"
-        position={Position.Top}
-        isConnectable={false}
-        className="invisible"
-      />
-      <Handle
-        type="source"
-        position={Position.Bottom}
-        isConnectable={false}
-        className="invisible"
-      />
-    </div>
+    <>
+      <div className="py-6 min-h-20 text-white bg-none border-2 border-web-dark-blue rounded-md font-clash-semibold text-center">
+        {text}
+      </div>
+    </>
   );
-}
+};
 
-export default memo(OutlinedNode);
+export default OutlinedNode;

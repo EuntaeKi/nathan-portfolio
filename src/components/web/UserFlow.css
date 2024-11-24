@@ -1,0 +1,76 @@
+.tree {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.tree-group {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 100px;
+}
+
+.outlined-node,
+.filled-node {
+  position: relative;
+  text-align: center;
+  margin: 0 10px;
+  flex-shrink: 0; /* Prevent shrinking of nodes */
+}
+
+.node-label {
+  padding: 2rem 4rem;
+  width: 250px;
+  height: 100px;
+  text-align: center;
+  font-size: 1.25rem;
+  border-radius: 5px;
+}
+
+.outlined-node .node-label {
+  border: 2px solid #4b60c0;
+}
+
+.filled-node .node-label {
+  background-color: #4b60c0;
+}
+
+.tree-group::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #ccc;
+  height: 100px;
+}
+
+.outlined-node::before,
+.outlined-node::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.outlined-node::before {
+  right: 50%;
+}
+
+.outlined-node::after {
+  left: 50%;
+}
+
+.outlined-node:first-child::before,
+.outlined-node:last-child::after {
+  border: none;
+}
+
+.filled-node::before,
+.filled-node::after {
+  display: none;
+}

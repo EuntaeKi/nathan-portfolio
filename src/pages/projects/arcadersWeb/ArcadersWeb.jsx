@@ -10,6 +10,46 @@ import UserFlow from "../../../components/web/UserFlow";
 
 const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
+  const flowChart = [
+    {
+      label: "Parent",
+      children: [
+        {
+          label: "Child",
+          children: [
+            {
+              label: "Grand Child",
+            },
+          ],
+        },
+        {
+          label: "Child",
+          children: [
+            {
+              label: "Grand Child",
+            },
+            {
+              label: "Grand Child",
+              children: [
+                {
+                  label: "Great Grand Child",
+                },
+                {
+                  label: "Great Grand Child",
+                },
+                {
+                  label: "Great Grand Child",
+                },
+              ],
+            },
+            {
+              label: "Grand Child",
+            },
+          ],
+        },
+      ],
+    },
+  ];
 
   useEffect(() => {
     setPageColor("#FFFFFF");
@@ -488,7 +528,8 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
           {/* User Flow */}
           <div className="w-full h-[500px]">
-            <UserFlow />
+            {/* <UserFlow /> */}
+            <UserFlow data={flowChart} />
           </div>
         </div>
       </div>
