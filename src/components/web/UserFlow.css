@@ -1,76 +1,98 @@
 .tree {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
-.tree-group {
+.tree ul {
+  padding-top: 2rem;
   position: relative;
+}
+
+.tree li {
+  float: left;
+  text-align: center;
+  list-style-type: none;
+  position: relative;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tree li::before,
+.tree li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #fff;
+  width: 50%;
+  height: 2rem;
+}
+
+.tree li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #fff;
+}
+
+.tree li:only-child::before,
+.tree li:only-child::after {
+  display: none;
+}
+
+.tree li:only-child {
+  padding-top: 0;
+}
+
+.tree li:first-child::before,
+.tree li:last-child::after {
+  border: 0 none;
+}
+
+.tree li:last-child::before {
+  border-right: 1px solid #fff;
+  border-radius: 0 5px 0 0;
+}
+
+.tree li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.tree ul ul::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-left: 1px solid #fff;
+  width: 0;
+  height: 2rem;
+}
+
+.tree li div {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  margin-top: 100px;
-}
-
-.outlined-node,
-.filled-node {
-  position: relative;
-  text-align: center;
-  margin: 0 10px;
-  flex-shrink: 0; /* Prevent shrinking of nodes */
-}
-
-.node-label {
-  padding: 2rem 4rem;
-  width: 250px;
-  height: 100px;
-  text-align: center;
+  align-items: center;
+  width: 15rem;
+  height: 6rem;
   font-size: 1.25rem;
+  text-decoration: none;
+  font-family: "ClashDisplay-Semibold";
   border-radius: 5px;
 }
 
-.outlined-node .node-label {
-  border: 2px solid #4b60c0;
-}
-
-.filled-node .node-label {
+.filled {
   background-color: #4b60c0;
 }
 
-.tree-group::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  border-left: 1px solid #ccc;
-  height: 100px;
+.outlined {
+  border: 1px solid #4b60c0;
 }
 
-.outlined-node::before,
-.outlined-node::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 50%;
-  height: 20px;
-  border-top: 1px solid #ccc;
-}
-
-.outlined-node::before {
-  right: 50%;
-}
-
-.outlined-node::after {
-  left: 50%;
-}
-
-.outlined-node:first-child::before,
-.outlined-node:last-child::after {
-  border: none;
-}
-
-.filled-node::before,
-.filled-node::after {
-  display: none;
+@media screen and (max-width: 887px) {
+  .tree li div {
+    width: 6rem;
+    height: 4rem;
+    font-size: 0.75rem;
+  }
 }

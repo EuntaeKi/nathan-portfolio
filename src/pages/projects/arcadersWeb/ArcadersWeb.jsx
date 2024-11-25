@@ -12,38 +12,72 @@ const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
   const flowChart = [
     {
-      label: "Parent",
+      label: "Set-up",
+      isFilled: true,
       children: [
         {
-          label: "Child",
+          label: "Log In",
+          isFilled: false,
           children: [
             {
-              label: "Grand Child",
-            },
-          ],
-        },
-        {
-          label: "Child",
-          children: [
-            {
-              label: "Grand Child",
-            },
-            {
-              label: "Grand Child",
+              label: "Main Page",
+              isFilled: true,
               children: [
                 {
-                  label: "Great Grand Child",
+                  label: "Select Game",
+                  isFilled: true,
+                  children: [
+                    {
+                      label: "Streamer Review",
+                      isFilled: false,
+                      children: [
+                        {
+                          label: "Add Review",
+                          isFilled: false,
+                          children: [
+                            {
+                              label: "Add Game",
+                              isFilled: false,
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
                 },
                 {
-                  label: "Great Grand Child",
+                  label: "Select Streamer",
+                  isFilled: true,
+                  children: [
+                    {
+                      label: "Select Game",
+                      isFilled: false,
+                      children: [
+                        {
+                          label: "Streamer's Review",
+                          isFilled: false,
+                          children: [
+                            {
+                              label: "Add Streamer",
+                              isFilled: false,
+                              children: [
+                                {
+                                  label: "Add Game",
+                                  isFilled: false,
+                                },
+                              ],
+                            },
+                          ],
+                        },
+                      ],
+                    },
+                  ],
                 },
                 {
-                  label: "Great Grand Child",
+                  label: "About Us",
+                  isFilled: true,
                 },
               ],
-            },
-            {
-              label: "Grand Child",
             },
           ],
         },
@@ -520,15 +554,15 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
         </div>
         {/* 04. Design */}
-        <div className="flex flex-col min-h-svh gap-12">
+        <div className="flex flex-col h-max">
           {/* Section Header */}
           <div className="mb-16 ml-20 pt-16">
             <div className="font-bebas-neue text-xl">04</div>
             <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Design</h2>
           </div>
           {/* User Flow */}
-          <div className="w-full h-[500px]">
-            {/* <UserFlow /> */}
+          <div className="w-full flex flex-col items-center">
+            <div className="mb-6 font-clash-semibold text-2xl">Userflow</div>
             <UserFlow data={flowChart} />
           </div>
         </div>
