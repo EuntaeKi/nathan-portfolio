@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
 import "./About.css";
@@ -24,7 +25,7 @@ const About = ({
         <title>NS | Portfolio</title>
       </Helmet>
       <Light
-        display={true}
+        display={triggerBlink}
         pageColor={pageColor}
         setShowOverlay={setShowOverlay}
         setOverlayColor={setOverlayColor}
@@ -34,11 +35,13 @@ const About = ({
       <div className="about-container">
         <div className="about-description-container">
           <div className="about-logo-container">
-            <img
-              src={logoPath}
-              alt="Nathan Seung"
-              className="about-logo"
-            />
+            <Link to="/home">
+              <img
+                src={logoPath}
+                alt="Nathan Seung"
+                className="about-logo"
+              />
+            </Link>
           </div>
           <p className="about-description">
             is a UX/UI designer and a formal psychology researcher who
@@ -51,12 +54,13 @@ const About = ({
           </p>
         </div>
         <div className="about-resume-container">
-          <div className="about-resume-header">
-            <span>Contact</span>
-            <ul>
+          <div>
+            <div className="about-resume-header">Contact</div>
+            <ul className="about-list">
               <li>
                 <a
                   href="mailto:jeungha89@gmail.com"
+                  className="underline"
                   style={{ color: pageColor }}
                 >
                   jeungha89@gmail.com
@@ -65,27 +69,32 @@ const About = ({
               <li>
                 <a
                   href="https://www.linkedin.com/in/jeonghaseung/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="underline"
                   style={{ color: pageColor }}
                 >
                   LinkedIn
+                  <span className="material-symbols-outlined text-base mb-0 ml-1">open_in_new</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`${process.env.PUBLIC_URL}/files/JeongHa_Seung CV Resume (UX).pdf`}
+                  className="flex items-baseline"
                   target="_blank"
                   rel="noreferrer"
                   style={{ color: pageColor }}
                 >
-                  {" "}
-                  Resume
+                  <div className="underline">Resume</div>
+                  <div className="material-symbols-outlined text-base mb-0 ml-1 no-underline">open_in_new</div>
                 </a>
               </li>
             </ul>
           </div>
-          <div className="about-resume-header">
-            <span>Experience</span>
-            <ul>
+          <div>
+            <div className="about-resume-header">Experience</div>
+            <ul className="about-list">
               <li>Developmental Psychology Researcher</li>
               <li>Learning Assistant Mentor</li>
               <li>Google Certificate</li>
@@ -102,20 +111,22 @@ const About = ({
               </ul>
             </ul>
           </div>
-          <div className="about-resume-header">
-            <span>Capabilities</span>
-            <ul>
+          <div>
+            <div className="about-resume-header">Capabilities</div>
+            <ul className="about-list">
               <li>Website Design</li>
               <li>Mobile App Design</li>
-              <li>Research</li>
+              <li>Responsive Design</li>
+              <li>Accessibility in UX</li>
+              <li>Research Skills</li>
               <ul className="about-resume-subitems">
                 <li>Usability Study</li>
                 <li>Data managing/Analysis</li>
               </ul>
             </ul>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     </>
   )
 }

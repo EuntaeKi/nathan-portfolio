@@ -225,7 +225,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           <div className="flex flex-col xl:flex-row w-full text-center">
             {/* Section Community */}
             <div
-              className="w-full xl:w-1/3 h-max-content xl:h-[150svh]"
+              className="w-full xl:w-1/3 h-max-content xl:h-[130svh] bg-center"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_community.png)`,
               }}
@@ -248,7 +248,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
             {/* Section Concision */}
             <div
-              className="w-full xl:w-1/3 h-max-content xl:h-[150svh]"
+              className="w-full xl:w-1/3 h-max-content xl:h-[130svh] bg-center"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_concision.png)`,
               }}
@@ -272,7 +272,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
             {/* Section Stream */}
             <div
-              className="w-full xl:w-1/3 h-max-content xl:h-[150svh]"
+              className="w-full xl:w-1/3 h-max-content xl:h-[130svh] bg-center"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_stream.png)`,
               }}

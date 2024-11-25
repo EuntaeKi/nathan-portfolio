@@ -25,20 +25,21 @@
 }
 
 .about-resume-header {
-    display: flex;
-    flex-direction: column;
-}
-
-.about-resume-header span {
     font-weight: 700;
     font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.about-list {
+    line-height: 2rem;
+    font-size: 1.25rem;
 }
 
 .about-resume-subitems li {
-    list-style-type: disc;
-    font-size: 1rem;
+    list-style-type: circle;
+    font-size: 1.125rem;
+    line-height: 1.625rem;
     margin-left: 1.5rem;
-    line-height: 1.5rem;
 }
 
 .about-logo {
@@ -82,6 +83,7 @@
     font-size: 1.5rem;
     line-height: 2.5rem;
     letter-spacing: -2px;
+    margin-bottom: 1rem;
 }
 
 @keyframes slidedown {

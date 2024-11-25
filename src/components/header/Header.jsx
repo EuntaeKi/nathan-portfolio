@@ -70,7 +70,7 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
   return (
     <div id="header">
       <nav id="header-navigation">
-        <Link to="/home">
+        <Link to="/home" className={location.pathname === "/about" ? 'invisible' : ''}>
           <img src={logo} alt="Logo_Nathan-Seung" />
         </Link>
         <ul id="header-navigation-list">
