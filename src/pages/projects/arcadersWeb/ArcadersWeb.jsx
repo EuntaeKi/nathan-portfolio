@@ -8,6 +8,14 @@ import UserJourney from "../../../components/web/UserJourney";
 import ProjectGoal from "../../../components/web/ProjectGoal";
 import UserFlow from "../../../components/web/UserFlow";
 
+const importAll = (context) => {
+  const images = {};
+  context.keys().forEach((key) => {
+    images[key.replace("./", "")] = context(key);
+  });
+  return images;
+};
+
 const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
   const flowChart = [
@@ -84,6 +92,11 @@ const ArcadersWeb = ({ setPageColor }) => {
       ],
     },
   ];
+  const iconImages = importAll(
+    require.context("../../../assets/imgs/", false, /arcaders_web_icons_*/)
+  );
+
+  console.log(iconImages);
 
   useEffect(() => {
     setPageColor("#FFFFFF");
@@ -554,7 +567,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
         </div>
         {/* 04. Design */}
-        <div className="flex flex-col h-max">
+        <div className="flex flex-col gap-12 font-clash-semibold">
           {/* Section Header */}
           <div className="mb-16 ml-20 pt-16">
             <div className="font-bebas-neue text-xl">04</div>
@@ -562,8 +575,85 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
           {/* User Flow */}
           <div className="w-full flex flex-col items-center">
-            <div className="mb-6 font-clash-semibold text-2xl">Userflow</div>
+            <h4 className="mb-6 text-2xl font-clash-semibold">Userflow</h4>
             <UserFlow data={flowChart} />
+          </div>
+          <div className="flex flex-col items-center gap-8">
+            {/* Style Guide */}
+            <h3 className="font-clash-semibold text-2xl">Style Guide</h3>
+            <div className="flex gap-8 flex-wrap justify-center w-full">
+              <div className="flex flex-col gap-8 flex-wrap justify-start items-center 2xl:items-end">
+                {/* Typography */}
+                <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6 max-w-[500px] sm:w-[500px]">
+                  <h4 className="font-clash-semibold text-2xl">Typography</h4>
+                  <div className="flex flex-col gap-4 text-wrap md:text-nowrap">
+                    <div className="flex justify-between">
+                      <div className="font-rubik text-xl font-extrabold basis-1/2">
+                        Arcaders
+                      </div>
+                      <div className="font-rubik text-xl font-extrabold basis-1/2 text-[#8990A8]">
+                        Rubik ExtraBold
+                      </div>
+                    </div>
+                    <div className="flex justify-between">
+                      <div className="font-rubik text-xl font-bold basis-1/2">
+                        Provide Customized
+                      </div>
+                      <div className="font-rubik text-xl font-bold basis-1/2 text-[#8990A8]">
+                        Rubik Bold
+                      </div>
+                    </div>
+                    <div className="flex justify-between">
+                      <div className="font-bebas-text-xl neue basis-1/2">
+                        REVIEW SERVICE
+                      </div>
+                      <div className="font-bebas-text-xl neue basis-1/2 text-[#8990A8]">
+                        BEBAS NEUE REGULAR
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {/* Icons */}
+                <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6">
+                  <h4 className="font-clash-semibold text-2xl">Icons</h4>
+                  <div className="flex gap-4 flex-wrap">
+                    {Object.keys(iconImages).map((name, index) => (
+                      <div key={index} className="basis-[calc(11%-1rem)]">
+                        <img
+                          src={iconImages[name]}
+                          alt={name}
+                          className="w-[50px] h-[50px]"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {/* Colors */}
+              <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6 max-w-[500px]">
+                <h4 className="font-clash-semibold text-2xl">Colors</h4>
+                <div className="flex flex-wrap gap-4">
+                  <div className="flex justify-center items-end bg-[#1B1B23] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                    #1B1B23
+                  </div>
+                  <div className="flex justify-center items-end bg-[#323131] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                    #323131
+                  </div>
+                  <div className="flex justify-center items-end bg-[#8990A8] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                    #8990A8
+                  </div>
+                  <div className="flex justify-center items-end bg-[#142252] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                    #142252
+                  </div>
+                  <div className="flex justify-center items-end bg-[#3340D8] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                    #3340D8
+                  </div>
+                  <div className="flex justify-center items-end bg-[#7BDDFF] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                    #7BDDFF
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

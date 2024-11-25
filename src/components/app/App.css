@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 :root {
   /* HTML Element Default Style Configuration */
-  --arcade-font-family: 'Press Start 2P', system-ui;
-  --header-text-font-family: 'ClashDisplay-Light', system-ui;
-  --header-highlight-text-font-family: 'ClashDisplay-Regular', system-ui;
-  --text-font-family: 'Inter', 'system-ui';
+  --arcade-font-family: "Press Start 2P", system-ui;
+  --header-text-font-family: "ClashDisplay-Light", system-ui;
+  --header-highlight-text-font-family: "ClashDisplay-Regular", system-ui;
+  --text-font-family: "Inter", "system-ui";
 }
 
 /* HTML Element Default Style Configuration */
@@ -40,129 +40,132 @@ li {
 }
 
 .html-red {
-  color: #EC7979;
+  color: #ec7979;
 }
 
 .html-white {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .html-blue {
-  color: #85ECE0;
+  color: #85ece0;
 }
 
 /* Font Load */
 
 @font-face {
-  font-family: 'ClashDisplay-Variable';
-  src: url('../../../public/fonts/ClashDisplay-Variable.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Variable.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Variable.ttf') format('truetype');
+  font-family: "ClashDisplay-Variable";
+  src: url("../../../public/fonts/ClashDisplay-Variable.woff2") format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Variable.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Variable.ttf") format("truetype");
   font-weight: 200 700;
   font-display: swap;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'ClashDisplay-Extralight';
-  src: url('../../../public/fonts/ClashDisplay-Extralight.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Extralight.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Extralight.ttf') format('truetype');
+  font-family: "ClashDisplay-Extralight";
+  src: url("../../../public/fonts/ClashDisplay-Extralight.woff2")
+      format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Extralight.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Extralight.ttf") format("truetype");
   font-weight: 200;
   font-display: swap;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'ClashDisplay-Light';
-  src: url('../../../public/fonts/ClashDisplay-Light.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Light.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Light.ttf') format('truetype');
+  font-family: "ClashDisplay-Light";
+  src: url("../../../public/fonts/ClashDisplay-Light.woff2") format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Light.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Light.ttf") format("truetype");
   font-weight: 300;
   font-display: swap;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'ClashDisplay-Regular';
-  src: url('../../../public/fonts/ClashDisplay-Regular.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Regular.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Regular.ttf') format('truetype');
+  font-family: "ClashDisplay-Regular";
+  src: url("../../../public/fonts/ClashDisplay-Regular.woff2") format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Regular.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Regular.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'ClashDisplay-Medium';
-  src: url('../../../public/fonts/ClashDisplay-Medium.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Medium.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Medium.ttf') format('truetype');
+  font-family: "ClashDisplay-Medium";
+  src: url("../../../public/fonts/ClashDisplay-Medium.woff2") format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Medium.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Medium.ttf") format("truetype");
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'ClashDisplay-Semibold';
-  src: url('../../../public/fonts/ClashDisplay-Semibold.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Semibold.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Semibold.ttf') format('truetype');
+  font-family: "ClashDisplay-Semibold";
+  src: url("../../../public/fonts/ClashDisplay-Semibold.woff2") format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Semibold.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Semibold.ttf") format("truetype");
   font-weight: 600;
   font-display: swap;
   font-style: normal;
 }
 
-
 @font-face {
-  font-family: 'ClashDisplay-Bold';
-  src: url('../../../public/fonts/ClashDisplay-Bold.woff2') format('woff2'),
-    url('../../../public/fonts/ClashDisplay-Bold.woff') format('woff'),
-    url('../../../public/fonts/ClashDisplay-Bold.ttf') format('truetype');
+  font-family: "ClashDisplay-Bold";
+  src: url("../../../public/fonts/ClashDisplay-Bold.woff2") format("woff2"),
+    url("../../../public/fonts/ClashDisplay-Bold.woff") format("woff"),
+    url("../../../public/fonts/ClashDisplay-Bold.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Inter';
-  src: url('../../../public/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf-variations');
-  src: url('../../../public/fonts/Inter-VariableFont_opsz,wght.ttf') format('ttf') tech('variations');
+  font-family: "Inter";
+  src: url("../../../public/fonts/Inter-VariableFont_opsz,wght.ttf")
+    format("truetype");
   font-weight: 100 900;
   font-stretch: 25% 150%;
 }
 
 @font-face {
-  font-family: 'Bebas-Neue-Bold';
-  src: url('../../../public/fonts/BebasNeue-Bold.ttf') format('truetype');
+  font-family: "Rubik";
+  src: url("../../../public/fonts/Rubik-VariableFont_wght.ttf")
+    format("truetype");
+  font-weight: 100 900;
+  font-stretch: 25% 150%;
+}
+
+@font-face {
+  font-family: "Bebas-Neue-Bold";
+  src: url("../../../public/fonts/BebasNeue-Bold.ttf") format("truetype");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: 'Bebas-Neue-Book';
-  src: url('../../../public/fonts/BebasNeue-Book.ttf') format('truetype');
+  font-family: "Bebas-Neue-Book";
+  src: url("../../../public/fonts/BebasNeue-Book.ttf") format("truetype");
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Bebas-Neue';
-  src: url('../../../public/fonts/BebasNeue-Regular.ttf') format('truetype');
+  font-family: "Bebas-Neue";
+  src: url("../../../public/fonts/BebasNeue-Regular.ttf") format("truetype");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Bebas-Neue-Light';
-  src: url('../../../public/fonts/BebasNeue-Light.ttf') format('truetype');
+  font-family: "Bebas-Neue-Light";
+  src: url("../../../public/fonts/BebasNeue-Light.ttf") format("truetype");
   font-weight: 300;
 }
 
 @font-face {
-  font-family: 'Bebas-Neue-Thin';
-  src: url('../../../public/fonts/BebasNeue-Thin.ttf') format('truetype');
+  font-family: "Bebas-Neue-Thin";
+  src: url("../../../public/fonts/BebasNeue-Thin.ttf") format("truetype");
   font-weight: 200;
 }
