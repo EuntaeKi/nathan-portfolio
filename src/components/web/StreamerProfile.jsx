@@ -12,9 +12,9 @@ const StreamerProfile = ({ comment, streamer, keywords, painPointsNeeds, profile
                     <div className="flex flex-col gap-4 w-full xl:w-1/3">
                         {/* Interest items */}
                         <div className="flex gap-3 flex-wrap">
-                            {keywords.map((e) => {
+                            {keywords.map((e, index) => {
                                 return (
-                                    <div className="bg-web-dark-blue py-3 px-4 text-white font-clash-semibold text-xl rounded-full">
+                                    <div key={index} className="bg-web-dark-blue py-3 px-4 text-white font-clash-semibold text-xl rounded-full">
                                         {e}
                                     </div>
                                 );
@@ -55,9 +55,9 @@ const StreamerProfile = ({ comment, streamer, keywords, painPointsNeeds, profile
                                     Needs
                                 </div>
                             </div>
-                            {painPointsNeeds.map((e) => {
+                            {painPointsNeeds.map((e, index) => {
                                 return (
-                                    <div className="flex flex-col sm:flex-row justify-between font-clash-medium text-lg sm:text-xl bg-white rounded-full items-center text-center">
+                                    <div key={index} className="flex flex-col sm:flex-row justify-between font-clash-medium text-lg sm:text-xl bg-white rounded-full items-center text-center">
                                         <div className="flex justify-center py-4 sm:py-6 w-full sm:w-1/2">
                                             {e.painPoint}
                                         </div>
@@ -69,9 +69,9 @@ const StreamerProfile = ({ comment, streamer, keywords, painPointsNeeds, profile
                             })}
                         </div>
                         <div className="flex flex-wrap gap-6 justify-between w-full rounded-[45px] text-center py-12 px-4 sm:px-8 md:px-12 lg:px-16 bg-[#DFE6EB]">
-                            {profileSliders.map((e) => {
+                            {profileSliders.map((e, index) => {
                                 return (
-                                    <div className="flex flex-col sm:flex-row items-center w-full lg:w-5/12 justify-between gap-6">
+                                    <div key={index} className="flex flex-col sm:flex-row items-center w-full lg:w-5/12 justify-between gap-6">
                                         <div className="font-clash-semibold text-xl w-full sm:w-44 text-center sm:text-left">{e.label}</div>
                                         <div className="font-clash-semibold text-2xl text-web-gray flex gap-6 items-center">
                                             <div>Low</div>

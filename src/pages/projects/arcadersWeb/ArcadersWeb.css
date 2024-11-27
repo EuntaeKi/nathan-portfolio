@@ -18,3 +18,23 @@
     opacity: 1;
     transition: all 0.2s ease-in; 
 }
+
+.repeating-stripes-x {
+    background-image: repeating-linear-gradient(
+      to right,
+      #4b60c0 0px,
+      #4b60c0 8px,
+      transparent 8px,
+      transparent 14px
+    );
+  }
+
+  .repeating-stripes-y {
+    background-image: repeating-linear-gradient(
+      to bottom,
+      #4b60c0 0px,
+      #4b60c0 8px,
+      transparent 8px,
+      transparent 14px
+    );
+  }

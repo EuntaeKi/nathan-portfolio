@@ -7,6 +7,7 @@ import StreamerProfile from "../../../components/web/StreamerProfile";
 import UserJourney from "../../../components/web/UserJourney";
 import ProjectGoal from "../../../components/web/ProjectGoal";
 import UserFlow from "../../../components/web/UserFlow";
+import DottedLine from "../../../components/web/DottedLine";
 
 const importAll = (context) => {
   const images = {};
@@ -18,6 +19,7 @@ const importAll = (context) => {
 
 const ArcadersWeb = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
+  const publicFilePath = `${process.env.PUBLIC_URL}/files/`;
   const flowChart = [
     {
       label: "Set-up",
@@ -95,8 +97,6 @@ const ArcadersWeb = ({ setPageColor }) => {
   const iconImages = importAll(
     require.context("../../../assets/imgs/", false, /arcaders_web_icons_*/)
   );
-
-  console.log(iconImages);
 
   useEffect(() => {
     setPageColor("#FFFFFF");
@@ -567,7 +567,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
         </div>
         {/* 04. Design */}
-        <div className="flex flex-col gap-12 font-clash-semibold">
+        <div className="flex flex-col gap-12 font-clash-semibold pb-8">
           {/* Section Header */}
           <div className="mb-16 ml-20 pt-16">
             <div className="font-bebas-neue text-xl">04</div>
@@ -630,7 +630,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                 </div>
               </div>
               {/* Colors */}
-              <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6 max-w-[500px]">
+              <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6 max-w-[500px] h-max">
                 <h4 className="font-clash-semibold text-2xl">Colors</h4>
                 <div className="flex flex-wrap gap-4">
                   <div className="flex justify-center items-end bg-[#1B1B23] min-w-32 h-32 basis-[calc(33%-1rem)]">
@@ -652,6 +652,170 @@ const ArcadersWeb = ({ setPageColor }) => {
                     #7BDDFF
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* Landing Page */}
+        <div className="flex flex-col bg-white text-black font-clash-semibold mb-4 items-center">
+          {/* Onboarding */}
+          <div className="flex flex-col justify-center items-center p-10 gap-4 text-center">
+            <h3 className="text-web-dark-blue text-2xl font-clash-semibold">Onboarding</h3>
+            <div className="font-clash-medium text-xl">We show what you might be interested in</div>
+            <div className="font-clash-medium text-xl text-web-gray">The first page that user face is a simple onboarding process</div>
+          </div>
+          {/* Video Demo */}
+          <div className="flex flex-col justify-center">
+            <video autoPlay className="w-full h-svh mb-8" loop={true} muted={true}>
+              <source src={publicFilePath + "arcaders_web_landing_tester.mp4"} type="video/mp4" />
+              Your browser does not support video element
+            </video>
+            <div className="flex items-center justify-center">
+              <div className="hidden sm:block transform -translate-y-1/2">
+                <DottedLine isHorizontal={false} isCirclePositionStart={null} className="h-16 ml-1/4" />
+                <DottedLine isHorizontal={true} isCirclePositionStart={false} className="w-16 ml-1/4" />
+              </div>
+              <div className="flex flex-col text-2xl ml-4 sm:items-start items-center text-center sm:text-start">
+                <div className="block sm:hidden transform -translate-y-1/2">
+                  <DottedLine isHorizontal={false} isCirclePositionStart={false} className="h-16 ml-1/4" />
+                </div>
+                <div>Customization</div>
+                <div className="font-clash-medium text-web-gray">This simple, image-based survey demonstrates what Arcaders provide for users in a nutshell.</div>
+              </div>
+            </div>
+            {/* Login */}
+            <div className="flex flex-wrap w-full text-center min-h-svh justify-center items-center">
+              <div className="flex flex-col w-full md:w-1/2 p-8 gap-12">
+                <h3 className="text-web-dark-blue text-2xl font-clash-semibold">LOGIN</h3>
+                <div className="font-clash-medium text-2xl">You can connect your account from three major game live streaming platform including Youtube, Twitch, and Chzzk</div>
+                <div className="font-clash-medium text-2xl text-web-gray">No matter where you are, you can always access your account through overlay log in tab. </div>
+              </div>
+              <div className="flex flex-col w-full md:w-1/2 justify-center items-center">
+                <img src={imagePath + 'arcaders_web_login.png'} alt="Login Page for Arcaders Web" className="w-full xl:w-3/4" />
+              </div>
+            </div>
+            {/* Game Review */}
+            <div className="flex flex-wrap w-full text-center justify-center items-center">
+              <div className="flex flex-col w-full p-8 gap-12 justify-center items-center">
+                <h3 className="text-web-dark-blue text-2xl font-clash-semibold">Game Review Page</h3>
+                <div className="font-clash-medium text-2xl max-w-[600px]">Arcaders aim to provide minimum length of information while its easy to understand. To do so,  Arcaders utilizes keywords, image-based cards.</div>
+                <div className="font-clash-medium text-2xl text-web-gray w-full sm:w-[450px]">I also wanted to keep the website pages entertaining and fun to watch. Organization was also not left alone.</div>
+              </div>
+            </div>
+            <div className="flex flex-col gap-8 min-[1567px]:gap-0 mb-8">
+              {/* Point 1 */}
+              {/* Height set to be height of the image */}
+              <div className="flex flex-wrap justify-center items-center md:min-h-[420px] flex-col min-[1567px]:flex-row">
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start items-center min-[1567px]:items-start">
+                  <div className="text-xl text-web-dark-blue">Point 1:</div>
+                  <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Categories</div>
+                  <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">Every games are tagged and grouped on these categories. These keywords are utilized to customize the recommendations for users as well.</div>
+                </div>
+                {/* Wrapper for View Port Visibility */}
+                {/* Breakpoint at flex wrap point */}
+                <div className="hidden min-[1567px]:block">
+                  <DottedLine isHorizontal={true} isCirclePositionStart={true} className="w-[100px] ml-1/4" />
+                </div>
+                {/* Wrapper for View Port Visibility */}
+                <div className="block min-[1567px]:hidden">
+                  <DottedLine isHorizontal={false} isCirclePositionStart={true} className="h-16 ml-1/4" />
+                </div>
+
+                <img src={imagePath + 'arcaders_web_game_review_1.png'} alt="Game review page on Arcaders Web showing rating (4.1) of League of Legends" />
+              </div>
+              {/* Point 2 */}
+              {/* Height set to be height of the image */}
+              <div className="flex flex-wrap justify-center items-center md:min-h-[810px] flex-col min-[1567px]:flex-row">
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start items-center min-[1567px]:items-start">
+                  <div className="text-xl text-web-dark-blue">Point 2:</div>
+                  <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Game Summary</div>
+                  <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">Actual gameplay and multiple images are considered to be essential in the game description section. Users can collect useful information intuitively here.</div>
+                </div>
+                {/* Wrapper for View Port Visibility */}
+                {/* Breakpoint at flex wrap point */}
+                <div className="hidden min-[1567px]:flex items-center">
+                  <DottedLine isHorizontal={true} isCirclePositionStart={true} className="w-16 ml-1/4" />
+                  <DottedLine isHorizontal={false} isCirclePositionStart={null} className="h-48 ml-1/4" />
+                  <div className="flex flex-col h-48 justify-between">
+                    <DottedLine isHorizontal={true} isCirclePositionStart={null} className="w-8" />
+                    <DottedLine isHorizontal={true} isCirclePositionStart={null} className="w-8" />
+                  </div>
+                </div>
+                {/* Wrapper for View Port Visibility */}
+                <div className="block min-[1567px]:hidden">
+                  <DottedLine isHorizontal={false} isCirclePositionStart={true} className="h-16 ml-1/4" />
+                </div>
+                <img src={imagePath + 'arcaders_web_game_review_2.png'} alt="Game review page on Arcaders Web showing the objective of League of Legends" />
+              </div>
+              {/* Point 3 */}
+              {/* Height set to be height of the image */}
+              <div className="flex flex-wrap justify-center items-center md:min-h-[420px] flex-col min-[1567px]:flex-row">
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start items-center min-[1567px]:items-start">
+                  <div className="text-xl text-web-dark-blue">Point 3:</div>
+                  <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Game Summary</div>
+                  <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">You can interact and respond to others reviews including your favorite streamers who also played the same game. </div>
+                </div>
+                {/* Wrapper for View Port Visibility */}
+                {/* Breakpoint at flex wrap point */}
+                <div className="hidden min-[1567px]:block">
+                  <DottedLine isHorizontal={true} isCirclePositionStart={true} className="w-[100px] ml-1/4" />
+                </div>
+                {/* Wrapper for View Port Visibility */}
+                <div className="block min-[1567px]:hidden">
+                  <DottedLine isHorizontal={false} isCirclePositionStart={true} className="h-16 ml-1/4" />
+                </div>
+                <img src={imagePath + 'arcaders_web_game_review_3.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+              </div>
+            </div>
+            {/* Streamers Page */}
+            <div className="flex flex-col gap-8 min-[1567px]:gap-0">
+              {/* Overview */}
+              {/* Height set to be height of the image */}
+              <div className="flex flex-wrap justify-center items-center md:min-h-[420px] flex-col min-[1567px]:flex-row">
+                <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_1.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0">
+                  <div className="flex flex-col w-full gap-12 justify-center ml-0 min-[1567px]:ml-[100px] items-center min-[1567px]:items-start">
+                    <h3 className="text-web-dark-blue text-2xl font-clash-semibold">Streamer Page</h3>
+                    <div className="font-clash-medium text-2xl max-w-[450px]">One of the leading factor that enables Arcaders to be an active community is streamers who demonstrate the game plays and lead the communicate between gamers.</div>
+                    <div className="font-clash-medium text-2xl text-web-gray w-full sm:w-[450px]">Connect your streaming account with Arcaders to build your own stream page!</div>
+                  </div>
+                </div>
+                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_1.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+              </div>
+              {/* Point 1 */}
+              <div className="flex flex-wrap justify-center items-center md:min-h-[420px] flex-col min-[1567px]:flex-row">
+                <div>
+                  <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_2.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                  <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_5.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                </div>
+                <div className="hidden min-[1567px]:flex items-center">
+                  <div className="flex flex-col h-48 justify-between">
+                    <DottedLine isHorizontal={true} isCirclePositionStart={null} className="w-8" />
+                    <DottedLine isHorizontal={true} isCirclePositionStart={null} className="w-8" />
+                  </div>
+                  <DottedLine isHorizontal={false} isCirclePositionStart={null} className="h-48 ml-1/4" />
+                  <DottedLine isHorizontal={true} isCirclePositionStart={false} className="w-16 ml-1/4" />
+                </div>
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0">
+                  <div className="text-xl text-web-dark-blue">Point 1:</div>
+                  <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Game Time</div>
+                  <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">Users can easily access what other games were played by this streamer. If they are live streaming, Arcaders will let the user know.</div>
+                </div>
+                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_2.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_5.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+              </div>
+              {/* Point 2 */}
+              <div className="flex flex-wrap justify-center items-center flex-col min-[1567px]:flex-row">
+                <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_4.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                <div className="flex items-center">
+                  <DottedLine isHorizontal={true} isCirclePositionStart={false} className="w-[100px]" />
+                </div>
+                <div className="flex flex-col gap-2 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0">
+                  <div className="text-xl text-web-dark-blue">Point 2:</div>
+                  <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Community</div>
+                  <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">Users can comment and rate the streamer’s review on games. Top 4 comments are displayed.</div>
+                </div>
+                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_4.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
               </div>
             </div>
           </div>
