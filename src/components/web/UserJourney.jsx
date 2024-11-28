@@ -47,7 +47,7 @@ const UserJourney = () => {
       </div>
 
       {/* Step Row */}
-      <div className="grid grid-cols-11 gap-4 items-center">
+      <div className="grid grid-rows-11 md:grid-rows-none md:grid-cols-11 gap-4 items-center justify-center">
         <Header title="Step" />
         <Step title="Search for a game" number={1} />
         <Step title="Watch a gaming stream" number={2} />
@@ -57,23 +57,23 @@ const UserJourney = () => {
       </div>
 
       {/* Behavior Row */}
-      <div className="grid grid-cols-11 gap-4 items-center">
+      <div className="grid grid-rows-11 md:grid-rows-none md:grid-cols-11 gap-4 items-center justify-center">
         <Header title="Behavior" />
-        <Behavior description="Look for games to play with peers" />
-        <Behavior description="Tries to look up what games their favorite streamer played" />
-        <Behavior description="Discuss what game to play with friends" />
-        <Behavior description="Tries playing the game" />
-        <Behavior description="Leaves a review about the game based on the gameplay" />
+        <Behavior description="Look for games to play with peers" number={1} />
+        <Behavior description="Tries to look up what games their favorite streamer played" number={2} />
+        <Behavior description="Discuss what game to play with friends" number={3} />
+        <Behavior description="Tries playing the game" number={4} />
+        <Behavior description="Leaves a review about the game based on the gameplay" number={5} />
       </div>
 
       {/* Emotion Row */}
-      <div className="grid grid-cols-11 items-center border-t-2 border-b-2 border-dashed border-web-gray py-8">
+      <div className="grid grid-rows-11 md:grid-rows-none md:grid-cols-11 items-center border-t-2 border-b-2 border-dashed border-web-gray py-8">
         <Header title="Emotion" />
-        <div className="col-span-10">
-          <div className="grid grid-cols-10 h-56">
+        <div className="row-span-10 md:col-span-10">
+          <div className="hidden md:grid grid-cols-10 h-56">
             <EmotionSection />
           </div>
-          <div className="grid grid-cols-10 gap-4 relative">
+          <div className="grid grid-rows-10 md:grid-rows-none md:grid-cols-10 gap-4 relative">
             <Emotion
               description="Excited to play a new game! Where do I find one though?"
               yPos={-60}
@@ -99,7 +99,7 @@ const UserJourney = () => {
       </div>
 
       {/* Pain Point Row */}
-      <div className="grid grid-cols-11 gap-4 items-center">
+      <div className="grid grid-rows-9 md:grid-rows-none md:grid-cols-11 gap-4 items-center">
         <Header title="Pain Point" />
         <PainPoint description="Too much information to consider" />
         <PainPoint description="Takes extra research to figure out what game is streamed" />
@@ -108,7 +108,7 @@ const UserJourney = () => {
       </div>
 
       {/* Opportunity Row */}
-      <div className="grid grid-cols-11 gap-4 items-center">
+      <div className="grid grid-rows-9 md:grid-rows-none md:grid-cols-11 gap-4 items-center">
         <Header title="Opportunity" />
         <Opportunity description="Provide customized recommendations" />
         <Opportunity description="Build a direct pathway that connects streamers and gamers" />
@@ -126,31 +126,39 @@ const Header = ({ title }) => (
 
 // Components for each step, behavior, emotion, pain point, and opportunity
 const Step = ({ title, number }) => (
-  <div className="text-black relative flex items-center justify-center col-span-2">
+  <div className="text-black relative flex items-center justify-center row-span-2 md:col-span-2">
     <div className="text-web-dark-blue text-lg absolute bottom-4 -left-4">{`0${number}`}</div>
     {title}
   </div>
 );
 
-const Behavior = ({ description }) => (
-  <div className="col-span-2">{description}</div>
-);
-
-const Emotion = ({ description, yPos }) => (
-  <div
-    className="col-span-2 p-2 bg-gray-300 rounded-3xl text-center text-pretty relative"
-    style={{ top: yPos }}
-  >
+const Behavior = ({ description, number }) => (
+  <div className="text-black relative flex items-center justify-center row-span-2 md:col-span-2">
+    <div className="text-web-dark-blue text-lg absolute bottom-4 -left-4 flex md:hidden">{`0${number}`}</div>
     {description}
   </div>
 );
 
+const Emotion = ({ description, yPos }) => (
+  <>
+    <div
+      className={`relative hidden md:flex justify-center items-center row-span-2 md:col-span-2 bg-gray-300 p-2 rounded-3xl text-center text-pretty`}
+      style={{ top: yPos }}
+    >
+      {description}
+    </div>
+    <div className={`relative flex md:hidden justify-center items-center row-span-2 md:col-span-2 bg-gray-300 p-2 rounded-3xl text-center text-pretty`}>
+      {description}
+    </div>
+  </>
+);
+
 const PainPoint = ({ description }) => (
-  <div className="col-span-2 p-4 rounded-3xl bg-[#E4E7F6]">{description}</div>
+  <div className="row-span-2 md:col-span-2 p-4 rounded-3xl bg-[#E4E7F6]">{description}</div>
 );
 
 const Opportunity = ({ description }) => (
-  <div className="text-white col-span-2 p-4 rounded-3xl bg-web-dark-blue">
+  <div className="text-white row-span-2 md:col-span-2 p-4 rounded-3xl bg-web-dark-blue">
     {description}
   </div>
 );

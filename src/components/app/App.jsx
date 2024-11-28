@@ -8,6 +8,7 @@ import {
 
 import "./App.css";
 import Layout from "../../components/layout/Layout";
+import ScrollToTop from "../../components/scrollToTop/ScrollToTop";
 import Main from "../../pages/main/Main";
 import Intro from "../../pages/intro/Intro";
 import About from "../../pages/about/About";
@@ -17,7 +18,7 @@ import ArcadersWeb from "../../pages/projects/arcadersWeb/ArcadersWeb";
 
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [overlayColor, setOverlayColor] = useState("#00000020");
+  const [overlayColor, setOverlayColor] = useState("#00000030");
   const [pageColor, setPageColor] = useState("#FFFFFF");
   const [triggerBlink, setTriggerBlink] = useState(false);
 
@@ -39,90 +40,93 @@ const Root = () => {
   });
 
   return (
-    <Routes>
-      <Route
-        path="/home"
-        element={
-          <Layout
-            showHeader={true}
-            pageColor={pageColor}
-            showOverlay={showOverlay}
-            overlayColor={overlayColor}
-            triggerBlink={triggerBlink}
-            setTriggerBlink={setTriggerBlink}
-          >
-            <Main
+    <>
+      <ScrollToTop /> {/* This ensures scroll resets on route changes */}
+      <Routes>
+        <Route
+          path="/home"
+          element={
+            <Layout
+              showHeader={true}
               pageColor={pageColor}
-              setPageColor={setPageColor}
+              showOverlay={showOverlay}
+              overlayColor={overlayColor}
               triggerBlink={triggerBlink}
               setTriggerBlink={setTriggerBlink}
-              setShowOverlay={setShowOverlay}
-              setOverlayColor={setOverlayColor}
-            />
-          </Layout>
-        }
-      />
-      <Route
-        path="/"
-        element={
-          <Layout showHeader={false}>
-            <Intro />
-          </Layout>
-        }
-      />
-      <Route
-        path="/about"
-        element={
-          <Layout
-            showHeader={true}
-            pageColor={pageColor}
-            showOverlay={showOverlay}
-            overlayColor={overlayColor}
-            triggerBlink={triggerBlink}
-            setTriggerBlink={setTriggerBlink}
-          >
-            <About
+            >
+              <Main
+                pageColor={pageColor}
+                setPageColor={setPageColor}
+                triggerBlink={triggerBlink}
+                setTriggerBlink={setTriggerBlink}
+                setShowOverlay={setShowOverlay}
+                setOverlayColor={setOverlayColor}
+              />
+            </Layout>
+          }
+        />
+        <Route
+          path="/"
+          element={
+            <Layout showHeader={false}>
+              <Intro />
+            </Layout>
+          }
+        />
+        <Route
+          path="/about"
+          element={
+            <Layout
+              showHeader={true}
               pageColor={pageColor}
-              setPageColor={setPageColor}
+              showOverlay={showOverlay}
+              overlayColor={overlayColor}
               triggerBlink={triggerBlink}
               setTriggerBlink={setTriggerBlink}
-              setShowOverlay={setShowOverlay}
-              setOverlayColor={setOverlayColor}
-            />
-          </Layout>
-        }
-      />
-      <Route
-        path="/projects"
-        element={
-          <Layout
-            showHeader={true}
-            pageColor={pageColor}
-            showOverlay={showOverlay}
-            overlayColor={overlayColor}
-            triggerBlink={triggerBlink}
-            setTriggerBlink={setTriggerBlink}
-          >
-            <Projects
+            >
+              <About
+                pageColor={pageColor}
+                setPageColor={setPageColor}
+                triggerBlink={triggerBlink}
+                setTriggerBlink={setTriggerBlink}
+                setShowOverlay={setShowOverlay}
+                setOverlayColor={setOverlayColor}
+              />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects"
+          element={
+            <Layout
+              showHeader={true}
               pageColor={pageColor}
-              setPageColor={setPageColor}
+              showOverlay={showOverlay}
+              overlayColor={overlayColor}
               triggerBlink={triggerBlink}
               setTriggerBlink={setTriggerBlink}
-              setShowOverlay={setShowOverlay}
-              setOverlayColor={setOverlayColor}
-            />
-          </Layout>
-        }
-      />
-      <Route
-        path="/projects/arcaders-app"
-        element={<ArcadersApp setPageColor={setPageColor} />}
-      />
-      <Route
-        path="/projects/arcaders-website"
-        element={<ArcadersWeb setPageColor={setPageColor} />}
-      />
-    </Routes>
+            >
+              <Projects
+                pageColor={pageColor}
+                setPageColor={setPageColor}
+                triggerBlink={triggerBlink}
+                setTriggerBlink={setTriggerBlink}
+                setShowOverlay={setShowOverlay}
+                setOverlayColor={setOverlayColor}
+              />
+            </Layout>
+          }
+        />
+        <Route
+          path="/projects/arcaders-app"
+          element={<ArcadersApp setPageColor={setPageColor} />}
+        />
+        <Route
+          path="/projects/arcaders-website"
+          element={<ArcadersWeb setPageColor={setPageColor} />}
+        />
+      </Routes>
+    </>
   );
 };
 

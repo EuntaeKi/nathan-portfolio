@@ -3,38 +3,77 @@
 
 #main-container {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin: auto 0;
+    height: calc(100vh - 180px);
 }
 
 #main-description {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    width: 40rem;
-    height: 100%;
+    max-width: 40rem;
     font-family: var(--header-highlight-text-font-family);
     font-size: 2.5rem;
     text-align: center;
     word-wrap: break-word;
-    margin-bottom: 10rem;
 }
 
 #main-name {
+    position: absolute;
     display: inline-block;
+    left: -9rem;
+    top: -3rem;
+    max-width: 15rem;
     font-family: var(--header-highlight-text-font-family);
     font-size: 5rem;
     letter-spacing: -0.5rem;
     line-height: 3rem;
-    margin-right: -5.5rem;
-    margin-top: -3rem;
 }
 
 #main-body {
-    align-self: flex-end;
-    margin-bottom: 2rem;
+    max-width: 500px;
 }
 
 #main-tree {
-    width: 523px;
-    height: 373px;
+    padding: 0 2rem;
+}
+
+@media (max-width: 1280px) {
+    #main-description {
+        flex-basis: 100%;
+        margin-top: 4rem;
+    }
+
+    #main-name {
+        left: -5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #main-description {
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    #main-name {
+        font-size: 3rem;
+        letter-spacing: -0.25rem;
+        left: 0;
+    }
+        
+    #main-body {
+        max-width: 400px;
+    }
+}
+
+
+@media (max-width: 640px) {
+    #main-name {
+        top: 0;
+        position: relative;
+    }
 }

@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
 import "./About.css";
 import Light from "../../components/light/Light";
+import usePreviousLocation from "../../contexts/usePreviousLocation";
 
 const About = ({
   pageColor,
@@ -14,6 +15,8 @@ const About = ({
   setOverlayColor,
 }) => {
   const logoPath = `${process.env.PUBLIC_URL}/img/logo_about.png`;
+  const location = useLocation();
+  const previousLocation = usePreviousLocation();
 
   useEffect(() => {
     setPageColor("#EC7979");
@@ -32,14 +35,17 @@ const About = ({
         setPageColor={setPageColor}
         triggerBlink={triggerBlink}
         setTriggerBlink={setTriggerBlink} />
-      <div className="about-container">
+      <div className={`${triggerBlink ? 'slide-down' :
+        (location.pathname === "home" &&
+          previousLocation &&
+          previousLocation.pathname !== "/" &&
+          previousLocation.pathname !== location.pathname) ? 'slide-up' : ''}`}>
         <div className="about-description-container">
           <div className="about-logo-container">
-            <Link to="/home">
+            <Link to="/home" className="about-logo">
               <img
                 src={logoPath}
                 alt="Nathan Seung"
-                className="about-logo"
               />
             </Link>
           </div>
@@ -71,23 +77,23 @@ const About = ({
                   href="https://www.linkedin.com/in/jeonghaseung/"
                   target="_blank"
                   rel="noreferrer"
-                  className="underline"
+                  className="flex items-end"
                   style={{ color: pageColor }}
                 >
-                  LinkedIn
-                  <span className="material-symbols-outlined text-base mb-0 ml-1">open_in_new</span>
+                  <div className="underline">LinkedIn</div>
+                  <span className="material-symbols-outlined text-lg mb-0 ml-1">open_in_new</span>
                 </a>
               </li>
               <li>
                 <a
                   href={`${process.env.PUBLIC_URL}/files/JeongHa_Seung CV Resume (UX).pdf`}
-                  className="flex items-baseline"
+                  className="flex items-end"
                   target="_blank"
                   rel="noreferrer"
                   style={{ color: pageColor }}
                 >
                   <div className="underline">Resume</div>
-                  <div className="material-symbols-outlined text-base mb-0 ml-1 no-underline">open_in_new</div>
+                  <div className="material-symbols-outlined text-lg mb-0 ml-1 no-underline">open_in_new</div>
                 </a>
               </li>
             </ul>

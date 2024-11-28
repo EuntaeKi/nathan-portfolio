@@ -30,6 +30,7 @@ const Light = ({
     let id;
     if (triggerBlink) {
       if (phase === 0) {
+        document.documentElement.classList.add("overflow-y-hidden");
         setPhase(1);
       } else if (phase === 1) {
         id = setTimeout(() => {
@@ -70,6 +71,8 @@ const Light = ({
     if (!triggerBlink) {
       setOverlayColor("#00000040");
       setPhase(0);
+
+      document.documentElement.classList.remove("overflow-y-hidden");
     }
   }, [triggerBlink]);
 

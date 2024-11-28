@@ -8,6 +8,7 @@ import UserJourney from "../../../components/web/UserJourney";
 import ProjectGoal from "../../../components/web/ProjectGoal";
 import UserFlow from "../../../components/web/UserFlow";
 import DottedLine from "../../../components/web/DottedLine";
+import ArcadersFooter from "../../../components/web/ArcadersFooter";
 
 const importAll = (context) => {
   const images = {};
@@ -111,55 +112,53 @@ const ArcadersWeb = ({ setPageColor }) => {
       {/* Outer margin should be m-8 */}
       <div className="flex flex-col bg-web-bg w-full">
         {/* Landing Section */}
-        <div className="flex min-h-svh">
-          <div className="flex justify-around w-full items-center">
-            <div className="flex flex-col justify-around h-full">
-              {/* Logo */}
-              <div className="relative flex flex-col font-bebas-neue">
-                <img
-                  src={`${imagePath}arcaders_web_icon.png`}
-                  alt="Arcaders icon glowing in blue"
-                  className="absolute -top-20 -left-24 bg-blend-lighten"
-                />
-                <h1 className="text-8xl font-bebas-neue">ARCADERS</h1>
-                <div className="text-xl text-white/50 -mt-3">
-                  ULTIMATE GAME REVIEW WEBSITE
-                </div>
-              </div>
-              {/* Project Description */}
-              <div className="flex flex-col font-bebas-neue text-2xl gap-3">
-                <div className="flex">
-                  <div className="flex-4 text-web-blue">TYPE</div>
-                  <div className="flex-5 text-web-gray">PERSONAL PROJECT</div>
-                </div>
-                <div className="flex">
-                  <div className="flex-4 text-web-blue">DESIGN PERIOD</div>
-                  <div className="flex-5 text-web-gray">2023.3 - 6</div>
-                </div>
-                <div className="flex">
-                  <div className="flex-4 text-web-blue">PARTICIPATION</div>
-                  <div className="flex-5 text-web-gray">UX/UI</div>
-                </div>
-                <div className="flex">
-                  <div className="flex-4 text-web-blue">TOOLS</div>
-                  <div className="flex-5 text-web-gray">
-                    FIGMA, GOOGLE FORMS
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
+        <div className="flex flex-wrap justify-around w-full min-h-svh items-center">
+          <div className="flex flex-col justify-around h-full pt-32 pb-8 min-[1376px]:py-0">
+            {/* Logo */}
+            <div className="relative flex flex-col font-bebas-neue">
               <img
-                src={`${imagePath}arcaders_web_main.png`}
-                alt="Laptop with a screenshot of Arcaders Website in the monitor"
+                src={`${imagePath}arcaders_web_icon.png`}
+                alt="Arcaders icon glowing in blue"
+                className="absolute -top-20 left-0 min-[1756px]:-left-24 bg-blend-lighten"
               />
+              <h1 className="text-8xl font-bebas-neue">ARCADERS</h1>
+              <div className="text-xl text-white/50 -mt-3">
+                ULTIMATE GAME REVIEW WEBSITE
+              </div>
             </div>
+            {/* Project Description */}
+            <div className="flex flex-col font-bebas-neue text-2xl gap-3">
+              <div className="flex">
+                <div className="flex-4 text-web-blue">TYPE</div>
+                <div className="flex-5 text-web-gray">PERSONAL PROJECT</div>
+              </div>
+              <div className="flex">
+                <div className="flex-4 text-web-blue">DESIGN PERIOD</div>
+                <div className="flex-5 text-web-gray">2023.3 - 6</div>
+              </div>
+              <div className="flex">
+                <div className="flex-4 text-web-blue">PARTICIPATION</div>
+                <div className="flex-5 text-web-gray">UX/UI</div>
+              </div>
+              <div className="flex">
+                <div className="flex-4 text-web-blue">TOOLS</div>
+                <div className="flex-5 text-web-gray">
+                  FIGMA, GOOGLE FORMS
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <img
+              src={`${imagePath}arcaders_web_main.png`}
+              alt="Laptop with a screenshot of Arcaders Website in the monitor"
+            />
           </div>
         </div>
         {/* 01. Content Section */}
-        <div className="flex flex-col min-h-svh justify-center">
+        <div className="flex flex-col min-h-svh justify-center gap-8">
           {/* Section Header */}
-          <div className="mb-16 ml-20">
+          <div className="self-center md:self-auto mb-0 md:mb-16 ml-0 md:ml-20">
             <div className="font-bebas-neue text-xl">01</div>
             <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Contents</h2>
           </div>
@@ -234,7 +233,7 @@ const ArcadersWeb = ({ setPageColor }) => {
         {/* 02. Background Section */}
         <div className="flex flex-col bg-black">
           {/* Section Header */}
-          <div className="mb-16 ml-20 pt-16">
+          <div className="self-center md:self-auto mb-0 md:mb-16 ml-0 md:ml-20 pt-16">
             <div className="font-bebas-neue text-xl">02</div>
             <h2 className="font-clash-medium text-5xl ml-4 -mt-2">
               Background
@@ -345,7 +344,7 @@ const ArcadersWeb = ({ setPageColor }) => {
         {/* 03. Ideate */}
         <div className="flex flex-col min-h-svh gap-12">
           {/* Section Header */}
-          <div className="mb-16 ml-20 pt-16">
+          <div className="self-center md:self-auto mb-0 md:mb-16 ml-0 md:ml-20 pt-16">
             <div className="font-bebas-neue text-xl">03</div>
             <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Ideate</h2>
           </div>
@@ -569,7 +568,7 @@ const ArcadersWeb = ({ setPageColor }) => {
         {/* 04. Design */}
         <div className="flex flex-col gap-12 font-clash-semibold pb-8">
           {/* Section Header */}
-          <div className="mb-16 ml-20 pt-16">
+          <div className="self-center md:self-auto mb-0 md:mb-16 ml-0 md:ml-20 pt-16">
             <div className="font-bebas-neue text-xl">04</div>
             <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Design</h2>
           </div>
@@ -656,7 +655,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
           </div>
         </div>
-        {/* Landing Page */}
+        {/* Web Page Walk-through */}
         <div className="flex flex-col bg-white text-black font-clash-semibold mb-4 items-center">
           {/* Onboarding */}
           <div className="flex flex-col justify-center items-center p-10 gap-4 text-center">
@@ -667,7 +666,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           {/* Video Demo */}
           <div className="flex flex-col justify-center">
             <video autoPlay className="w-full h-svh mb-8" loop={true} muted={true}>
-              <source src={publicFilePath + "arcaders_web_landing_tester.mp4"} type="video/mp4" />
+              <source src={publicFilePath + "arcaders_web_onboarding.mp4"} type="video/mp4" />
               Your browser does not support video element
             </video>
             <div className="flex items-center justify-center">
@@ -773,7 +772,7 @@ const ArcadersWeb = ({ setPageColor }) => {
               {/* Height set to be height of the image */}
               <div className="flex flex-wrap justify-center items-center md:min-h-[420px] flex-col min-[1567px]:flex-row">
                 <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_1.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
-                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0">
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0 ml-0 min-[1567px]:ml-4">
                   <div className="flex flex-col w-full gap-12 justify-center ml-0 min-[1567px]:ml-[100px] items-center min-[1567px]:items-start">
                     <h3 className="text-web-dark-blue text-2xl font-clash-semibold">Streamer Page</h3>
                     <div className="font-clash-medium text-2xl max-w-[450px]">One of the leading factor that enables Arcaders to be an active community is streamers who demonstrate the game plays and lead the communicate between gamers.</div>
@@ -784,10 +783,10 @@ const ArcadersWeb = ({ setPageColor }) => {
               </div>
               {/* Point 1 */}
               <div className="flex flex-wrap justify-center items-center md:min-h-[420px] flex-col min-[1567px]:flex-row">
-                <div>
-                  <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_2.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
-                  <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_5.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
-                </div>
+                {/* Images */}
+                <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_2.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+
+                {/* Lines */}
                 <div className="hidden min-[1567px]:flex items-center">
                   <div className="flex flex-col h-48 justify-between">
                     <DottedLine isHorizontal={true} isCirclePositionStart={null} className="w-8" />
@@ -796,39 +795,47 @@ const ArcadersWeb = ({ setPageColor }) => {
                   <DottedLine isHorizontal={false} isCirclePositionStart={null} className="h-48 ml-1/4" />
                   <DottedLine isHorizontal={true} isCirclePositionStart={false} className="w-16 ml-1/4" />
                 </div>
-                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0">
+                {/* Text Block */}
+                <div className="flex flex-col gap-4 text-center min-[1567px]:text-start items-center min-[1567px]:items-start mb-8 min-[1567px]:mb-0 ml-0 min-[1567px]:ml-4">
                   <div className="text-xl text-web-dark-blue">Point 1:</div>
                   <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Game Time</div>
                   <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">Users can easily access what other games were played by this streamer. If they are live streaming, Arcaders will let the user know.</div>
                 </div>
+                {/* Wrapper for View Port Visibility */}
+                <div className="block min-[1567px]:hidden">
+                  <DottedLine isHorizontal={false} isCirclePositionStart={true} className="h-16 ml-1/4" />
+                </div>
+                {/* Mobile Images */}
                 <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_2.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
-                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_5.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
               </div>
               {/* Point 2 */}
               <div className="flex flex-wrap justify-center items-center flex-col min-[1567px]:flex-row">
-                <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_4.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
-                <div className="flex items-center">
+                {/* Image */}
+                <img className="hidden min-[1567px]:flex" src={imagePath + 'arcaders_web_streamers_3.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                <div className="hidden min-[1567px]:flex items-center">
                   <DottedLine isHorizontal={true} isCirclePositionStart={false} className="w-[100px]" />
                 </div>
-                <div className="flex flex-col gap-2 text-center min-[1567px]:text-start mb-8 min-[1567px]:mb-0">
+                {/* Text Block */}
+                <div className="flex flex-col gap-2 text-center min-[1567px]:text-start items-center min-[1567px]:items-start mb-8 min-[1567px]:mb-0 ml-0 min-[1567px]:ml-4">
                   <div className="text-xl text-web-dark-blue">Point 2:</div>
                   <div className="text-white text-xl py-6 px-8 bg-web-dark-blue w-fit rounded-md">Community</div>
                   <div className="max-w-[450px] font-clash-medium text-2xl text-web-gray">Users can comment and rate the streamer’s review on games. Top 4 comments are displayed.</div>
                 </div>
-                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_4.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
+                {/* Wrapper for View Port Visibility */}
+                <div className="block min-[1567px]:hidden">
+                  <DottedLine isHorizontal={false} isCirclePositionStart={true} className="h-16 ml-1/4" />
+                </div>
+                {/* Mobile Image */}
+                <img className="flex min-[1567px]:hidden" src={imagePath + 'arcaders_web_streamers_3.png'} alt="Game review page on Arcaders Web showing the list of streamers who played the game and users' comment on the game" />
               </div>
             </div>
           </div>
         </div>
+        <div className="flex flex-col items-center justify-center py-8 sm:py-24">
+          <div className="text-2xl sm:text-4xl font-clash-semibold">Thank you!</div>
+        </div>
+        <ArcadersFooter />
       </div>
-    </>
-  );
-};
-
-const ArcadersFooter = () => {
-  return (
-    <>
-      <div className="border-white border-4 w-4/5"></div>
     </>
   );
 };

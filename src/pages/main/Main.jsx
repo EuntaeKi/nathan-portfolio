@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
@@ -15,7 +15,6 @@ const Main = ({
   setShowOverlay,
 }) => {
   const tree = `${process.env.PUBLIC_URL}/img/main_tree.png`;
-  const [isHome, setIsHome] = useState(false);
   const location = useLocation();
   const previousLocation = usePreviousLocation();
 

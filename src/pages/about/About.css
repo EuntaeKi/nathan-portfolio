@@ -15,10 +15,11 @@
 }
 
 .about-resume-container {
-    width: 50vw;
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 2rem;
+    width: 50vw;
     font-size: 1.125rem;
     line-height: 2.125rem;
     letter-spacing: -1.5px;
@@ -43,6 +44,8 @@
 }
 
 .about-logo {
+    display: block;
+    width: fit-content;
     margin-left: -7rem;
     margin-bottom: -2.5rem;
     animation: logo-blink 3s infinite;

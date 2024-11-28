@@ -33,12 +33,11 @@ const Projects = ({
         slideType={triggerBlink ? "down" : "up"}
       />
       <div
-        className={`${
-          triggerBlink ? "slide-down flex flex-col" : "slide-up flex flex-col"
-        }`}
+        className={`${triggerBlink ? "pt-12 slide-down flex flex-col" : "flex flex-col"
+          }`}
       >
-        <div className="flex mb-16 justify-between flex-wrap">
-          <div className="flex flex-col mr-10">
+        <div className="flex mb-16 justify-center min-[1152px]:justify-between flex-wrap items-center gap-10">
+          <div className="flex flex-col">
             <div className="flex items-center justify-center bg-zinc-900 px-8 py-12 mb-4">
               <div className="preview-container" id="arcaders-app">
                 <div className="flex text-gray-400 w-full justify-around">
@@ -71,7 +70,7 @@ const Projects = ({
               <i className="material-symbols-outlined">arrow_right_alt</i>
             </Link>
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col w-fit">
             <div className="flex items-center justify-center bg-zinc-900 px-8 py-12 mb-4">
               <div className="preview-container" id="arcaders-web"></div>
             </div>

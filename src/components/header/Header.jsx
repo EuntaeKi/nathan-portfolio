@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { NavLink, Link, useNavigate, useLocation } from "react-router-dom";
-
 import "./Header.css";
 import usePreviousLocation from '../../contexts/usePreviousLocation';
 
@@ -8,11 +7,11 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
   const [logo, setLogo] = useState(`${process.env.PUBLIC_URL}/img/logo.png`);
   const [destPath, setDestPath] = useState("");
   const [clicked, setClicked] = useState(false);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
   const previousLocation = usePreviousLocation();
 
-  // Change the pageColor of logo based on the parameter
   useEffect(() => {
     if (pageColor === "#FFFFFF") {
       setLogo(`${process.env.PUBLIC_URL}/img/logo.png`);
@@ -21,13 +20,10 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
     } else if (pageColor === "#EC7979") {
       setLogo(`${process.env.PUBLIC_URL}/img/logo_red.png`);
     }
-  }, [pageColor, setLogo]);
+  }, [pageColor]);
 
-  // Trigger blink effect before navigating via click 
   const handleNavLinkClick = (event, path) => {
-    // Prevent navigation
     event.preventDefault();
-
     const shouldTriggerBlink = ((location.pathname === "/about" || location.pathname === "/home" || location.pathname === "/projects") && !triggerBlink);
 
     if (previousLocation) {
@@ -40,7 +36,7 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
         setDestPath(path);
         setClicked(true);
       }
-    } else { // When user refreshes
+    } else {
       if (shouldTriggerBlink) {
         setTriggerBlink(true);
         setDestPath(path);
@@ -53,9 +49,9 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
 
     document.body.classList.add('overflow-y-hidden');
     document.documentElement.classList.add('overflow-y-hidden');
+    setMobileMenuOpen(false); // Close menu on navigation
   };
 
-  // Blink Finished & Clean up
   useEffect(() => {
     if (!triggerBlink && clicked) {
       setClicked(false);
@@ -65,7 +61,9 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
       document.body.classList.remove('overflow-y-hidden');
       document.documentElement.classList.remove('overflow-y-hidden');
     };
-  }, [triggerBlink, destPath, clicked, setClicked, navigate])
+  }, [triggerBlink, destPath, clicked, navigate]);
+
+  const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
   return (
     <div id="header">
@@ -73,51 +71,26 @@ function Header({ pageColor, triggerBlink, setTriggerBlink }) {
         <Link to="/home" className={location.pathname === "/about" ? 'invisible' : ''}>
           <img src={logo} alt="Logo_Nathan-Seung" />
         </Link>
-        <ul id="header-navigation-list">
-          <li>
-            <NavLink
-              to="/"
-              style={{ color: pageColor }}
-              onClick={(event) => handleNavLinkClick(event, "/")}
-              className="relative"
-            >
-              Intro
-              <div className="navitem-underline" style={{ background: pageColor }} />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/home"
-              style={{ color: pageColor }}
-              onClick={(event) => handleNavLinkClick(event, "/home")}
-              className="relative"
-            >
-              Home
-              <div className="navitem-underline" style={{ background: pageColor }} />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/about"
-              style={{ color: pageColor }}
-              onClick={(event) => handleNavLinkClick(event, "/about")}
-              className="relative"
-            >
-              About
-              <div className="navitem-underline" style={{ background: pageColor }} />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/projects"
-              style={{ color: pageColor }}
-              onClick={(event) => handleNavLinkClick(event, "/projects")}
-              className="relative"
-            >
-              Projects
-              <div className="navitem-underline" style={{ background: pageColor }} />
-            </NavLink>
-          </li>
+        <button className="mobile-menu-toggle absolute right-6 top-4" onClick={toggleMobileMenu}>
+          {isMobileMenuOpen ? <span className="material-symbols-outlined">close</span> : <span className="material-symbols-outlined">menu</span>}
+        </button>
+        <ul id="header-navigation-list" className={isMobileMenuOpen ? 'open' : ''}>
+          {['/', '/home', '/about', '/projects'].map((path, idx) => {
+            const labels = ['Intro', 'Home', 'About', 'Projects'];
+            return (
+              <li key={path}>
+                <NavLink
+                  to={path}
+                  style={{ color: pageColor }}
+                  onClick={(event) => handleNavLinkClick(event, path)}
+                  className="relative"
+                >
+                  {labels[idx]}
+                  <div className="navitem-underline" style={{ background: pageColor }} />
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </div>
