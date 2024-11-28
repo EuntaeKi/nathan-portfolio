@@ -1,73 +1,109 @@
-@import url('../../index.css');
+@import url("../../index.css");
 
 .intro-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .intro-heading-container {
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  text-align: center;
 }
 
 #intro-name-container {
-    flex-grow: 0;
-    display: flex;
-    align-items: last baseline;
-    margin-bottom: -10rem;
+  flex-grow: 0;
+  display: flex;
+  align-items: last baseline;
+  margin-bottom: -10rem;
 }
 
 .intro-heading {
-    font-size: 3rem;
-    color: #ffffff;
-    font-family: 'Press Start 2P',
-        system-ui;
+  font-size: 3rem;
+  color: #ffffff;
+  font-family: "Press Start 2P", system-ui;
+  width: 100%;
 }
 
 .intro-heading::after {
-    content: 'SHIP APPROACHING.';
-    animation: heading 3s linear infinite normal;
+  content: "SHIP APPROACHING.";
+  animation: heading 3s linear infinite normal;
+  display: inline-block;
+  /* word-break: break-all; */
 }
 
 .plane-container {
-    position: relative;
-    flex-grow: 2;
+  position: relative;
+  display: flex;
+  flex-grow: 2;
 }
 
 #name {
-    font-size: 2.25rem;
-    font-family: 'ClashDisplay-Regular',
-        system-ui;
-    opacity: 0;
+  font-size: 2.25rem;
+  font-family: "ClashDisplay-Regular", system-ui;
+  opacity: 0;
 }
 
 @keyframes heading {
-    0% {
-        content: 'SHIP APPROACHING.';
-    }
+  0% {
+    content: "SHIP APPROACHING.";
+  }
 
-    20% {
-        content: 'SHIP APPROACHING..';
-    }
+  20% {
+    content: "SHIP APPROACHING..";
+  }
 
-    40% {
-        content: 'SHIP APPROACHING...';
-    }
+  40% {
+    content: "SHIP APPROACHING...";
+  }
 
-    60% {
-        content: 'SHIP APPROACHING....';
-    }
+  60% {
+    content: "SHIP APPROACHING....";
+  }
 
-    80% {
-        content: 'SHIP APPROACHING.....';
-    }
+  80% {
+    content: "SHIP APPROACHING.....";
+  }
 
-    100% {
-        content: 'SHIP APPROACHING.....';
-    }
+  100% {
+    content: "SHIP APPROACHING.....";
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro-heading {
+    font-size: 2rem;
+    word-break: normal;
+    text-wrap: stable;
+  }
+  .plane-container {
+    width: 50vw;
+  }
+}
+
+@media (max-width: 786px) {
+  .plane-container {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 640px) {
+  .plane-container {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 550px) {
+  .intro-heading {
+    font-size: 1.5rem;
+  }
+
+  .plane-container {
+    width: 200vw;
+  }
 }

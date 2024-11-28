@@ -1,56 +1,44 @@
-@import '../../components/app/App.css';
+@import "../../components/app/App.css";
 
 .project-list {
-    display: flex;
-    justify-content: space-around;
-    width: 100vw;
-    margin-top: 5rem;
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
 .project-list-item {
-    font-size: 1.25rem;
-    font-family: var(--text-font-family);
-    transition: all 0.2s ease;
-    cursor: pointer;
+  font-size: 1.25rem;
+  font-family: var(--text-font-family);
+  transition: all 0.2s ease;
+  cursor: pointer;
 
-    &:hover {
-        text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px, 0px 0px 80px;
-    }
+  &:hover {
+    text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px,
+      0px 0px 80px;
+  }
 
-    &.active {
-        text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px, 0px 0px 80px
-    }
+  &.active {
+    text-shadow: 0px 0px 5px, 0px 0px 10px, 0px 0px 20px, 0px 0px 40px,
+      0px 0px 80px;
+  }
 }
 
 .project-preview-container {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .preview-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    width: 100%;
-    max-width: 500px;
-    height: 277px;
-    padding: 2rem;
-    font-family: var(--arcade-font-family);
-    /* background-repeat: no-repeat; */
-    background-repeat: repeat-y;
-    background-position: center;
-    row-gap: 0.5rem;
-    box-shadow: 10px 10px 3px #00000080
-}
-
-#arcaders-app {
-    background-image: url('../../../public/img/arcaders_preview.png');
-}
-
-#arcaders-web {
-    background-image: url('../../../public/img/arcaders_web_preview.png');
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  width: 100%;
+  max-width: 500px;
+  font-family: var(--arcade-font-family);
+  box-shadow: 10px 10px 3px #00000080;
 }

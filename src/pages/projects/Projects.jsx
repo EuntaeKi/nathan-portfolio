@@ -13,6 +13,7 @@ const Projects = ({
   setShowOverlay,
   setOverlayColor,
 }) => {
+  const imagePath = `${process.env.PUBLIC_URL}/img/`;
   useEffect(() => {
     setPageColor("#85ECE0");
   }, [setPageColor]);
@@ -33,29 +34,20 @@ const Projects = ({
         slideType={triggerBlink ? "down" : "up"}
       />
       <div
-        className={`${triggerBlink ? "pt-12 slide-down flex flex-col" : "flex flex-col"
-          }`}
+        className={`${
+          triggerBlink
+            ? "pt-12 slide-down flex flex-col w-full items-center"
+            : "flex flex-col w-full items-center"
+        }`}
       >
-        <div className="flex mb-16 justify-center min-[1152px]:justify-between flex-wrap items-center gap-10">
-          <div className="flex flex-col">
+        <div className="flex mb-16 justify-center xl:justify-between flex-wrap items-center gap-10">
+          <div className="flex flex-col mx-4">
             <div className="flex items-center justify-center bg-zinc-900 px-8 py-12 mb-4">
               <div className="preview-container" id="arcaders-app">
-                <div className="flex text-gray-400 w-full justify-around">
-                  <div className="w-1/3 text-[6.5px]">PROJECT:</div>
-                  <div className="w-1/3 text-[6.5px]">PROJECT TYPE:</div>
-                </div>
-                <div className="flex w-full justify-around">
-                  <div className="w-1/3 text-[22px]">ARCADERS'</div>
-                  <div className="w-1/3 text-[8.5px] text-nowrap ">
-                    10 WEEKS SOLO PROJECT <br /> SELF-SELECT PROMPT
-                  </div>
-                </div>
-                <div className="flex w-full justify-around">
-                  <div className="w-1/3 text-[10px]">
-                    ALL-AROUND GAME REVIEW APP
-                  </div>
-                  <div className="w-1/3"></div>
-                </div>
+                <img
+                  src={imagePath + "arcaders_app_preview.png"}
+                  alt="Arcaders"
+                />
               </div>
             </div>
             <div className="text-white text-xl font-bebas-neue">
@@ -70,9 +62,14 @@ const Projects = ({
               <i className="material-symbols-outlined">arrow_right_alt</i>
             </Link>
           </div>
-          <div className="flex flex-col w-fit">
+          <div className="flex flex-col mx-4">
             <div className="flex items-center justify-center bg-zinc-900 px-8 py-12 mb-4">
-              <div className="preview-container" id="arcaders-web"></div>
+              <div className="preview-container" id="arcaders-web">
+                <img
+                  src={imagePath + "arcaders_web_preview.png"}
+                  alt="Arcaders"
+                />
+              </div>
             </div>
             <div className="text-white text-xl font-bebas-neue">
               ARCADERS WEBSITE
@@ -87,12 +84,12 @@ const Projects = ({
             </Link>
           </div>
         </div>
-        <div className="flex bg-zinc-900 w-full py-8 items-center justify-around">
-          <div className="flex flex-col w-2/3">
+        <div className="flex items-center justify-between flex-wrap gap-8 w-full bg-zinc-900 p-8 mx-8">
+          <div className="flex flex-col">
             <div className="text-white text-3xl font-clash-bold w-fit">
               Let's work together!
             </div>
-            <div className="text-gray-400 w-2/3 font-clash-bold">
+            <div className="text-gray-400 max-w-[700px] font-clash-bold">
               With a passion for designing simple, intuitive, and visually
               appealing user experiences, I’m ready to bring my skills to your
               next project.
