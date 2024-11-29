@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
 
 import "./ArcadersApp.css";
+import ArcadersFooter from "../../../components/web/ArcadersFooter";
 
 const ArcadersApp = ({ setPageColor }) => {
   const imagePath = `${process.env.PUBLIC_URL}/img/`;
@@ -77,7 +78,7 @@ const ArcadersApp = ({ setPageColor }) => {
           </div>
         </div>
         {/* Persona */}
-        <div className="flex flex-col items-start bg-gray-500 min-h-svh pt-8 px-4 xl:p-0">
+        <div className="flex flex-col items-start bg-gray-500 min-h-svh py-8 px-4 xl:p-0">
           <div className="flex justify-center xl:justify-between flex-wrap gap-8">
             {/* Nancy */}
             <div className="flex gap-6 flex-wrap sm:flex-nowrap w-full xl:w-1/3 max-w-[600px] xl:max-w-none xl:min-w-[600px] h-fit bg-white text-black border-4 border-black text-[6.5px] p-4 rotate-0 xl:rotate-[-12deg]">
@@ -236,8 +237,9 @@ const ArcadersApp = ({ setPageColor }) => {
             </div>
           </div>
           {/* Focus Points */}
-          <div className="flex self-center flex-wrap gap-6 w-full xl:w-1/3 h-fit max-w-[750px] xl:max-w-none bg-white text-black border-4 border-black text-[6.5px] p-4 py-8 px-16 my-8">
-            <div className="flex flex-col gap-8 items-center w-full xl:w-1/3">
+          <div className="flex self-center justify-center flex-wrap gap-6 w-full lg:w-1/2 h-fit min-w-0 sm:min-w-[600px] max-w-[600px] lg:max-w-none bg-white text-black border-4 border-black text-[6.5px] p-8 my-8">
+            {/* 1. Organization */}
+            <div className="flex flex-col gap-8 items-center w-full lg:w-1/4">
               <div className="flex flex-col items-center gap-4 w-full">
                 <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">
                   1
@@ -251,7 +253,8 @@ const ArcadersApp = ({ setPageColor }) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-8 items-center w-full xl:w-1/3">
+            {/* 2. Informative */}
+            <div className="flex flex-col gap-8 items-center w-full lg:w-1/4">
               <div className="flex flex-col items-center gap-4 w-full">
                 <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">
                   2
@@ -266,7 +269,8 @@ const ArcadersApp = ({ setPageColor }) => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-8 items-center w-full xl:w-1/3">
+            {/* 3. Visual Appeal */}
+            <div className="flex flex-col gap-8 items-center w-full lg:w-1/4">
               <div className="flex flex-col items-center gap-4 w-full">
                 <div className="text-lg w-16 h-16 flex items-center justify-center rounded-full border-4 border-black">
                   3
@@ -282,26 +286,31 @@ const ArcadersApp = ({ setPageColor }) => {
               </div>
             </div>
           </div>
-          <div className="flex bg-white w-1/3 self-center text-black border-4 border-black text-[6.5px] p-4 h-fit gap-6 py-8 px-16">
+          {/* User Research */}
+          <div className="flex self-center gap-6 flex-wrap sm:flex-nowrap w-full xl:w-1/3 max-w-[600px] xl:max-w-none xl:min-w-[600px] h-fit bg-white text-black border-4 border-black text-[6.5px] p-4">
             <div className="flex flex-col items-center gap-4">
               <div className="text-gray-500 text-[10px]">USER RESEARCH</div>
               <div className="flex border border-black w-full"></div>
               <div className="text-center text-[9px]">
-                PREVIEWS AVAILABLE IN THE MARKET ARE OFTEN HARD TO NAVIGATE
+                THIS USER GROUPS’ MAJOR CONCERN WAS THE ORGANIZATION, NAVIGATION, AND THE COMPLICATION OF THE EXISTING GAME PREVIEW APPS. THEY WANTED SPECIFIC INFORMATION TO BE INCLUDED DUE TO THEIR NEED TO PLAY WITH THEIR PEERS. USERS WANTED A SIMPL, YET ACCURATE GAME PREVIEWS SO THEY COULD FIND GAMES THAT THEY CAN ENJOY THEMSELVES, WITH THEIR SPOUSE, KIDS, OR FRIENDS.
               </div>
             </div>
           </div>
         </div>
-        <div className="flex bg-black mt-[-10rem] justify-center mb-24">
-          <div className="flex flex-col mt-80 gap-16">
+        {/* Competitive Audit */}
+        <div className="flex bg-black justify-center mb-24">
+          <div className="flex flex-col mt-8 gap-16">
+            {/* 1. Steam */}
             <div className="flex flex-col items-center gap-8">
-              <div className="flex items-center gap-8">
+              <div className="flex flex-wrap justify-center items-center gap-8">
                 <div className="text-gray-500">COMPETITIVE AUDIT I: </div>
-                <img
-                  src={`${imagePath}arcaders_app_steam.png`}
-                  alt="Steam Icon"
-                />
-                STEAM
+                <div className="flex items-center gap-4">
+                  <img
+                    src={`${imagePath}arcaders_app_steam.png`}
+                    alt="Steam Icon"
+                  />
+                  STEAM
+                </div>
               </div>
               <div>
                 <div className={`relative opacity-0 hover-show`}>
@@ -370,14 +379,17 @@ const ArcadersApp = ({ setPageColor }) => {
                 />
               </div>
             </div>
+            {/* 2. Metacritic */}
             <div className="flex flex-col items-center gap-8">
-              <div className="flex items-center gap-8">
+              <div className="flex flex-wrap justify-center items-center gap-8">
                 <div className="text-gray-500">COMPETITIVE AUDIT II: </div>
-                <img
-                  src={`${imagePath}arcaders_app_metacritic.png`}
-                  alt="Metacritic Icon"
-                />
-                METACRITIC
+                <div className="flex items-center gap-8">
+                  <img
+                    src={`${imagePath}arcaders_app_metacritic.png`}
+                    alt="Metacritic Icon"
+                  />
+                  METACRITIC
+                </div>
               </div>
               <div>
                 <div className={`relative opacity-0 hover-show`}>
@@ -406,14 +418,17 @@ const ArcadersApp = ({ setPageColor }) => {
                 />
               </div>
             </div>
+            {/* 3. Gamespot */}
             <div className="flex flex-col items-center gap-8">
-              <div className="flex items-center gap-8">
+              <div className="flex flex-wrap justify-center items-center gap-8">
                 <div className="text-gray-500">COMPETITIVE AUDIT III: </div>
-                <img
-                  src={`${imagePath}arcaders_app_gamespot.png`}
-                  alt="Gamespot Icon"
-                />
-                GAMESPOT
+                <div className="flex items-center gap-8">
+                  <img
+                    src={`${imagePath}arcaders_app_gamespot.png`}
+                    alt="Gamespot Icon"
+                  />
+                  GAMESPOT
+                </div>
               </div>
               <div>
                 <div className={`relative opacity-0 hover-show`}>
@@ -444,9 +459,11 @@ const ArcadersApp = ({ setPageColor }) => {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-48">
+        {/* Remaining Sections */}
+        <div className="flex flex-col text-center gap-48">
+          {/* Testing Designs */}
           <div className="flex flex-col items-center gap-12">
-            <div className="text-2xl text-gray-500">TESTING DESIGNS:</div>
+            <div className="text-2xl text-gray-500">TESTING DESIGNS</div>
             <div className="flex gap-12 flex-wrap justify-center">
               <img
                 src={`${imagePath}arcaders_testing_design_1.png`}
@@ -460,7 +477,8 @@ const ArcadersApp = ({ setPageColor }) => {
               />
             </div>
           </div>
-          <div className="flex items-center justify-center gap-16">
+          {/* Confirming Interaction */}
+          <div className="flex flex-wrap-reverse items-center justify-center gap-16">
             <div className="flex items-center">
               <img
                 src={`${imagePath}arcaders_confirming_interaction_1.png`}
@@ -478,14 +496,14 @@ const ArcadersApp = ({ setPageColor }) => {
                 className="z-0"
               />
             </div>
-            <div className="flex flex-col w-1/3 text-xs">
-              <div className="text-gray-500 text-2xl mb-6">
-                CONFIRMING INTERACTION:
+            <div className="flex flex-col items-center w-full min-[830px]:w-1/3 text-xs">
+              <div className="text-gray-500 text-2xl mb-6 text-center sm:text-left">
+                CONFIRMING INTERACTION
               </div>
-              <div>
+              <div className="max-w-[400px] min-[830px]:max-w-none text-left">
                 ADDING CONFIRMATION INTERACTION WHEN USERS MAKING MAJOR
-                DECISIONS SUCH AS
-                <ul className="list-decimal ml-9">
+                DECISIONS SUCH AS:
+                <ul className="list-decimal w-fit ml-9">
                   <li>ADDING GAMES/STREAMERS TO MYLIST</li>
                   <li>LOG-IN & REGISTERING ACCOUNT PROCESS</li>
                   <li>ADJUSTING FILTERS</li>
@@ -493,6 +511,7 @@ const ArcadersApp = ({ setPageColor }) => {
               </div>
             </div>
           </div>
+          {/* Customization */}
           <div className="flex justify-center gap-12 items-center">
             <div className="flex flex-col w-1/3">
               <div className="text-gray-500 text-2xl mb-6">CUSTOMIZATION:</div>
@@ -648,18 +667,12 @@ const ArcadersApp = ({ setPageColor }) => {
             </div>
           </div>
           <div className="flex justify-center">
-            <ArcadersFooter />
+            <div className="border-white border-4 w-4/5"></div>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
 
-const ArcadersFooter = () => {
-  return (
-    <>
-      <div className="border-white border-4 w-4/5"></div>
+        <ArcadersFooter />
+      </div>
     </>
   );
 };
