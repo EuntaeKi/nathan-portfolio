@@ -13,7 +13,7 @@ module.exports = {
         "web-dirty-white": "#F2F5F6",
       },
       fontFamily: {
-        // "press-start-2p": ['Press-Start-2P', 'system-ui'],
+        "press-start-2p": "'Press Start 2P'",
         "clash-variable": "ClashDisplay-Variable",
         "clash-extra-light": "ClashDisplay-Extralight",
         "clash-light": "ClashDisplay-Light",

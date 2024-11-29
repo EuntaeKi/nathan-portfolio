@@ -1,40 +1,19 @@
-.arcaders-app-container {
-    font-family: var(--arcade-font-family);
-}
-
-.arcaders-app-intro {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    width: 100vw;
-    background-image: url('../../../../public/img/arcaders_bg_preview.png');
-    background-position: center;
-    row-gap: 2rem;
-}
-
-.hover-show:hover {
-    opacity: 1;
-    transition: all 0.2s ease-in; 
-}
-
 .repeating-stripes-x {
-    background-image: repeating-linear-gradient(
-      to right,
-      #4b60c0 0px,
-      #4b60c0 8px,
-      transparent 8px,
-      transparent 14px
-    );
-  }
+  background-image: repeating-linear-gradient(
+    to right,
+    #4b60c0 0px,
+    #4b60c0 8px,
+    transparent 8px,
+    transparent 14px
+  );
+}
 
-  .repeating-stripes-y {
-    background-image: repeating-linear-gradient(
-      to bottom,
-      #4b60c0 0px,
-      #4b60c0 8px,
-      transparent 8px,
-      transparent 14px
-    );
-  }
+.repeating-stripes-y {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    #4b60c0 0px,
+    #4b60c0 8px,
+    transparent 8px,
+    transparent 14px
+  );
+}

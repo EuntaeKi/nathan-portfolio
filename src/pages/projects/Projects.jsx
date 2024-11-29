@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
@@ -36,8 +36,8 @@ const Projects = ({
       <div
         className={`${
           triggerBlink
-            ? "pt-12 slide-down flex flex-col w-full items-center"
-            : "flex flex-col w-full items-center"
+            ? "pt-12 slide-down flex flex-col items-center"
+            : "flex flex-col items-center"
         }`}
       >
         <div className="flex mb-16 justify-center xl:justify-between flex-wrap items-center gap-10">
