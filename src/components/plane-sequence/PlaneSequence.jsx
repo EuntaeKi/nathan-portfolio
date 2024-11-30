@@ -54,7 +54,7 @@ const PlaneSequence = ({ phaseFrames, interval, phase, setPhase }) => {
         const img = new Image();
         img.src = getCurrentFrame(i);
         img.onload = () => {
-          loadedImages.push(img);
+          loadedImages[i - 1] = img;
           if (
             loadedImages.length ===
             phaseFrames[0] + phaseFrames[1] + phaseFrames[2]
@@ -68,7 +68,7 @@ const PlaneSequence = ({ phaseFrames, interval, phase, setPhase }) => {
       }
     };
     preloadImages();
-  }, [phaseFrames, frameCoordinates]);
+  }, [phaseFrames]);
 
   // Initialize the canvas
   useEffect(() => {
@@ -80,17 +80,16 @@ const PlaneSequence = ({ phaseFrames, interval, phase, setPhase }) => {
 
   // Image rendering process
   useEffect(() => {
+    if (images.length < frameCoordinates.length) return;
     const context = canvasRef.current.getContext("2d");
     const render = () => {
-      if (images.length > 0) {
-        context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-        context.drawImage(images[frameIndex], 0, 0);
-      }
+      context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+      context.drawImage(images[frameIndex], 0, 0);
       requestAnimationFrame(render);
     };
 
     render();
-  }, [frameIndex, images]);
+  }, [frameIndex, images, frameCoordinates]);
 
   // Click handler to start the second phase
   const handleClick = () => {

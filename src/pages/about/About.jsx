@@ -40,7 +40,7 @@ const About = ({
           previousLocation &&
           previousLocation.pathname !== "/" &&
           previousLocation.pathname !== location.pathname) ? 'slide-up' : ''}`}>
-        <div className="about-description-container">
+        <div className="about-description-container -mt-20 lg:mt-0">
           <div className="about-logo-container">
             <Link to="/home" className="about-logo">
               <img

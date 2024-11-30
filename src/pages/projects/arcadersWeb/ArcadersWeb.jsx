@@ -271,7 +271,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           <div className="flex flex-col xl:flex-row w-full text-center">
             {/* Section Community */}
             <div
-              className="w-full xl:w-1/3 h-max-content xl:h-[130svh] bg-center"
+              className="w-full xl:w-1/3 h-max-content xl:min-h-full bg-center"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_community.png)`,
               }}
@@ -294,7 +294,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
             {/* Section Concision */}
             <div
-              className="w-full xl:w-1/3 h-max-content xl:h-[130svh] bg-center"
+              className="w-full xl:w-1/3 h-max-content xl:min-h-full bg-center"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_concision.png)`,
               }}
@@ -318,7 +318,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             </div>
             {/* Section Stream */}
             <div
-              className="w-full xl:w-1/3 h-max-content xl:h-[130svh] bg-center"
+              className="w-full xl:w-1/3 h-max-content xl:min-h-full bg-center"
               style={{
                 backgroundImage: `url(${imagePath}arcaders_web_background_stream.png)`,
               }}
@@ -613,7 +613,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                   </div>
                 </div>
                 {/* Icons */}
-                <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6">
+                <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6 max-w-[900px]">
                   <h4 className="font-clash-semibold text-2xl">Icons</h4>
                   <div className="flex gap-4 flex-wrap">
                     {Object.keys(iconImages).map((name, index) => (
@@ -621,7 +621,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                         <img
                           src={iconImages[name]}
                           alt={name}
-                          className="w-[50px] h-[50px]"
+                          className="w-[50px] h-[50px] min-w-[50px]"
                         />
                       </div>
                     ))}

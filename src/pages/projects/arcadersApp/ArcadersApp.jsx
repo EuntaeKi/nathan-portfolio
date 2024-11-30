@@ -84,7 +84,7 @@ const ArcadersApp = ({ setPageColor }) => {
             <div className="flex gap-6 flex-wrap sm:flex-nowrap w-full xl:w-1/3 max-w-[600px] xl:max-w-none xl:min-w-[600px] h-fit bg-white text-black border-4 border-black text-[6.5px] p-4 rotate-0 xl:rotate-[-12deg]">
               {/* Column 1 */}
               <div className="flex flex-col items-center gap-8 w-full sm:w-1/3">
-                <div className="text-[10px]">PERSONA 2: NANCY</div>
+                <div className="text-[10px]">PERSONA 1: NANCY</div>
                 <div>
                   <div className="grid grid-cols-2">
                     <div className="grid-span-3 opacity-60 text-right">
@@ -160,7 +160,7 @@ const ArcadersApp = ({ setPageColor }) => {
             <div className="flex gap-6 flex-wrap sm:flex-nowrap w-full xl:w-1/3 max-w-[600px] xl:max-w-none xl:min-w-[600px] h-fit bg-white text-black border-4 border-black text-[6.5px] p-4 rotate-0 xl:rotate-[12deg]">
               {/* Column 1 */}
               <div className="flex flex-col items-center gap-8 w-full sm:w-1/3">
-                <div className="text-[10px]">PERSONA 1: ARNOLD</div>
+                <div className="text-[10px]">PERSONA 2: ARNOLD</div>
                 <div>
                   <div className="grid grid-cols-2">
                     <div className="grid-span-3 opacity-60 text-right">

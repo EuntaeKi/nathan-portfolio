@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/nathan-portfolio/static/css/main.56db984a.css",
-    "main.js": "/nathan-portfolio/static/js/main.4b361171.js",
+    "main.css": "/nathan-portfolio/static/css/main.d111aa75.css",
+    "main.js": "/nathan-portfolio/static/js/main.ec9367c2.js",
     "static/media/Inter-VariableFont_opsz,wght.ttf": "/nathan-portfolio/static/media/Inter-VariableFont_opsz,wght.e05c5f3d1fa6a3893d84.ttf",
     "static/media/arcaders_bg_preview.png": "/nathan-portfolio/static/media/arcaders_bg_preview.f57549162628404e8857.png",
     "static/media/Rubik-VariableFont_wght.ttf": "/nathan-portfolio/static/media/Rubik-VariableFont_wght.3a4acc0356c6ea73f2c3.ttf",
@@ -45,11 +45,11 @@
     "static/media/arcaders_web_icons_bell.svg": "/nathan-portfolio/static/media/arcaders_web_icons_bell.4a51ba045bd66c4ecefa.svg",
     "static/media/arcaders_web_icons_headphone.svg": "/nathan-portfolio/static/media/arcaders_web_icons_headphone.86fda044d05b6f1eefec.svg",
     "static/media/arcaders_web_icons_info.svg": "/nathan-portfolio/static/media/arcaders_web_icons_info.be392c5a4576b234d0f8.svg",
-    "main.56db984a.css.map": "/nathan-portfolio/static/css/main.56db984a.css.map",
-    "main.4b361171.js.map": "/nathan-portfolio/static/js/main.4b361171.js.map"
+    "main.d111aa75.css.map": "/nathan-portfolio/static/css/main.d111aa75.css.map",
+    "main.ec9367c2.js.map": "/nathan-portfolio/static/js/main.ec9367c2.js.map"
   },
   "entrypoints": [
-    "static/css/main.56db984a.css",
-    "static/js/main.4b361171.js"
+    "static/css/main.d111aa75.css",
+    "static/js/main.ec9367c2.js"
   ]
 }

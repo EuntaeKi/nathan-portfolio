@@ -4,6 +4,7 @@ import {
   Route,
   createBrowserRouter,
   RouterProvider,
+  createHashRouter,
 } from "react-router-dom";
 
 import "./App.css";
@@ -18,7 +19,7 @@ import ArcadersWeb from "../../pages/projects/arcadersWeb/ArcadersWeb";
 
 const Root = () => {
   const [showOverlay, setShowOverlay] = useState(false);
-  const [overlayColor, setOverlayColor] = useState("#00000030");
+  const [overlayColor, setOverlayColor] = useState("#00000075");
   const [pageColor, setPageColor] = useState("#FFFFFF");
   const [triggerBlink, setTriggerBlink] = useState(false);
 
@@ -130,14 +131,14 @@ const Root = () => {
   );
 };
 
-const router = createBrowserRouter(
+const router = createHashRouter(
   [
     {
       path: "*",
       element: <Root />,
     },
   ],
-  { basename: "/nathan-portfolio" } // Set the basename here
+  { basename: "/" } // Set the basename here
 );
 
 const App = () => {

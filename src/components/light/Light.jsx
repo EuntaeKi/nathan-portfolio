@@ -69,7 +69,7 @@ const Light = ({
   // Component Dismount Logic
   useEffect(() => {
     if (!triggerBlink) {
-      setOverlayColor("#00000040");
+      setOverlayColor("#000000bb");
       setPhase(0);
 
       document.documentElement.classList.remove("overflow-y-hidden");
