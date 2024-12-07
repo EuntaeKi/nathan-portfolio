@@ -16,7 +16,7 @@ const ArcadersApp = ({ setPageColor }) => {
       <Helmet>
         <title>NS | Arcaders App</title>
       </Helmet>
-      <div className="font-press-start-2p block">
+      <div className="font-press-start-2p block bg-[#222222]">
         {/* Introduction */}
         <div className="arcaders-app-intro min-h-svh">
           <div className="flex items-center justify-start xl:justify-center flex-wrap gap-8 p-8">
@@ -478,25 +478,23 @@ const ArcadersApp = ({ setPageColor }) => {
             </div>
           </div>
           {/* Confirming Interaction */}
-          <div className="flex flex-wrap-reverse items-center justify-center gap-16">
+          <div className="flex flex-wrap-reverse items-center justify-center gap-16 p-8">
+            <div className="flex flex-col items-center w-full min-[830px]:w-[500px] text-xs">
+              <div className="text-gray-500 text-2xl mb-6 text-center sm:text-left">
+                SIMPLE DESCRIPTION
+              </div>
+              <div className="max-w-[400px] min-[830px]:max-w-none text-center">
+                MOBILE ARCADERS APP HAS LETTER LIMITATION WHICH REQUIRES REVIEWERS AND GAMER PRODUCERS TO PROVIDE SIMPLE DESCRIPTION OF THE GAME.
+              </div>
+            </div>
             <div className="flex items-center">
               <img
-                src={`${imagePath}arcaders_confirming_interaction_1.png`}
+                src={`${imagePath}arcaders_confirming_interaction.png`}
                 alt="Arcaders' app screen on the game League of Legends, showing an option to add the game to the list"
                 className="z-0"
               />
-              <img
-                src={`${imagePath}arcaders_confirming_interaction_arrow.png`}
-                alt="Arrow showing the connection between the first and second screen"
-                className="z-10 mt-[116px] mx-[-36px]"
-              />
-              <img
-                src={`${imagePath}arcaders_confirming_interaction_2.png`}
-                alt="Arcaders' app screen on the game League of Legends confirming an option to add the game to the list"
-                className="z-0"
-              />
             </div>
-            <div className="flex flex-col items-center w-full min-[830px]:w-1/3 text-xs">
+            <div className="flex flex-col items-center w-full min-[830px]:w-[500px] text-xs">
               <div className="text-gray-500 text-2xl mb-6 text-center sm:text-left">
                 CONFIRMING INTERACTION
               </div>
@@ -511,11 +509,46 @@ const ArcadersApp = ({ setPageColor }) => {
               </div>
             </div>
           </div>
+          {/* Community */}
+          <div className="flex flex-wrap justify-center gap-12 items-center p-8">
+            <div className="flex flex-col w-full md:w-[500px]">
+              <div className="text-gray-500 text-2xl mb-6">
+                COMMUNITY: GAMERS AND STREAMERS
+              </div>
+              <div className="text-xs text-left">
+                ACCORDING TO THE INTERVIEW/USABILITY STUDY, LARGE PORTION OF
+                ONLINE GAMING COMMUNITY AND STREAM VIEWERS’ COMMUNITY
+                OVERLAPPED.
+                <br />
+                <br />
+                TO STRENGTHEN THE CUSTOMIZING PROCESS, PREFERENCE OF STREAMERS
+                IS ADDED TO THE SURVEY PAGE ALONG WITH A SEPARATE STREAMER &
+                GAME REVIEW PAGES.
+              </div>
+            </div>
+            <div className="flex justify-center md:justify-end flex-wrap md:flex-nowrap gap-8 md:gap-0">
+              <img
+                src={`${imagePath}arcaders_gamers_streamers_1.png`}
+                alt="Arcaders' app screen on a streamer's overview page showing League of Legends and StarCraft videos"
+                className="z-20 rotate-0 md:rotate-[-30deg]  translate-x-0 md:translate-x-11 translate-y-0 md:translate-y-5"
+              />
+              <img
+                src={`${imagePath}arcaders_gamers_streamers_2.png`}
+                alt="Arcaders' app screen asking what streamers the user watches, listing out random streamers"
+                className="z-10"
+              />
+              <img
+                src={`${imagePath}arcaders_gamers_streamers_3.png`}
+                alt="Arcaders' app screen listing out streamers the user follows"
+                className="z-0 rotate-0 md:rotate-[15deg] translate-x-0 md:translate-x-[-1.25rem] translate-y-0 md:translate-y-5"
+              />
+            </div>
+          </div>
           {/* Customization */}
-          <div className="flex justify-center gap-12 items-center">
-            <div className="flex flex-col w-1/3">
-              <div className="text-gray-500 text-2xl mb-6">CUSTOMIZATION:</div>
-              <div className="text-xs">
+          <div className="flex justify-center gap-12 items-center p-8 flex-wrap">
+            <div className="flex flex-col w-full lg:w-1/3">
+              <div className="text-gray-500 text-2xl mb-6">INTERACTIVE CUSTOMIZATION</div>
+              <div className="text-base">
                 ARCADERS’ PROVIDE CUSTOMIZED EXPERIENCE FOR THE USERS BY
                 COLLECTING SURVEY DATA WHILE SETTING UP THE ACCOUNT FOR THE
                 FIRST TIME. THESE SURVEY INCLUDES STRAIGHTFORWARD IMAGES AND
@@ -527,47 +560,15 @@ const ArcadersApp = ({ setPageColor }) => {
               alt="Arcaders' survey screen where the user can select games and streamers and another Arcaders' survey screen with a question asking 'How many people do you play games with in general?'"
               className="z-0"
             />
-            <div className="w-1/4 text-xs">
+            <div className="w-full lg:w-1/4 max-w-[300px] text-base text-left">
               THE COLLECTED DATA ARE APPLIED TO RECOMMENDED GAMES AND STREAMER
               LIST.
             </div>
           </div>
-          <div className="flex flex-wrap justify-center gap-12 items-center">
-            <div className="flex flex-col w-1/4">
-              <div className="text-gray-500 text-2xl mb-6">
-                GAMERS AND STREAMERS:
-              </div>
-              <div className="text-xs">
-                ACCORDING TO THE INTERVIEW/USABILITY STUDY, LARGE PORTION OF
-                ONLINE GAMING COMMUNITY AND STREAM VIEWERS’ COMMUNITY
-                OVERLAPPED.
-                <br />
-                <br />
-                TO STRENGTHEN THE CUSTOMIZING PROCESS, PREFERENCE OF STREAMERS
-                IS ADDED TO THE SURVEY PAGE ALONG WITH A SEPARATE STREAMER &
-                GAME REVIEW PAGES.
-              </div>
-            </div>
-            <div className="flex justify-end">
-              <img
-                src={`${imagePath}arcaders_gamers_streamers_1.png`}
-                alt="Arcaders' app screen on a streamer's overview page showing League of Legends and StarCraft videos"
-                className="z-20 rotate-[-30deg] translate-x-11 translate-y-5"
-              />
-              <img
-                src={`${imagePath}arcaders_gamers_streamers_2.png`}
-                alt="Arcaders' app screen asking what streamers the user watches, listing out random streamers"
-                className="z-10"
-              />
-              <img
-                src={`${imagePath}arcaders_gamers_streamers_3.png`}
-                alt="Arcaders' app screen listing out streamers the user follows"
-                className="z-0 rotate-[15deg] translate-x-[-1.25rem] translate-y-5"
-              />
-            </div>
-          </div>
-          <div className="flex flex-col flex-wrap justify-center gap-12 items-center">
-            <div className="flex gap-8">
+          {/* Pages & Stylesheets */}
+          <div className="flex flex-col flex-wrap justify-center gap-12 items-center p-8">
+            {/* Three Images */}
+            <div className="flex flex-wrap gap-8 justify-center">
               <img
                 src={`${imagePath}arcaders_screen_1.png`}
                 alt="Main login screen on the Arcaders' app"
@@ -584,48 +585,47 @@ const ArcadersApp = ({ setPageColor }) => {
                 className="z-0"
               />
             </div>
-            <div className="flex flex-col h-[1500px]">
+            {/* Four Images */}
+            <div className="flex flex-col flex-wrap lg:flex-nowrap gap-8 lg:gap-0 max-h-full lg:max-h-[1500px]">
               <img
                 src={`${imagePath}arcaders_screen_4.png`}
                 alt="Different search page showing recommended games or genre on the Arcaders' app"
-                className="z-0 translate-x-[-75%]"
+                className="z-0 translate-x-0 lg:translate-x-[-75%]"
               />
               <img
                 src={`${imagePath}arcaders_screen_5.png`}
                 alt="Different search page showing user's favorite games or daily and weekly popular games on the Arcaders' app"
-                className="z-0 translate-x-[-25%] translate-y-[-75%]"
+                className="z-0 translate-x-0 lg:translate-x-[-25%] translate-y-0 lg:translate-y-[-75%]"
               />
               <img
                 src={`${imagePath}arcaders_screen_6.png`}
                 alt="Different search page showing recently added games on the Arcaders' app"
-                className="z-0 translate-x-[25%] translate-y-[-150%]"
+                className="z-0 translate-x-0 lg:translate-x-[25%] translate-y-0 lg:translate-y-[-150%]"
               />
               <img
                 src={`${imagePath}arcaders_screen_7.png`}
                 alt="Overlay for confirming the addition of the game to the list on the Arcaders' app"
-                className="z-0 translate-x-[75%] translate-y-[-225%]"
+                className="z-0 translate-x-0 lg:translate-x-[75%] translate-y-0 lg:translate-y-[-225%]"
               />
             </div>
+            {/* White Board */}
             <img
               src={`${imagePath}arcaders_whiteboard.png`}
               alt="Main login screen on the Arcaders' app"
               className="z-0"
             />
           </div>
-          <div className="flex flex-col gap-24 items-center">
+          {/* Improvements */}
+          <div className="flex flex-col gap-8 items-center p-8">
             <div className="flex flex-col w-1/2 items-center">
-              <div className="text-gray-500 text-2xl mb-16">
-                IF I HAD MORE RESOURCES:
+              <div className="text-gray-500 text-2xl mb-8">
+                ROOM FOR IMPROVEMENTS
               </div>
-              <ul className="text-xs list-decimal ml-10">
+              <ul className="text-xs text-left list-decimal ml-10">
                 <li className="mb-6">
-                  EXPLORING COLLABORATING METHODS WITH MAJOR COMPANIES LIKE
-                  YOUTUBE, INSTAGRAM, TWITTER, ETC. I THINK PROVIDING BRIDGES
-                  FOR PRE-EXISING USER/GROUP POOL FROM THESE MAINSTREAM SERVICES
-                  MAY BE AN ATTRACTIVE OPTION FOR A LOT OF SERVICES, BUT I ALSO
-                  RECOGNIZED THAT THESE CAN BE CHALLENGING DUE TO VARIOUS
-                  REASONS SUCH AS COPYRIGHTS. I WISH I HAD MORE TIME TO
-                  UNDERSTAND THE DYNAMICS OF COLLABORATIONS.
+                  MAKING CONNECTIONS WITH OTHER COMPANIES
+                  <br />
+                  EXPLORING COLLABORATING METHODS WITH MAJOR COMPANIES LIKE YOUTUBE, INSTAGRAM, TWITTER, ETC. I THINK PROVIDING BRIDGES FOR PRE-EXISING USER/GROUP POOL FROM THESE MAINSTREAM SERVICES MAY BE AN ATTRACTIVE OPTION FOR A LOT OF SERVICES, BUT I ALSO RECOGNIZED THAT THESE CAN BE CHALLENGING DUE TO VARIOUS REASONS SUCH AS COPYRIGHTS. I WISH I HAD MORE TIME TO UNDERSTAND THE DYNAMICS OF COLLABORATIONS.
                 </li>
                 <li>
                   I BELIEVE THAT THE CUSTOMIZING COMPONENT WOULD HAVE BEEN MORE
@@ -637,8 +637,8 @@ const ArcadersApp = ({ setPageColor }) => {
               </ul>
             </div>
             <div className="flex flex-col w-1/2 items-center">
-              <div className="text-gray-500 text-2xl mb-16">
-                WHAT DID I LEARN AND WHAT’S NEXT:
+              <div className="text-gray-500 text-2xl mb-8">
+                CONCLUSION
               </div>
               <ul className="text-xs list-decimal ml-10">
                 <li className="mb-6">
@@ -665,9 +665,6 @@ const ArcadersApp = ({ setPageColor }) => {
                 </li>
               </ul>
             </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="border-white border-4 w-4/5"></div>
           </div>
         </div>
 
