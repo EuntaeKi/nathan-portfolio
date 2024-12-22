@@ -1,100 +1,97 @@
 @import url(../../components/app/App.css);
 
 .about-container {
-    display: contents;
-    font-family: 'Inter', system-ui;
+  display: contents;
+  font-family: "Inter", system-ui;
 }
 
 .about-description-container {
-    margin-bottom: 2rem;
 }
 
 .slide-down {
-    animation-duration: 0.5s;
-    animation-name: slidedown;
+  animation-duration: 0.7s;
+  animation-name: slidedown;
 }
 
 .about-resume-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-    width: 50vw;
-    font-size: 1.125rem;
-    line-height: 2.125rem;
-    letter-spacing: -1.5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  font-size: 1.125rem;
+  line-height: 2.125rem;
+  letter-spacing: -1.5px;
+  margin-bottom: 4rem;
 }
 
 .about-resume-header {
-    font-weight: 700;
-    font-size: 1.75rem;
-    margin-bottom: 0.5rem;
+  font-weight: 700;
+  font-size: 1.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .about-list {
-    line-height: 2rem;
-    font-size: 1.25rem;
+  line-height: 2rem;
+  font-size: 1.25rem;
 }
 
 .about-resume-subitems li {
-    list-style-type: circle;
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-    margin-left: 1.5rem;
+  list-style-type: circle;
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+  margin-left: 1.5rem;
 }
 
 .about-logo {
-    display: block;
-    width: fit-content;
-    margin-left: -7rem;
-    margin-bottom: -2.5rem;
-    animation: logo-blink 3s infinite;
-    animation-timing-function: ease;
-    opacity: 1;
+  display: block;
+  width: fit-content;
+  margin-bottom: -2.5rem;
+  animation: logo-blink 3s infinite;
+  animation-timing-function: ease;
+  opacity: 1;
 }
 
 @keyframes logo-blink {
-    0% {
-        filter: drop-shadow(0 0 5px #EC7979) drop-shadow(0 0 40px #EC7979);
-    }
+  0% {
+    filter: drop-shadow(0 0 5px #ec7979) drop-shadow(0 0 40px #ec7979);
+  }
 
-    37% {
-        opacity: 1;
-    }
+  37% {
+    opacity: 1;
+  }
 
-    40% {
-        filter: drop-shadow(0 0 5px #EC7979) drop-shadow(0 0 40px #EC7979);
-        opacity: 0.7;
-    }
+  40% {
+    filter: drop-shadow(0 0 5px #ec7979) drop-shadow(0 0 40px #ec7979);
+    opacity: 0.7;
+  }
 
-    43% {
-        opacity: 1;
-    }
+  43% {
+    opacity: 1;
+  }
 
-    70% {
-        filter: drop-shadow(0 0 5px #EC7979) drop-shadow(0 0 40px #EC7979);
-    }
+  70% {
+    filter: drop-shadow(0 0 5px #ec7979) drop-shadow(0 0 40px #ec7979);
+  }
 
-    100% {
-        filter: none;
-    }
+  100% {
+    filter: none;
+  }
 }
 
 .about-description {
-    width: 50vw;
-    font-weight: 400;
-    font-size: 1.5rem;
-    line-height: 2.5rem;
-    letter-spacing: -2px;
-    margin-bottom: 1rem;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
 }
 
 @keyframes slidedown {
-    from {
-        transform: translateY(-20%);
-    }
+  from {
+    transform: translateY(-20%);
+  }
 
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(0%);
+  }
 }

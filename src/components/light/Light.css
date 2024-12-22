@@ -1,35 +1,35 @@
 .light {
-    /* width: 339px;
+  /* width: 339px;
     height: 183px; */
-    margin-bottom: -5rem;
+  margin-bottom: -5rem;
 }
 
 .slide-down {
-    animation-duration: 0.5s;
-    animation-name: slidedown;
+  animation-duration: 0.5s;
+  animation-name: slidedown;
 }
 
 @keyframes slidedown {
-    from {
-        transform: translateY(-20%);
-    }
+  from {
+    transform: translateY(-20%);
+  }
 
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(0);
+  }
 }
 
 .slide-up {
-    animation-duration: 0.5s;
-    animation-name: slideup;
+  animation-duration: 0.5s;
+  animation-name: slideup;
 }
 
 @keyframes slideup {
-    from {
-        transform: translateY(20%);
-    }
+  from {
+    transform: translateY(20%);
+  }
 
-    to {
-        transform: translateY(0);
-    }
+  to {
+    transform: translateY(-10%);
+  }
 }

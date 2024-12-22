@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 import "./About.css";
 import Light from "../../components/light/Light";
@@ -20,7 +20,7 @@ const About = ({
 
   useEffect(() => {
     setPageColor("#EC7979");
-  }, [setPageColor])
+  }, [setPageColor]);
 
   return (
     <>
@@ -34,32 +34,36 @@ const About = ({
         setOverlayColor={setOverlayColor}
         setPageColor={setPageColor}
         triggerBlink={triggerBlink}
-        setTriggerBlink={setTriggerBlink} />
-      <div className={`${triggerBlink ? 'slide-down' :
-        (location.pathname === "home" &&
-          previousLocation &&
-          previousLocation.pathname !== "/" &&
-          previousLocation.pathname !== location.pathname) ? 'slide-up' : ''}`}>
-        <div className="about-description-container -mt-20 lg:mt-0">
+        setTriggerBlink={setTriggerBlink}
+      />
+      <div
+        className={`${
+          triggerBlink
+            ? "slide-down"
+            : location.pathname === "home" &&
+              previousLocation &&
+              previousLocation.pathname !== "/" &&
+              previousLocation.pathname !== location.pathname
+            ? "slide-up"
+            : ""
+        }`}
+      >
+        <div className="about-description-container mb-0 md:mb-8 -mt-20 lg:mt-0">
           <div className="about-logo-container">
-            <Link to="/home" className="about-logo">
-              <img
-                src={logoPath}
-                alt="Nathan Seung"
-              />
+            <Link to="/home" className="about-logo ml-4 md:ml-[-7rem]">
+              <img src={logoPath} alt="Nathan Seung" />
             </Link>
           </div>
-          <p className="about-description">
-            is a UX/UI designer and a formal psychology researcher who
-            dedicated his work on various multi-disciplinary research
-            studies for 3 years. Now he is applying this background to
-            expand his passion in influencing the world through
-            research-based projects by his UX/UI designs. He understands the
-            dynamics of research and how to connect the collected data to
-            life through this designs.
+          <p className="about-description max-w-full md:max-w-[60vw] p-8 md:p-0">
+            is a UX/UI designer and a formal psychology researcher who dedicated
+            his work on various multi-disciplinary research studies for 3 years.
+            Now he is applying this background to expand his passion in
+            influencing the world through research-based projects by his UX/UI
+            designs. He understands the dynamics of research and how to connect
+            the collected data to life through this designs.
           </p>
         </div>
-        <div className="about-resume-container">
+        <div className="about-resume-container max-w-full md:max-w-[60vw] p-8 md:p-0">
           <div>
             <div className="about-resume-header">Contact</div>
             <ul className="about-list">
@@ -81,7 +85,9 @@ const About = ({
                   style={{ color: pageColor }}
                 >
                   <div className="underline">LinkedIn</div>
-                  <span className="material-symbols-outlined text-lg mb-0 ml-1">open_in_new</span>
+                  <span className="material-symbols-outlined text-lg mb-0 ml-1">
+                    open_in_new
+                  </span>
                 </a>
               </li>
               <li>
@@ -93,7 +99,9 @@ const About = ({
                   style={{ color: pageColor }}
                 >
                   <div className="underline">Resume</div>
-                  <div className="material-symbols-outlined text-lg mb-0 ml-1 no-underline">open_in_new</div>
+                  <div className="material-symbols-outlined text-lg mb-0 ml-1 no-underline">
+                    open_in_new
+                  </div>
                 </a>
               </li>
             </ul>
@@ -111,9 +119,7 @@ const About = ({
                 </li>
                 <li>Foundations of User Experience (UX) Design</li>
                 <li>Build Wireframes and Low-Fidelity Prototypes</li>
-                <li>
-                  Create High-Fidelity Designs and Prototypes in Figma
-                </li>
+                <li>Create High-Fidelity Designs and Prototypes in Figma</li>
               </ul>
             </ul>
           </div>
@@ -131,9 +137,9 @@ const About = ({
               </ul>
             </ul>
           </div>
-        </div >
-      </div >
+        </div>
+      </div>
     </>
-  )
-}
+  );
+};
 export default About;

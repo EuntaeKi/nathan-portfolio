@@ -6,6 +6,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 9999;
+  clip-path: url("../../../public/img/light_mask.svg");
   /* mask: url("../../../public/img/light_mask.svg") center/contain no-repeat;
   mask-composite: exclude; */
 }
@@ -17,7 +18,7 @@
 
 @keyframes blink {
   20% {
-    opacity: 0;
+    opacity: 0.2;
   }
 
   30% {
@@ -25,7 +26,7 @@
   }
 
   40% {
-    opacity: 0;
+    opacity: 0.2;
   }
 
   60% {
@@ -33,6 +34,6 @@
   }
 
   90% {
-    opacity: 0;
+    opacity: 0.2;
   }
 }

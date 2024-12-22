@@ -40,16 +40,22 @@ const ArcadersApp = ({ setPageColor }) => {
           <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center">
             PROJECT OVERVIEW
           </div>
-          <div className="flex justify-center items-center flex-wrap gap-8 min-h-svh">
-            <div className="flex flex-col gap-8 w-full md:w-1/3">
+          <div className="flex justify-center items-center flex-wrap gap-8 min-h-svh w-full">
+            <div className="flex flex-col gap-8 w-fit md:w-1/2">
               <div className="text-app-accent text-3xl">GOAL</div>
               <div className="text-sm border-4 border-app-accent rounded-3xl p-8">
-                MY PRODUCT WILL LET <div className="text-app-accent inline">USERS BUILD COMMUNITIES</div> & GAIN USEFUL
-                DESCRIPTIONS OF THE GAMES WHICH WILL AFFECT <div className="text-app-accent inline">USERS LOOKING FOR NEW
-                  GAMES</div> TO PLAY BY EMPHASIZING CATEGORIES & DESCRIPTIONS OF THE
-                GAMES, PROVIDING COMMUNITY PLATFORM, & UTILIZING SIMPLE
-                ORGANIZATION. I WILL MEASURE EFFECTIVENESS BY INTEGRATED USER
-                EVALUATION (RATING).{" "}
+                MY PRODUCT WILL LET{" "}
+                <div className="text-app-accent inline">
+                  USERS BUILD COMMUNITIES
+                </div>{" "}
+                & GAIN USEFUL DESCRIPTIONS OF THE GAMES WHICH WILL AFFECT{" "}
+                <div className="text-app-accent inline">
+                  USERS LOOKING FOR NEW GAMES
+                </div>{" "}
+                TO PLAY BY EMPHASIZING CATEGORIES & DESCRIPTIONS OF THE GAMES,
+                PROVIDING COMMUNITY PLATFORM, & UTILIZING SIMPLE ORGANIZATION. I
+                WILL MEASURE EFFECTIVENESS BY INTEGRATED USER EVALUATION
+                (RATING).{" "}
               </div>
               <div className="text-app-accent text-3xl">PAIN POINT</div>
               <div className="text-sm border-4 border-app-accent rounded-3xl p-8">
@@ -95,15 +101,16 @@ const ArcadersApp = ({ setPageColor }) => {
           </div>
         </div>
         {/* Persona */}
-        <div className="flex flex-col items-start min-h-svh py-8 xl:p-0">
-          <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-11/12 text-center self-center mb-8">
+        <div className="flex flex-col items-start min-h-svh p-8">
+          <div className="text-app-accent text-3xl self-center mb-10">
             RESEARCH
           </div>
-          <div className="flex flex-col items-start bg-[#ff4949c7] py-4 px-4 gap-8">
-            {/* Header */}
-            <div className="bg-transparent text-white border-white border-4 rounded-full py-3 px-6 text-center self-center">
-              USER PERSONA
-            </div>
+
+          {/* Header */}
+          <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center self-center mb-0 md:mb-16">
+            USER PERSONA
+          </div>
+          <div className="flex flex-col items-start py-4 gap-8">
             {/* Personas */}
             <div className="flex justify-center xl:justify-between gap-8 flex-wrap">
               {/* Nancy */}
@@ -145,9 +152,10 @@ const ArcadersApp = ({ setPageColor }) => {
                   </div>
                   <div className="max-w-[200px] border-black border-4 p-2 text-[5px]">
                     NANCY IS A 17-YEAR-OLD HIGHSCHOOL STUDENT WHO LOVES GAMING.
-                    SHE HAS TWO OTHER SIBLINGS WHO LOVES TO PLAY GAME WITH. THESE
-                    THREE GIRLS ALSO LOVE TO WATCH STREAMERS AND INFLUENCERS
-                    PLAYING GAMES AND OFTEN TRIES THE SAME GAME FOR THEMSELVES.
+                    SHE HAS TWO OTHER SIBLINGS WHO LOVES TO PLAY GAME WITH.
+                    THESE THREE GIRLS ALSO LOVE TO WATCH STREAMERS AND
+                    INFLUENCERS PLAYING GAMES AND OFTEN TRIES THE SAME GAME FOR
+                    THEMSELVES.
                   </div>
                 </div>
                 {/* Column 2 */}
@@ -222,10 +230,10 @@ const ArcadersApp = ({ setPageColor }) => {
                   <div className="max-w-[200px] border-black border-4 p-2 text-[5px]">
                     ARNOLD IS A 22-YEAR-OLD JUNIOR PROGRAMMER WHO LIVES IN
                     DOWNTOWN LA, CALIFORNIA. ARNOLD IS PASSIONATE AT GAMING AND
-                    OFTEN USES THE ONLINE COMMUNITY TO SOCIALIZE WITH HIS ONLINE &
-                    OFFLINE PEERS. HIS EXPLORATIVE PERSONALITY MAKES HIM
-                    CONSTANTLY LOOK FOR NEW GAMES TO ENTERTAIN HIM AND HIS DISCORD
-                    GROUP MEMBERS.
+                    OFTEN USES THE ONLINE COMMUNITY TO SOCIALIZE WITH HIS ONLINE
+                    & OFFLINE PEERS. HIS EXPLORATIVE PERSONALITY MAKES HIM
+                    CONSTANTLY LOOK FOR NEW GAMES TO ENTERTAIN HIM AND HIS
+                    DISCORD GROUP MEMBERS.
                   </div>
                 </div>
                 {/* Column 2 */}
@@ -235,8 +243,8 @@ const ArcadersApp = ({ setPageColor }) => {
                     alt="Arnold"
                   />
                   <div className="text-center text-wrap">
-                    “GAMES ARE GREAT ENVIRONMENT TO SOCIALIZE. I WANT TO EXPAND MY
-                    SOCIAL NETWORK THERE”
+                    “GAMES ARE GREAT ENVIRONMENT TO SOCIALIZE. I WANT TO EXPAND
+                    MY SOCIAL NETWORK THERE”
                   </div>
                 </div>
                 {/* Column 3s */}
@@ -318,7 +326,12 @@ const ArcadersApp = ({ setPageColor }) => {
                 <div className="text-gray-500 text-[10px]">USER RESEARCH</div>
                 <div className="flex border border-black w-full"></div>
                 <div className="text-center text-[9px]">
-                  THIS USER GROUPS’ MAJOR CONCERN WAS THE ORGANIZATION, NAVIGATION, AND THE COMPLICATION OF THE EXISTING GAME PREVIEW APPS. THEY WANTED SPECIFIC INFORMATION TO BE INCLUDED DUE TO THEIR NEED TO PLAY WITH THEIR PEERS. USERS WANTED A SIMPL, YET ACCURATE GAME PREVIEWS SO THEY COULD FIND GAMES THAT THEY CAN ENJOY THEMSELVES, WITH THEIR SPOUSE, KIDS, OR FRIENDS.
+                  THIS USER GROUPS’ MAJOR CONCERN WAS THE ORGANIZATION,
+                  NAVIGATION, AND THE COMPLICATION OF THE EXISTING GAME PREVIEW
+                  APPS. THEY WANTED SPECIFIC INFORMATION TO BE INCLUDED DUE TO
+                  THEIR NEED TO PLAY WITH THEIR PEERS. USERS WANTED A SIMPL, YET
+                  ACCURATE GAME PREVIEWS SO THEY COULD FIND GAMES THAT THEY CAN
+                  ENJOY THEMSELVES, WITH THEIR SPOUSE, KIDS, OR FRIENDS.
                 </div>
               </div>
             </div>
@@ -347,9 +360,9 @@ const ArcadersApp = ({ setPageColor }) => {
                 <div className="flex flex-col items-center gap-8">
                   <div className="text-2xl underline">ALL IN ONE</div>
                   <div className="max-w-[400px] text-center">
-                    MAIN PAGE HAS IMAGE, ADDITIONAL TOOL TAB ON TOP OF THE
-                    APP’S TOOL TAB (DEFAULT SETTING), SIMPLE DESCRIPTION
-                    WITH OVERALL RATING FROM THE USERS
+                    MAIN PAGE HAS IMAGE, ADDITIONAL TOOL TAB ON TOP OF THE APP’S
+                    TOOL TAB (DEFAULT SETTING), SIMPLE DESCRIPTION WITH OVERALL
+                    RATING FROM THE USERS
                   </div>
                 </div>
               </div>
@@ -361,9 +374,9 @@ const ArcadersApp = ({ setPageColor }) => {
                 <div className="flex flex-col items-center gap-8">
                   <div className="text-2xl underline">ABOUT</div>
                   <div className="max-w-[400px] text-center">
-                    THE GENERAL DESCRIPTION IS PROVIDED, BUT BY THE
-                    PRODUCERS. SOME USERS FIND IT DIFFICULT TO NOTICE WHAT
-                    KIND OF GAME IT ACTUALLY IS.
+                    THE GENERAL DESCRIPTION IS PROVIDED, BUT BY THE PRODUCERS.
+                    SOME USERS FIND IT DIFFICULT TO NOTICE WHAT KIND OF GAME IT
+                    ACTUALLY IS.
                   </div>
                 </div>
               </div>
@@ -375,9 +388,8 @@ const ArcadersApp = ({ setPageColor }) => {
                 <div className="flex flex-col items-center gap-8">
                   <div className="text-2xl underline">REVIEWS</div>
                   <div className="max-w-[400px] text-center">
-                    USERS CAN LEAVE THEIR OWN REVIEWS AND BRIEFLY
-                    COMMUNICATE THROUGH LIKE OR DISLIKE OTHER USER’S
-                    REVIEWS.
+                    USERS CAN LEAVE THEIR OWN REVIEWS AND BRIEFLY COMMUNICATE
+                    THROUGH LIKE OR DISLIKE OTHER USER’S REVIEWS.
                   </div>
                 </div>
               </div>
@@ -402,9 +414,9 @@ const ArcadersApp = ({ setPageColor }) => {
                   <div className="flex flex-col items-center gap-8">
                     <div className="text-2xl underline">METASCORE</div>
                     <div className="max-w-[400px] text-center">
-                      CENTERED ON REVIEW “SCORES” BY BOTH USERS AND THEIR
-                      OWN EVALUATIONS. DESCRIPTION OF THE GAMES ARE HIDDEN
-                      OR NOT PROVIDED.
+                      CENTERED ON REVIEW “SCORES” BY BOTH USERS AND THEIR OWN
+                      EVALUATIONS. DESCRIPTION OF THE GAMES ARE HIDDEN OR NOT
+                      PROVIDED.
                     </div>
                   </div>
                 </div>
@@ -428,73 +440,94 @@ const ArcadersApp = ({ setPageColor }) => {
                   <div className="flex flex-col items-center gap-8">
                     <div className="text-2xl underline">ARTICLES</div>
                     <div className="max-w-[400px] text-center">
-                      CENTERED ON REVIEW “SCORES” BY BOTH USERS AND THEIR
-                      OWN EVALUATIONS. DESCRIPTION OF THE GAMES ARE HIDDEN
-                      OR NOT PROVIDED.{" "}
+                      CENTERED ON REVIEW “SCORES” BY BOTH USERS AND THEIR OWN
+                      EVALUATIONS. DESCRIPTION OF THE GAMES ARE HIDDEN OR NOT
+                      PROVIDED.{" "}
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          {/* Insights */}
+          <div className="flex flex-col items-center border-app-accent border-4 rounded-3xl p-8 text-center w-full max-w-screen-lg">
+            <div className="text-2xl mb-8">INSIGHT FROM RESEARCH</div>
+            <div className="max-w-screen-md">
+              EACH OF THE COMPETITORS HAVE VERY DIFFERENT WAYS TO ATTRACT USERS.
+              STEAM,THE POWERHOUSE OF THE MARKET, HAD THE MOST ALL-AROUND
+              FEATURES. HOWERVER, USERS WANTED MORE STRAIGHTFORWARD AND SIMPLE
+              INTERFACE THAT WILL EXPLAIN WHAT PRESENTED GAMES ARE AND ENABLE
+              USERS TO BUILD A COMMUNITY OF GAMERS.
+            </div>
+          </div>
         </div>
         {/* Remaining Sections */}
-        <div className="flex flex-col text-center gap-48">
-          {/* Testing Designs */}
-          <div className="flex flex-col items-center gap-12">
-            <div className="text-2xl text-gray-500">TESTING DESIGNS</div>
-            <div className="flex gap-12 flex-wrap justify-center">
+        <div className="flex flex-col text-center gap-12">
+          {/* Wireframing */}
+          <div className="flex flex-col items-center gap-12 p-8 pb-0">
+            <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center">
+              WIREFRAMING
+            </div>
+            <div className="flex flex-wrap justify-center">
               <img
                 src={`${imagePath}arcaders_testing_design_1.png`}
                 alt="Wireframe and flow design on Arcaders' app"
-                className="z-0 block"
+                className="z-0"
               />
               <img
                 src={`${imagePath}arcaders_testing_design_2.png`}
                 alt="Prototype design on Arcaders' app"
-                className="z-0 block"
+                className="z-0"
               />
             </div>
           </div>
           {/* Confirming Interaction */}
-          <div className="flex flex-wrap-reverse items-center justify-center gap-16 p-8">
-            <div className="flex flex-col items-center w-full min-[830px]:w-[500px] text-xs">
-              <div className="text-gray-500 text-2xl mb-6 text-center sm:text-left">
-                SIMPLE DESCRIPTION
-              </div>
-              <div className="max-w-[400px] min-[830px]:max-w-none text-center">
-                MOBILE ARCADERS APP HAS LETTER LIMITATION WHICH REQUIRES REVIEWERS AND GAMER PRODUCERS TO PROVIDE SIMPLE DESCRIPTION OF THE GAME.
-              </div>
+          <div className="flex flex-col items-center p-8">
+            <div className="bg-app-accent text-white text-center rounded-3xl py-3 max-w-[600px] w-full mb-8">
+              TESTING DESIGNS
             </div>
-            <div className="flex items-center">
-              <img
-                src={`${imagePath}arcaders_confirming_interaction.png`}
-                alt="Arcaders' app screen on the game League of Legends, showing an option to add the game to the list"
-                className="z-0"
-              />
-            </div>
-            <div className="flex flex-col items-center w-full min-[830px]:w-[500px] text-xs">
-              <div className="text-gray-500 text-2xl mb-6 text-center sm:text-left">
-                CONFIRMING INTERACTION
+            <div className="flex flex-wrap items-center justify-center gap-16">
+              <div className="flex flex-col items-center gap-8 w-full min-[830px]:w-[500px] text-xs">
+                <div className="bg-app-accent text-white text-xl text-center rounded-3xl px-8 py-3 w-fit">
+                  SIMPLE DESCRIPTION
+                </div>
+                <div className="max-w-[400px] min-[830px]:max-w-none text-center text-base">
+                  MOBILE ARCADERS APP HAS LETTER LIMITATION WHICH REQUIRES
+                  REVIEWERS AND GAMER PRODUCERS TO PROVIDE SIMPLE DESCRIPTION OF
+                  THE GAME.
+                </div>
               </div>
-              <div className="max-w-[400px] min-[830px]:max-w-none text-left">
-                ADDING CONFIRMATION INTERACTION WHEN USERS MAKING MAJOR
-                DECISIONS SUCH AS:
-                <ul className="list-decimal w-fit ml-9">
-                  <li>ADDING GAMES/STREAMERS TO MYLIST</li>
-                  <li>LOG-IN & REGISTERING ACCOUNT PROCESS</li>
-                  <li>ADJUSTING FILTERS</li>
-                </ul>
+              <div className="flex items-center">
+                <img
+                  src={`${imagePath}arcaders_confirming_interaction.png`}
+                  alt="Arcaders' app screen on the game League of Legends, showing an option to add the game to the list"
+                  className="z-0"
+                />
+              </div>
+              <div className="flex flex-col items-center gap-8 w-full min-[830px]:w-[500px] text-xs">
+                <div className="bg-app-accent text-white text-xl text-center rounded-3xl px-8 py-3 w-fit">
+                  CONFIRMING INTERACTION
+                </div>
+                <div className="max-w-[400px] min-[830px]:max-w-none text-left text-base">
+                  ADDING CONFIRMATION INTERACTION WHEN USERS MAKING MAJOR
+                  DECISIONS SUCH AS:
+                  <ul className="list-decimal w-fit ml-9">
+                    <li>ADDING GAMES/STREAMERS TO MYLIST</li>
+                    <li>LOG-IN & REGISTERING ACCOUNT PROCESS</li>
+                    <li>ADJUSTING FILTERS</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
           {/* Community */}
           <div className="flex flex-wrap justify-center gap-12 items-center p-8">
             <div className="flex flex-col w-full md:w-[500px]">
-              <div className="text-gray-500 text-2xl mb-6">
-                COMMUNITY: GAMERS AND STREAMERS
+              <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center mb-8">
+                COMMUNITY: <br />
+                GAMERS AND STREAMERS
               </div>
-              <div className="text-xs text-left">
+              <div className="text-left">
                 ACCORDING TO THE INTERVIEW/USABILITY STUDY, LARGE PORTION OF
                 ONLINE GAMING COMMUNITY AND STREAM VIEWERS’ COMMUNITY
                 OVERLAPPED.
@@ -526,7 +559,9 @@ const ArcadersApp = ({ setPageColor }) => {
           {/* Customization */}
           <div className="flex justify-center gap-12 items-center p-8 flex-wrap">
             <div className="flex flex-col w-full lg:w-1/3">
-              <div className="text-gray-500 text-2xl mb-6">INTERACTIVE CUSTOMIZATION</div>
+              <div className="self-center bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center mb-8">
+                INTERACTIVE CUSTOMIZATION
+              </div>
               <div className="text-base">
                 ARCADERS’ PROVIDE CUSTOMIZED EXPERIENCE FOR THE USERS BY
                 COLLECTING SURVEY DATA WHILE SETTING UP THE ACCOUNT FOR THE
@@ -550,7 +585,7 @@ const ArcadersApp = ({ setPageColor }) => {
             <div className="flex flex-wrap gap-8 justify-center">
               <img
                 src={`${imagePath}arcaders_screen_1.png`}
-                alt="Main login screen on the Arcaders' app"
+                alt="Main log in screen on the Arcaders' app"
                 className="z-0"
               />
               <img
@@ -587,60 +622,348 @@ const ArcadersApp = ({ setPageColor }) => {
                 className="z-0 translate-x-0 lg:translate-x-[75%] translate-y-0 lg:translate-y-[-225%]"
               />
             </div>
-            {/* White Board */}
-            <img
-              src={`${imagePath}arcaders_whiteboard.png`}
-              alt="Main login screen on the Arcaders' app"
-              className="z-0"
-            />
+            {/* Design Board */}
+            <div className="flex flex-wrap gap-8 font-arcade text-start justify-center">
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-col items-start gap-4">
+                  <div className="text-[#E6EA16]">Arcade Normal Font Style</div>
+                  <div className="flex gap-12">
+                    <div className="flex flex-col items-end">
+                      <div className="text-[2.5rem]">ARS</div>
+                      <div className="text-[1.875rem]">ARS</div>
+                      <div className="text-[1.5625rem]">ARS</div>
+                      <div className="text-[1.25rem]">ARS</div>
+                    </div>
+                    <div className="flex flex-col items-start">
+                      <div className="text-[2.5rem]">40PX</div>
+                      <div className="text-[1.875rem]">30PX</div>
+                      <div className="text-[1.5625rem]">25PX</div>
+                      <div className="text-[1.25rem]">20PX</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col items-start gap-4">
+                  <div className="text-[#E6EA16]">Quoted Comments</div>
+                  <div>
+                    “QUOTATION MARKS <br />
+                    FOR EMPHASIS”
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-12">
+                  <div className="flex flex-col gap-8 w-full sm:w-auto">
+                    <div className="flex flex-col items-start gap-4">
+                      <div className="text-[#E6EA16]">Ratings</div>
+                      <div className="flex gap-2">
+                        <div>5.0</div>
+                        <div className="text-[#F2D643]">*****</div>
+                        <div>(5)</div>
+                      </div>
+                      <div className="flex gap-2">
+                        <div>1.0</div>
+                        <div className="flex">
+                          <div className="text-[#F2D643]">*</div>****
+                        </div>
+                        <div>(10)</div>
+                      </div>
+                    </div>
+                    <div className="flex flex-col items-start gap-4">
+                      <div className="text-[#E6EA16]">Pagination</div>
+                      <div className="flex w-full max-w-48">
+                        <div className="w-1/5 border-4"></div>
+                        <div className="w-4/5 border-4 border-[#D9D9D999]"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-start gap-4 w-full sm:w-auto">
+                    <div className="text-[#E6EA16]">Filters</div>
+                    <div className="text-[#043BFF] text-[6px] border-4 border-[#043BFF] w-fit py-2 px-3">
+                      I WANT TO KEEP IT CLASSIC
+                    </div>
+                    <div className="text-[#ffffff] text-[6px] border-4 border-[#ffffff] w-fit py-2 px-3">
+                      MULTIPLAYER
+                    </div>
+                    <div className="text-[#FF4949] text-[6px] border-4 border-[#FF4949] w-fit py-2 px-3">
+                      HORROR
+                    </div>
+                    <div className="text-[#F2D643] text-[6px] border-4 border-[#F2D643] w-fit py-2 px-3">
+                      ROLE PLAYER
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-8 max-w-[400px]">
+                  <div className="flex flex-col gap-4 max-w-24">
+                    <div className="text-[#E6EA16]">Add Button</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_add_icon.png`}
+                      alt="Add icon used for Arcaders App"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4 max-w-24">
+                    <div className="text-[#E6EA16]">Back Button</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_back_icon.png`}
+                      alt="Back icon used for Arcaders App"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4 max-w-24">
+                    <div className="text-[#E6EA16]">Question Button</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_question_icon.png`}
+                      alt="Question icon used for Arcaders App"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4 max-w-24">
+                    <div className="text-[#E6EA16]">Heart Button</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_heart_icon.png`}
+                      alt="Heart icon used for Arcaders App"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4 max-w-24">
+                    <div className="text-[#E6EA16]">Search Button</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_search_icon.png`}
+                      alt="Search icon used for Arcaders App"
+                      className="w-full"
+                    />
+                  </div>
+                  <div className="flex flex-col gap-4 max-w-24">
+                    <div className="text-[#E6EA16]">Like Button</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_like_icon.png`}
+                      alt="Like icon used for Arcaders App"
+                      className="w-full"
+                    />
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-8">
+                  <div className="flex flex-col items-start gap-4">
+                    <div className="text-[#E6EA16]">Search Bar</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_search.png`}
+                      alt="Search bar used in Arcaders App"
+                    />
+                  </div>
+                  <div className="flex flex-col items-start gap-4">
+                    <div className="text-[#E6EA16]">Search Bar with Filter</div>
+                    <img
+                      src={`${imagePath}arcaders_app_design_search_filter.png`}
+                      alt="Search bar with filter icon used in Arcaders App"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="flex flex-col gap-8">
+                <div className="flex flex-wrap gap-8">
+                  <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-4">
+                      <div className="text-[#E6EA16]">Tool Tab A</div>
+                      <img
+                        src={`${imagePath}arcaders_app_design_tooltab_a.png`}
+                        alt="Tooltab design used in Arcaders App"
+                      />
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="text-[#E6EA16]">Tool Tab B</div>
+                      <img
+                        src={`${imagePath}arcaders_app_design_tooltab_b.png`}
+                        alt="Alternative tooltab design used in Arcaders App"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-4">
+                      <div className="text-[#E6EA16]">My List Tool Tab</div>
+                      <img
+                        src={`${imagePath}arcaders_app_design_tooltab_mylist.png`}
+                        alt="My List tab's tooltab design used in Arcaders App"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-8">
+                    <div className="flex flex-col gap-4">
+                      <div className="text-[#E6EA16]">Log In Troubleshoot</div>
+                      <img
+                        src={`${imagePath}arcaders_app_design_login_troubleshoot.png`}
+                        alt="Log In troubleshoot design used in Arcaders App"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-wrap gap-8">
+                  <div className="flex flex-col gap-4 text-xs">
+                    <div className="text-[#E6EA16] text-base">
+                      Option Default
+                    </div>
+                    <div className="border-white border-4 w-fit p-3">
+                      ALL ALONE!
+                    </div>
+                    <div className="border-white border-4 w-fit p-3">TWO</div>
+                    <div className="border-white border-4 w-fit p-3">
+                      MORE THAN TWO
+                    </div>
+                    <div className="border-[#043BFF] bg-[#043BFF] border-4 w-fit p-3">
+                      YES I DO!
+                    </div>
+                    <div className="border-[#F34444] bg-[#F34444] border-4 w-fit p-3">
+                      NOPE
+                    </div>
+                    <div className="border-[#043BFF] bg-[#043BFF] border-4 p-3 text-center">
+                      CONFIRM
+                    </div>
+                    <div className="border-[#043BFF] bg-[#043BFF] border-4 w-fit p-3">
+                      YES
+                    </div>
+                    <div className="border-[#043BFF] bg-[#043BFF] border-4 max-w-52 p-3 text-center">
+                      CONTINUE
+                    </div>
+                    <div className="border-[#043BFF] bg-[#043BFF] border-4  max-w-52 p-3 text-center">
+                      ADD TO MY LIST
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-4 text-xs">
+                    <div className="text-[#E6EA16] text-base">Selected</div>
+                    <div className="border-white bg-[#043BFF] border-4 w-fit p-3">
+                      ALL ALONE!
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4 w-fit p-3">
+                      TWO
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4 w-fit p-3">
+                      MORE THAN TWO
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4 w-fit p-3">
+                      YES I DO!
+                    </div>
+                    <div className="border-white bg-[#F34444] border-4 w-fit p-3">
+                      NOPE
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4 p-3 text-center">
+                      CONFIRM
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4 w-fit p-3">
+                      YES
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4 max-w-52 p-3 text-center">
+                      CONTINUE
+                    </div>
+                    <div className="border-white bg-[#043BFF] border-4  max-w-52 p-3 text-center">
+                      ADD TO MY LIST
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-4 text-xs">
+                    <div className="text-[#E6EA16] text-base">Log In Tabs</div>
+                    <div className="border-white bg-white border-4 p-3 text-[#B1B1B1] text-center">
+                      EMAIL
+                    </div>
+                    <div className="border-white bg-white border-4 p-3 text-[#B1B1B1] text-center">
+                      CREATE ACCOUNT
+                    </div>
+                    <div className="border-white bg-white border-4 p-3 text-[#B1B1B1] text-center">
+                      LOG IN
+                    </div>
+                    <div className="border-white bg-white border-4 p-3 text-[#B1B1B1] text-center">
+                      PASSWORD
+                    </div>
+                    <div className="border-white bg-white border-4 p-3 text-[#B1B1B1] text-center">
+                      ACCOUNT NAME
+                    </div>
+                    <div className="border-white bg-white border-4 p-3 text-[#B1B1B1] text-center">
+                      PASSWORD CHECK
+                    </div>
+                  </div>
+                </div>
+                <div className="flex flex-col flex-wrap gap-4 bg-[#D9D9D980] p-8">
+                  <div className="text-[#E6EA16]">Colors</div>
+                  <div className="flex flex-wrap gap-8">
+                    <div className="flex flex-col gap-4">
+                      <div className="w-20 h-20 bg-[#043BFF]"></div>
+                      <div className="text-[#043BFF] text-sm">#043BFF</div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="w-20 h-20 bg-[#F2D643]"></div>
+                      <div className="text-[#F2D643] text-sm">#F2D643</div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="w-20 h-20 bg-[#F34444]"></div>
+                      <div className="text-[#F34444] text-sm">#F34444</div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="w-20 h-20 bg-[#FFFFFF]"></div>
+                      <div className="text-[#FFFFFF] text-sm">#FFFFFF</div>
+                    </div>
+                    <div className="flex flex-col gap-4">
+                      <div className="w-20 h-20 bg-[#B1B1B1]"></div>
+                      <div className="text-[#B1B1B1] text-sm">#B1B1B1</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           {/* Improvements */}
           <div className="flex flex-col gap-8 items-center p-8">
-            <div className="flex flex-col w-1/2 items-center">
-              <div className="text-gray-500 text-2xl mb-8">
+            <div className="flex flex-col w-full md:w-1/2 items-center">
+              <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center mb-8">
                 ROOM FOR IMPROVEMENTS
               </div>
-              <ul className="text-xs text-left list-decimal ml-10">
+              <ul className="text-left list-decimal ml-10">
                 <li className="mb-6">
                   MAKING CONNECTIONS WITH OTHER COMPANIES
                   <br />
-                  EXPLORING COLLABORATING METHODS WITH MAJOR COMPANIES LIKE YOUTUBE, INSTAGRAM, TWITTER, ETC. I THINK PROVIDING BRIDGES FOR PRE-EXISING USER/GROUP POOL FROM THESE MAINSTREAM SERVICES MAY BE AN ATTRACTIVE OPTION FOR A LOT OF SERVICES, BUT I ALSO RECOGNIZED THAT THESE CAN BE CHALLENGING DUE TO VARIOUS REASONS SUCH AS COPYRIGHTS. I WISH I HAD MORE TIME TO UNDERSTAND THE DYNAMICS OF COLLABORATIONS.
+                  <br />
+                  EXPLORING COLLABORATION METHODS WITH MAJOR COMPANIES LIKE
+                  YOUTUBE, INSTAGRAM, TWITTER, AND OTHERS CAN PROVIDE BRIDGES
+                  FOR PRE-EXISTING USER AND GROUP POOLS FROM THESE MAINSTREAM
+                  SERVICES. THIS APPROACH MAY BE AN ATTRACTIVE OPTION FOR MANY
+                  SERVICES. HOWEVER, I ALSO RECOGNIZE THAT SUCH COLLABORATIONS
+                  CAN BE CHALLENGING DUE TO VARIOUS FACTORS, SUCH AS COPYRIGHT
+                  ISSUES. I WISH I HAD MORE TIME TO FULLY UNDERSTAND THE
+                  DYNAMICS OF THESE PARTNERSHIPS.
                 </li>
                 <li>
-                  I BELIEVE THAT THE CUSTOMIZING COMPONENT WOULD HAVE BEEN MORE
-                  THOROUGH IF I WORKED WITH A TECH TEAM, WHICH WOULD HAVE
-                  CREATED A LOGIC BEHIND THE COLLECTED RAW DATA. AS A UX
-                  RESEARCHER, I WOULD HAVE CONTACTED DATA ANALYST TO MODIFY THE
-                  CUSTOMIZATION WITH THEM.
+                  I BELIEVE THE CUSTOMIZATION COMPONENT COULD HAVE BEEN MORE
+                  ROBUST IF I HAD WORKED WITH A TECHNICAL TEAM. COLLABORATING
+                  WITH SUCH A TEAM WOULD HAVE ALLOWED US TO CREATE LOGIC BEHIND
+                  THE COLLECTED RAW DATA. AS A UX RESEARCHER, I WOULD HAVE
+                  ENGAGED WITH DATA ANALYSTS TO REFINE AND IMPROVE CUSTOMIZATION
+                  FEATURES.
                 </li>
               </ul>
             </div>
-            <div className="flex flex-col w-1/2 items-center">
-              <div className="text-gray-500 text-2xl mb-8">
+            <div className="flex flex-col w-full md:w-1/2 items-center">
+              <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center mb-8">
                 CONCLUSION
               </div>
-              <ul className="text-xs list-decimal ml-10">
+              <ul className="text-left list-decimal ml-10">
                 <li className="mb-6">
-                  NEED OF WORKING AS A TEAM
+                  THE NEED FOR TEAMWORK
                   <br />
                   <br />
-                  LAUNCHING A PRODUCT WITH GOOD LOGIC SHOULD BE BASED ON GOOD
-                  RESEARCH ON THE MARKET/FIELD. ONCE THE RESEARCH IS FIRM, THE
-                  PRODUCT SHOULD BE DESIGNED WITH INTENTIONS AND CLEAR AIMS.
-                  MODERN TREND OFTEN REQUIRES THE PRODUCT/SERVICE TO COLLECT,
-                  ANALYZE, AND UTILIZE DATA TO PROVIDE MORE PERSONALIZED USER
-                  EXPERIENCE FOR THE CUSTOMERS. ONCE I LEARNED THESE LIMITATIONS
-                  OF WORKING ALONE, I ASSEMBLED A SMALL TEAM INCLUDING A
-                  BUSINESS RESEARCHER, MYSELF, AND A TECHNICIAN TO LAUNCH OUR
-                  OWN SERVICE.
+                  LAUNCHING A SUCCESSFUL PRODUCT WITH STRONG LOGIC REQUIRES
+                  THOROUGH RESEARCH INTO THE MARKET AND FIELD. ONCE THE RESEARCH
+                  IS SOLID, THE PRODUCT SHOULD BE DESIGNED WITH CLEAR INTENTIONS
+                  AND WELL-DEFINED OBJECTIVES. MODERN TRENDS OFTEN DEMAND THAT
+                  PRODUCTS AND SERVICES COLLECT, ANALYZE, AND UTILIZE DATA TO
+                  OFFER MORE PERSONALIZED USER EXPERIENCES.
+                  <br />
+                  <br />
+                  AFTER RECOGNIZING THE LIMITATIONS OF WORKING ALONE, I
+                  ASSEMBLED A SMALL TEAM COMPRISING A BUSINESS RESEARCHER, A
+                  TECHNICIAN, AND MYSELF TO COLLABORATIVELY LAUNCH OUR OWN
+                  SERVICE.
                 </li>
                 <li>
                   WEBSITE DESIGN
                   <br />
-                  <br />I LEARNED THAT I WAS ENJOYING THE PROCESS OF PLANNING
-                  AND ACTUALLY DESIGNING PRODUCTS. I WANTED TO EXPAND THIS
-                  PROJECT TO WEBSITE DESIGN. CHECK OUT MY ARCADERS WEBSITE
-                  PROJECT BELOW.
+                  <br />I DISCOVERED THAT I ENJOY THE PROCESS OF PLANNING AND
+                  DESIGNING PRODUCTS. THIS REALIZATION MOTIVATED ME TO EXPAND
+                  THIS PROJECT INTO WEBSITE DESIGN. CHECK OUT MY ARCADERS
+                  WEBSITE PROJECT BELOW!
                 </li>
               </ul>
             </div>

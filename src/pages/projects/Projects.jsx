@@ -36,7 +36,7 @@ const Projects = ({
       <div
         className={`${
           triggerBlink
-            ? "pt-12 slide-down flex flex-col items-center"
+            ? "pt-24 slide-down flex flex-col items-center"
             : "flex flex-col items-center"
         }`}
       >

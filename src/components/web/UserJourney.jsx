@@ -41,79 +41,93 @@ const emojiToCanvas = (emoji, fontSize = 32) => {
 
 const UserJourney = () => {
   return (
-    <div className="p-8 bg-white text-black text-lg font-clash-medium flex flex-col justify-center gap-12 text-center overflow-x-scroll w-[1280px]">
-      <div className="text-web-dark-blue text-4xl font-clash-semibold">
-        User Journey
-      </div>
+    <div className="p-8 bg-white text-black text-lg font-clash-medium overflow-x-scroll w-full">
+      <div className="flex flex-col justify-center gap-12 text-center min-w-[1000px]">
+        <div className="text-web-dark-blue text-4xl font-clash-semibold">
+          User Journey
+        </div>
 
-      {/* Step Row */}
-      <div className="grid grid-cols-11 gap-4 items-center justify-center">
-        <Header title="Step" />
-        <Step title="Search for a game" number={1} />
-        <Step title="Watch a gaming stream" number={2} />
-        <Step title="Discuss with peers" number={3} />
-        <Step title="Play the game" number={4} />
-        <Step title="Leave a review" number={5} />
-      </div>
+        {/* Step Row */}
+        <div className="grid grid-cols-11 gap-4 items-center justify-center">
+          <Header title="Step" />
+          <Step title="Search for a game" number={1} />
+          <Step title="Watch a gaming stream" number={2} />
+          <Step title="Discuss with peers" number={3} />
+          <Step title="Play the game" number={4} />
+          <Step title="Leave a review" number={5} />
+        </div>
 
-      {/* Behavior Row */}
-      <div className="grid grid-cols-11 gap-4 items-center justify-center">
-        <Header title="Behavior" />
-        <Behavior description="Look for games to play with peers" number={1} />
-        <Behavior description="Tries to look up what games their favorite streamer played" number={2} />
-        <Behavior description="Discuss what game to play with friends" number={3} />
-        <Behavior description="Tries playing the game" number={4} />
-        <Behavior description="Leaves a review about the game based on the gameplay" number={5} />
-      </div>
+        {/* Behavior Row */}
+        <div className="grid grid-cols-11 gap-4 items-center justify-center">
+          <Header title="Behavior" />
+          <Behavior
+            description="Look for games to play with peers"
+            number={1}
+          />
+          <Behavior
+            description="Tries to look up what games their favorite streamer played"
+            number={2}
+          />
+          <Behavior
+            description="Discuss what game to play with friends"
+            number={3}
+          />
+          <Behavior description="Tries playing the game" number={4} />
+          <Behavior
+            description="Leaves a review about the game based on the gameplay"
+            number={5}
+          />
+        </div>
 
-      {/* Emotion Row */}
-      <div className="grid grid-cols-11 items-center border-t-2 border-b-2 border-dashed border-web-gray py-8">
-        <Header title="Emotion" />
-        <div className="col-span-10">
-          <div className="grid grid-cols-10 h-56">
-            <EmotionSection />
-          </div>
-          <div className="grid grid-cols-10 gap-4 relative">
-            <Emotion
-              description="Excited to play a new game! Where do I find one though?"
-              yPos={-60}
-            />
-            <Emotion
-              description="Is this the one my streamer played? I can't tell."
-              yPos={-30}
-            />
-            <Emotion
-              description="Whatever the game is we will enjoy it together!"
-              yPos={-70}
-            />
-            <Emotion
-              description="This is not what I expected. What a disappointment."
-              yPos={-10}
-            />
-            <Emotion
-              description="The interface looks boring. What's the point of reviewing?"
-              yPos={-10}
-            />
+        {/* Emotion Row */}
+        <div className="grid grid-cols-11 items-center border-t-2 border-b-2 border-dashed border-web-gray py-8">
+          <Header title="Emotion" />
+          <div className="col-span-10">
+            <div className="grid grid-cols-10 h-56">
+              <EmotionSection />
+            </div>
+            <div className="grid grid-cols-10 gap-4 relative">
+              <Emotion
+                description="Excited to play a new game! Where do I find one though?"
+                yPos={-60}
+              />
+              <Emotion
+                description="Is this the one my streamer played? I can't tell."
+                yPos={-30}
+              />
+              <Emotion
+                description="Whatever the game is we will enjoy it together!"
+                yPos={-70}
+              />
+              <Emotion
+                description="This is not what I expected. What a disappointment."
+                yPos={-10}
+              />
+              <Emotion
+                description="The interface looks boring. What's the point of reviewing?"
+                yPos={-10}
+              />
+            </div>
           </div>
         </div>
-      </div>
 
-      {/* Pain Point Row */}
-      <div className="grid grid-cols-11 gap-4 items-center">
-        <Header title="Pain Point" />
-        <PainPoint description="Too much information to consider" />
-        <PainPoint description="Takes extra research to figure out what game is streamed" />
-        <PainPoint description="The expectation built from reviews were not met" />
-        <PainPoint description="Minimum interaction after leaving review. Boring UI/UX design." />
-      </div>
+        {/* Pain Point Row */}
+        <div className="grid grid-cols-11 gap-4 items-center">
+          <Header title="Pain Point" />
+          <PainPoint description="Too much information to consider" />
+          <PainPoint description="Takes extra research to figure out what game is streamed" />
+          <PainPoint description="The expectation built from reviews were not met" />
+          <PainPoint description="Minimum interaction after leaving review. Boring UI/UX design." />
+        </div>
 
-      {/* Opportunity Row */}
-      <div className="grid grid-cols-11 gap-4 items-center">
-        <Header title="Opportunity" />
-        <Opportunity description="Provide customized recommendations" />
-        <Opportunity description="Build a direct pathway that connects streamers and gamers" />
-        <Opportunity description="Provide useful and accurate reviews" />
-        <Opportunity description="Community-based review platform for users to stay active. Visually appealing UI/UX design." />
+        {/* Opportunity Row */}
+        <div className="grid grid-cols-11 gap-4 items-center">
+          <Header title="Opportunity" />
+          <Opportunity description="Provide customized recommendations" />
+          <Opportunity description="Build a direct pathway that connects streamers and gamers" />
+          <Opportunity description="Provide useful and accurate reviews" />
+          <Opportunity description="Community-based review platform for users to stay active. Visually appealing UI/UX design." />
+        </div>
       </div>
     </div>
   );
@@ -147,7 +161,9 @@ const Emotion = ({ description, yPos }) => (
     >
       {description}
     </div>
-    <div className={`relative flex md:hidden justify-center items-center col-span-2 bg-gray-300 p-2 rounded-3xl text-center text-pretty`}>
+    <div
+      className={`relative flex md:hidden justify-center items-center col-span-2 bg-gray-300 p-2 rounded-3xl text-center text-pretty`}
+    >
       {description}
     </div>
   </>
