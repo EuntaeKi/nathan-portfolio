@@ -154,7 +154,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
         </div>
         {/* 01. Content Section */}
-        <div className="flex flex-col min-h-svh justify-center gap-8">
+        <div className="flex flex-col min-h-svh justify-center gap-8 px-8">
           {/* Section Header */}
           <div className="self-center md:self-auto mb-0 md:mb-16 ml-0 md:ml-20">
             <div className="font-bebas-neue text-xl">01</div>
@@ -163,7 +163,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           {/* Section Body */}
           <div className="flex justify-around flex-wrap gap-2">
             <div className="flex flex-col bg-white rounded-[48px] w-[22rem] gap-8 items-center text-center p-10">
-              <div className="text-5xl text-web-dark-blue font-clash-semibold">
+              <div className="text-4xl sm:text-5xl text-web-dark-blue font-clash-semibold">
                 Background
               </div>
               <div className="flex flex-col gap-3">
@@ -179,7 +179,7 @@ const ArcadersWeb = ({ setPageColor }) => {
               </div>
             </div>
             <div className="flex flex-col bg-white rounded-[48px] w-[22rem] gap-8 items-center text-center p-10">
-              <div className="text-5xl text-web-dark-blue font-clash-semibold">
+              <div className="text-4xl sm:text-5xl text-web-dark-blue font-clash-semibold">
                 Ideate
               </div>
               <div className="flex flex-col gap-3">
@@ -195,7 +195,7 @@ const ArcadersWeb = ({ setPageColor }) => {
               </div>
             </div>
             <div className="flex flex-col bg-white rounded-[48px] w-[22rem] gap-8 items-center text-center p-10">
-              <div className="text-5xl text-web-dark-blue font-clash-semibold">
+              <div className="text-4xl sm:text-5xl text-web-dark-blue font-clash-semibold">
                 Design
               </div>
               <div className="flex flex-col gap-3">
@@ -211,7 +211,7 @@ const ArcadersWeb = ({ setPageColor }) => {
               </div>
             </div>
             <div className="flex flex-col bg-white rounded-[48px] w-[22rem] gap-8 items-center text-center p-10">
-              <div className="text-5xl text-web-dark-blue font-clash-semibold">
+              <div className="text-4xl sm:text-5xl text-web-dark-blue font-clash-semibold">
                 Conclusion
               </div>
               <div className="flex flex-col gap-3">
@@ -238,7 +238,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             </h2>
           </div>
           {/* Section Body Gamepad */}
-          <div className="flex flex-col min-h-svh items-center justify-end text-center border-b-4 border-white/50">
+          <div className="flex flex-col min-h-svh items-center justify-end text-center border-b-4 border-white/50 px-8">
             <div className="font-clash-semibold text-5xl mb-8">
               How do I find the games that I <br />
               want to play?
@@ -254,9 +254,9 @@ const ArcadersWeb = ({ setPageColor }) => {
             />
           </div>
           {/* Section Body Brainstorming */}
-          <div className="flex flex-col bg-web-bg font-clash-medium justify-center items-center py-16">
+          <div className="flex flex-col bg-web-bg font-clash-medium justify-center items-center py-16 px-8">
             <div className="container">
-              <div className="text-5xl mb-6">Brainstorming</div>
+              <div className="text-4xl sm:text-5xl mb-6">Brainstorming</div>
               <div className="text-xl">
                 To outline the research plan, I selected 3 main themes:
                 Community, Concision, and Stream. Through industry-relevant user
@@ -274,9 +274,11 @@ const ArcadersWeb = ({ setPageColor }) => {
                 backgroundImage: `url(${imagePath}arcaders_web_background_community.png)`,
               }}
             >
-              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full">
+              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full px-8 text-center">
                 <div className="flex flex-col h-max-content justify-between text-center pt-16">
-                  <div className="font-clash-bold text-6xl">Community</div>
+                  <div className="font-clash-bold text-5xl sm:text-6xl">
+                    Community
+                  </div>
                 </div>
                 <div className="flex flex-col items-center py-12">
                   <div className="font-clash-semibold text-3xl w-fit mb-12">
@@ -297,9 +299,11 @@ const ArcadersWeb = ({ setPageColor }) => {
                 backgroundImage: `url(${imagePath}arcaders_web_background_concision.png)`,
               }}
             >
-              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full">
+              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full px-8 text-center">
                 <div className="flex flex-col h-max-content justify-between pt-16">
-                  <div className="font-clash-bold text-6xl">Concision</div>
+                  <div className="font-clash-bold text-5xl sm:text-6xl">
+                    Concision
+                  </div>
                 </div>
                 <div className="flex flex-col items-center py-12">
                   <div className="font-clash-semibold text-3xl w-fit mb-12">
@@ -321,9 +325,11 @@ const ArcadersWeb = ({ setPageColor }) => {
                 backgroundImage: `url(${imagePath}arcaders_web_background_stream.png)`,
               }}
             >
-              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full text-center">
+              <div className="flex flex-col justify-between h-max-content bg-web-img-background-gradient h-full px-8 text-center">
                 <div className="flex flex-col h-max-content justify-between text-center pt-16">
-                  <div className="font-clash-bold text-6xl">Stream</div>
+                  <div className="font-clash-bold text-5xl sm:text-6xl">
+                    Stream
+                  </div>
                 </div>
                 <div className="flex flex-col items-center py-12">
                   <div className="font-clash-semibold text-3xl w-fit mb-12">
@@ -347,7 +353,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             <h2 className="font-clash-medium text-5xl ml-4 -mt-2">Ideate</h2>
           </div>
           {/* Section Body Comments */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center px-8">
             <div className="mb-[5.5rem]">
               <div className="font-clash-medium text-2xl text-white">
                 User Reviews & Persona
@@ -373,7 +379,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                 username="KitingSam"
                 comment="Not enough information<br /> about the actual game"
                 altText="Rectangle shaped comment box"
-                commentBoxStyle="bottom-[5.5rem]"
+                commentBoxStyle="bottom-[3rem] sm:bottom-[5.5rem]"
               />
               <CommentBox
                 imagePath={imagePath}
@@ -390,7 +396,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                 username="FragileVictor"
                 comment="Boring UI/UX Design."
                 altText="Rectangle shaped comment box"
-                commentBoxStyle="bottom-[5.5rem]"
+                commentBoxStyle="bottom-[3rem] sm:bottom-[5.5rem]"
               />
               <CommentBox
                 imagePath={imagePath}
@@ -407,12 +413,12 @@ const ArcadersWeb = ({ setPageColor }) => {
                 username="WatchingTim"
                 comment="Wish I could know what <br /> my streamer played."
                 altText="Rectangle shaped comment box"
-                commentBoxStyle="bottom-[5.5rem]"
+                commentBoxStyle="bottom-[3rem] sm:bottom-[5.5rem]"
               />
             </div>
           </div>
           {/* Section Body Profiles */}
-          <div className="flex flex-col gap-12">
+          <div className="flex flex-col gap-12 px-8">
             <StreamerProfile
               comment="I want to know what my favorite streamer plays. It’s hard to find what games they played before."
               streamer={{
@@ -427,7 +433,7 @@ const ArcadersWeb = ({ setPageColor }) => {
                 "#GAMEISLIFE",
                 "#FAN",
                 "#UI/UX",
-                "#VIEWING-GAME",
+                "#VIEWING_GAME",
                 "#STREAM",
               ]}
               painPointsNeeds={[
@@ -527,7 +533,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             <UserJourney />
           </div>
           {/* Insight #2 */}
-          <div className="flex flex-col w-full justify-center items-center gap-4">
+          <div className="flex flex-col w-full justify-center items-center gap-4 px-8">
             <div className="flex flex-col bg-web-dark-blue text-white gap-4 font-clash-semibold items-center w-5/6 self-center py-8 px-4 rounded-3xl text-center mb-12">
               <div className="text-4xl">Insight #2</div>
               <div className="text-2xl">
@@ -575,7 +581,7 @@ const ArcadersWeb = ({ setPageColor }) => {
             <h4 className="mb-6 text-2xl font-clash-semibold">Userflow</h4>
             <UserFlow data={flowChart} />
           </div>
-          <div className="flex flex-col items-center gap-8">
+          <div className="flex flex-col items-center gap-8 px-8">
             {/* Style Guide */}
             <h3 className="font-clash-semibold text-2xl">Style Guide</h3>
             <div className="flex gap-8 flex-wrap justify-center w-full">
@@ -630,22 +636,22 @@ const ArcadersWeb = ({ setPageColor }) => {
               <div className="flex flex-col bg-[#404040] p-8 rounded-3xl gap-6 max-w-[500px] h-max">
                 <h4 className="font-clash-semibold text-2xl">Colors</h4>
                 <div className="flex flex-wrap gap-4">
-                  <div className="flex justify-center items-end bg-[#1B1B23] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                  <div className="flex justify-center items-end bg-[#1B1B23] min-w-24 max-w-24 sm:min-w-32 sm:max-w-32 h-24 sm:h-32 basis-[calc(33%-1rem)]">
                     #1B1B23
                   </div>
-                  <div className="flex justify-center items-end bg-[#323131] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                  <div className="flex justify-center items-end bg-[#323131] min-w-24 max-w-24 sm:min-w-32 sm:max-w-32 h-24 sm:h-32 basis-[calc(33%-1rem)]">
                     #323131
                   </div>
-                  <div className="flex justify-center items-end bg-[#8990A8] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                  <div className="flex justify-center items-end bg-[#8990A8] min-w-24 max-w-24 sm:min-w-32 sm:max-w-32 h-24 sm:h-32 basis-[calc(33%-1rem)]">
                     #8990A8
                   </div>
-                  <div className="flex justify-center items-end bg-[#142252] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                  <div className="flex justify-center items-end bg-[#142252] min-w-24 max-w-24 sm:min-w-32 sm:max-w-32 h-24 sm:h-32 basis-[calc(33%-1rem)]">
                     #142252
                   </div>
-                  <div className="flex justify-center items-end bg-[#3340D8] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                  <div className="flex justify-center items-end bg-[#3340D8] min-w-24 max-w-24 sm:min-w-32 sm:max-w-32 h-24 sm:h-32 basis-[calc(33%-1rem)]">
                     #3340D8
                   </div>
-                  <div className="flex justify-center items-end bg-[#7BDDFF] min-w-32 h-32 basis-[calc(33%-1rem)]">
+                  <div className="flex justify-center items-end bg-[#7BDDFF] min-w-24 max-w-24 sm:min-w-32 sm:max-w-32 h-24 sm:h-32 basis-[calc(33%-1rem)]">
                     #7BDDFF
                   </div>
                 </div>
@@ -654,7 +660,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           </div>
         </div>
         {/* Web Page Walk-through */}
-        <div className="flex flex-col bg-white text-black font-clash-semibold pb-8 items-center">
+        <div className="flex flex-col bg-white text-black font-clash-semibold pb-8 items-center px-8">
           {/* Onboarding */}
           <div className="flex flex-col justify-center items-center p-10 gap-4 text-center">
             <h3 className="text-web-dark-blue text-2xl font-clash-semibold">
@@ -671,7 +677,7 @@ const ArcadersWeb = ({ setPageColor }) => {
           <div className="flex flex-col justify-center">
             <video
               autoPlay
-              className="w-full h-svh mb-8"
+              className="w-full h-full mb-8"
               loop={true}
               muted={true}
             >

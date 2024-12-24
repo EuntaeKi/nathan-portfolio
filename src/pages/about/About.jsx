@@ -48,7 +48,7 @@ const About = ({
             : ""
         }`}
       >
-        <div className="about-description-container mb-0 md:mb-8 -mt-20 lg:mt-0">
+        <div className="about-description-container mb-0 md:mb-8 mt-12 md:-mt-20 lg:mt-0">
           <div className="about-logo-container">
             <Link to="/home" className="about-logo ml-4 md:ml-[-7rem]">
               <img src={logoPath} alt="Nathan Seung" />

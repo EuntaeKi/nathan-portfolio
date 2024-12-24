@@ -61,21 +61,6 @@ module.exports = {
             "background-color": "#8F9094",
             outline: "none",
           },
-          ".web-profile-quote-before::before": {
-            content: '"\\201C"',
-            color: "#4B60C0",
-            "font-family": "ClashDisplay-Bold",
-            "font-size": "2rem",
-            "margin-right": "1rem",
-            "margin-left": "-2rem",
-          },
-          ".web-profile-quote-after::after": {
-            content: '"\\201D"',
-            color: "#4B60C0",
-            "font-family": "ClashDisplay-Bold",
-            "font-size": "2rem",
-            "margin-left": "1rem",
-          },
           ".web-user-journey-step-after::after": {
             content:
               'url("data:image/svg+xml;utf8,<svg xmlns=\\"http://www.w3.org/2000/svg\\" width=\\"20\\" height=\\"20\\" viewBox=\\"0 0 20 20\\"><polygon points=\\"0,0 20,0 10,18\\" fill=\\"gray\\" /></svg>")',
