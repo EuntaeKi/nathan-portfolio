@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Routes,
   Route,
-  createBrowserRouter,
   RouterProvider,
   createHashRouter,
 } from "react-router-dom";
@@ -22,6 +21,7 @@ const Root = () => {
   const [overlayColor, setOverlayColor] = useState("#00000075");
   const [pageColor, setPageColor] = useState("#FFFFFF");
   const [triggerBlink, setTriggerBlink] = useState(false);
+  const headerRef = useRef(null);
 
   // Change the text color of the HTML based on page color
   useEffect(() => {
@@ -84,6 +84,7 @@ const Root = () => {
               overlayColor={overlayColor}
               triggerBlink={triggerBlink}
               setTriggerBlink={setTriggerBlink}
+              headerRef={headerRef}
             >
               <About
                 pageColor={pageColor}
@@ -92,6 +93,7 @@ const Root = () => {
                 setTriggerBlink={setTriggerBlink}
                 setShowOverlay={setShowOverlay}
                 setOverlayColor={setOverlayColor}
+                headerRef={headerRef}
               />
             </Layout>
           }

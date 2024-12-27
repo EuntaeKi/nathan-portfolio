@@ -13,6 +13,7 @@ const About = ({
   setTriggerBlink,
   setShowOverlay,
   setOverlayColor,
+  headerRef,
 }) => {
   const logoPath = `${process.env.PUBLIC_URL}/img/logo_about.png`;
   const location = useLocation();
@@ -21,6 +22,12 @@ const About = ({
   useEffect(() => {
     setPageColor("#EC7979");
   }, [setPageColor]);
+
+  const navigateToHome = (event) => {
+    if (headerRef.current) {
+      headerRef.current.handleNavLinkClick(event, "/home");
+    }
+  };
 
   return (
     <>
@@ -50,7 +57,11 @@ const About = ({
       >
         <div className="about-description-container mb-0 md:mb-8 mt-12 md:-mt-20 lg:mt-0">
           <div className="about-logo-container">
-            <Link to="/home" className="about-logo ml-4 md:ml-[-7rem]">
+            <Link
+              to="/home"
+              className="about-logo ml-4 md:ml-[-7rem]"
+              onClick={navigateToHome}
+            >
               <img src={logoPath} alt="Nathan Seung" />
             </Link>
           </div>
@@ -129,7 +140,6 @@ const About = ({
               <li>Website Design</li>
               <li>Mobile App Design</li>
               <li>Responsive Design</li>
-              <li>Accessibility in UX</li>
               <li>Research Skills</li>
               <ul className="about-resume-subitems">
                 <li>Usability Study</li>

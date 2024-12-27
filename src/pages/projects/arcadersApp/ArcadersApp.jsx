@@ -36,11 +36,11 @@ const ArcadersApp = ({ setPageColor }) => {
           </div>
         </div>
         {/* Goals & Pain Point */}
-        <div className="flex flex-col justify-center items-center flex-wrap gap-8 p-8 md:gap-0">
-          <div className="bg-app-accent text-white rounded-3xl py-3 max-w-[600px] w-full text-center">
+        <div className="flex flex-col justify-center items-center flex-wrap gap-8 md:gap-0 min-h-svh p-8">
+          <div className="bg-app-accent text-white rounded-3xl mb-8 py-3 max-w-[600px] w-full text-center">
             PROJECT OVERVIEW
           </div>
-          <div className="flex justify-center items-center flex-wrap gap-8 min-h-svh w-full">
+          <div className="flex justify-center items-center flex-wrap gap-8 w-full">
             <div className="flex flex-col gap-8 w-fit md:w-1/2">
               <div className="text-app-accent text-3xl">GOAL</div>
               <div className="text-sm border-4 border-app-accent rounded-3xl p-8">
@@ -969,7 +969,11 @@ const ArcadersApp = ({ setPageColor }) => {
             </div>
           </div>
         </div>
-
+        <div className="flex flex-col items-center justify-center py-8 sm:py-24">
+          <div className="text-2xl sm:text-4xl font-clash-semibold">
+            Thank you!
+          </div>
+        </div>
         <ArcadersFooter />
       </div>
     </>
